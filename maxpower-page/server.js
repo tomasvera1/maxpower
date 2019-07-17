@@ -38,19 +38,19 @@ app.get('/productos', (req, resp) => {
     resp.sendFile('productos.html', {root: path.join(__dirname, './files')})
 });
 
-app.get('/products-electrics', (req, resp) => {
+app.get('/productos-electricos', (req, resp) => {
     resp.sendFile('productos-electricos.html', {root: path.join(__dirname, './files')})
 });
 
-app.get('/products-electronic', (req, resp) => {
+app.get('/productos-electronicos', (req, resp) => {
     resp.sendFile('productos-electronicos.html', {root: path.join(__dirname, './files')})
 });
 
 app.get('/producto-detallado', (req, resp) => {
     resp.sendFile('producto-detallado.html', {root: path.join(__dirname, './files')})
 });
-app.get('/products-seg-industrial', (req, resp) => {
-    resp.sendFile('products-seg-industrial.html', {root: path.join(__dirname, './files')})
+app.get('/productos-seguridad', (req, resp) => {
+    resp.sendFile('productos-seguridad.html', {root: path.join(__dirname, './files')})
 });
 
 app.get('/services', (req, resp)=>{
@@ -60,6 +60,44 @@ app.get('/services', (req, resp)=>{
 app.get('/contact', (req, resp)=>{
     resp.sendFile('contact.html', {root: path.join(__dirname, './files')});
 });
+
+app.get('/motores', (req, resp)=>{
+    resp.sendFile('motores.html', {root: path.join(__dirname, './files/productos-electricos')});
+});
+
+app.get('/arrancadores-suaves', (req, resp)=>{
+    resp.sendFile('arrancadores-suaves.html', {root: path.join(__dirname, './files/productos-electricos')});
+});
+
+app.get('/altistar01', (req, resp)=>{
+    resp.sendFile('altistar01.html', {root: path.join(__dirname, './files/productos-electricos')});
+});
+
+app.get('/altistar48', (req, resp)=>{
+    resp.sendFile('altistar48.html', {root: path.join(__dirname, './files/productos-electricos')});
+});
+
+app.get('/sirius-3rw44', (req, resp)=>{
+    resp.sendFile('sirius-3rw44.html', {root: path.join(__dirname, './files/productos-electricos')});
+});
+
+app.get('/sirius-3rw30', (req, resp)=>{
+    resp.sendFile('sirius-3rw30.html', {root: path.join(__dirname, './files/productos-electricos')});
+});
+
+app.get('/contactores-a-line', (req, resp)=>{
+    resp.sendFile('contactores-a-line.html', {root: path.join(__dirname, './files/productos-electricos')});
+});
+
+app.get('/contactores-de-vacio', (req, resp)=>{
+    resp.sendFile('contactores-de-vacio.html', {root: path.join(__dirname, './files/productos-electricos')});
+});
+
+
+
+
+
+
 
 app.get('/capacitores', (req, resp)=>{
     resp.sendFile('capacitores.html', {root: path.join(__dirname, './files')});

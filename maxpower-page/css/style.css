@@ -2573,7 +2573,7 @@ section {
   z-index: 2;
 }
 .slider::after {
-  right: 0;
+  right: 100;
   top: 0;
   -webkit-transform: rotateZ(180deg);
           transform: rotateZ(180deg);
