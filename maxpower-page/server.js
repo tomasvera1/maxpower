@@ -60,6 +60,7 @@ app.get('/contact', (req, resp)=>{
     resp.sendFile('contact.html', {root: path.join(__dirname, './files')});
 });
 
+<<<<<<< HEAD
 
 app.get('/arrancadores-suaves-1', (req, resp)=>{
     resp.sendFile('arrancadores-suaves-1.html', {root: path.join(__dirname, './files/productos-electricos/arrancadores')});
@@ -182,6 +183,43 @@ app.get('/plc-6', (req, resp)=>{
 app.get('/plc-7', (req, resp)=>{
     resp.sendFile('plc-7.html', {root: path.join(__dirname, './files/productos-electricos/plc')});
 });
+=======
+app.get('/motores', (req, resp)=>{
+    resp.sendFile('motores.html', {root: path.join(__dirname, './files/productos-electricos')});
+});
+
+app.get('/arrancadores-suaves', (req, resp)=>{
+    resp.sendFile('arrancadores-suaves.html', {root: path.join(__dirname, './files/productos-electricos')});
+});
+
+app.get('/altistar01', (req, resp)=>{
+    resp.sendFile('altistar01.html', {root: path.join(__dirname, './files/productos-electricos')});
+});
+
+app.get('/altistar48', (req, resp)=>{
+    resp.sendFile('altistar48.html', {root: path.join(__dirname, './files/productos-electricos')});
+});
+
+app.get('/sirius-3rw44', (req, resp)=>{
+    resp.sendFile('sirius-3rw44.html', {root: path.join(__dirname, './files/productos-electricos')});
+});
+
+app.get('/sirius-3rw30', (req, resp)=>{
+    resp.sendFile('sirius-3rw30.html', {root: path.join(__dirname, './files/productos-electricos')});
+});
+
+app.get('/contactores-a-line', (req, resp)=>{
+    resp.sendFile('contactores-a-line.html', {root: path.join(__dirname, './files/productos-electricos')});
+});
+
+app.get('/contactores-de-vacio', (req, resp)=>{
+    resp.sendFile('contactores-de-vacio.html', {root: path.join(__dirname, './files/productos-electricos')});
+});
+
+
+
+
+>>>>>>> ba2708295162b375cf3db6afd0c2739a3526a076
 
 
 
