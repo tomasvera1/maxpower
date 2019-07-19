@@ -343,7 +343,7 @@ app.post('/search', (req, response) => {
     let find = [];
     
     //si se hacen distintas tablas, camb∂iar el or
-    if(where == 'productos' || where == 'products-electrics' || where == 'products-electronic' || where == 'products-seg-industrial'){
+    if(where == 'productos' || where == 'productos-electricos' || where == 'productos-electronicos' || where == 'productos-seg-industrial'){
         //query a db
         for(let p of prod){
             if(p.substring(0, word.length) == word)

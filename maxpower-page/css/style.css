@@ -519,6 +519,18 @@ body.nobg .section1 {
   margin-top: 60px;
 }
 
+.list {
+  padding: 0;
+  width: 190px;
+  height: 40px;
+  float: right;
+  position: relative;
+  display: inline-block;
+  background: url("../img/search.png") left top no-repeat;
+  margin-top: 60px;
+  z-index: 1;
+}
+
 .search-bar form input {
   width: 190px !important;
   padding: 0 0 0 35px !important;

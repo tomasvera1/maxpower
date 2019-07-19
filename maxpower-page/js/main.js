@@ -246,7 +246,7 @@ async function search(e){
   if(json){
     $('#list').empty();
     for(let p of json.find){
-      $('#list').append(`<p style="border: 1px solid black;">${p}</p>`);
+      $('#list').append(`<p>${p}</p>`);
     }
     $('#list').css('display','block');
   }

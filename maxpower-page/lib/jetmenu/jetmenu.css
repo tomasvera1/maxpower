@@ -1,9 +1,7 @@
-/* MENU CONFIGURATION
-**********************************************************/
 .jetmenu{
 	width: 100%;
 	padding:0;
-	margin: 0;
+	margin: 15px;
 	position: relative;
 	list-style: none;
 	background: #ffffff;
@@ -24,9 +22,9 @@
 
 .jetmenu > li > a {
     border-top: 3px solid #FFFFFF;
-    color: #777777;
+    color: #5f5d5d;
     display: inline-block;
-    font-size: 12px;
+    font-size: 14px;
 	font-weight:400;
     line-height: 1.273em;
     padding: 18px 20px;
@@ -39,8 +37,7 @@
 	color: #777777;
 }
 
-/* DROPDOWN CONFIGURATION
-**********************************************************/
+
 .jetmenu ul.dropdown, 
 .jetmenu ul.dropdown li ul.dropdown {
 	list-style: none;
@@ -84,11 +81,10 @@
 }
 .jetmenu ul.dropdown li:hover > a{
 	background: #e0e0e0;
-	color: #777777;
+	color: #ce110a;
 }
 
-/* SUBMENU INDICATORS
-**********************************************************/
+
 .jetmenu .indicator{
 	position: relative;
 	left: 5px;
@@ -115,8 +111,7 @@
 	color:#ffffff !important
 }
 	
-/* MEGAMENU
-**********************************************************/
+
 .jetmenu > li > .megamenu{
 	position: absolute;
 	display: none;
@@ -134,7 +129,7 @@
 	box-sizing: border-box;
 }
 
-/* megamenu list */
+
 .jetmenu li > .megamenu ul{
 	margin: 0 0 20px 0;
 	float: left;
@@ -155,7 +150,7 @@
 .jetmenu li > .megamenu .menutitle{
 	margin:0;
 }
-/* megamenu h5 */
+
 .jetmenu li > .megamenu h5{
 	text-decoration: none;
 	text-transform:uppercase;
@@ -169,7 +164,7 @@
     text-transform: uppercase;
 }
 
-/* megamenu links */
+
 .jetmenu li > .megamenu a{
 	color: #6F6F6F;
 	text-decoration: none;
@@ -181,7 +176,6 @@
 .jetmenu li > .megamenu a:hover{
 }
 
-/* megamenu images */
 .jetmenu  .megamenu img{
 	width: 100%;
 	-webkit-transition: border 0.3s linear; 
@@ -190,8 +184,7 @@
 	transition: border 0.3s linear;
 }
 
-/* MEGAMENU WIDTHS
-**********************************************************/
+
 .jetmenu > li > .megamenu.half-width{
 	width: 50%;
 }
@@ -200,13 +193,11 @@
 	left: 0;
 }
 
-/* MEGAMENU FORM CONFIGURATION
-**********************************************************/
 .jetmenu li > .megamenu form{
 	width: 100%;
 }
 
-/* megamenu inputs */
+
 .jetmenu li > .megamenu form input[type="text"],
 .jetmenu li > .megamenu form textarea{
 	padding: 5px;
@@ -254,8 +245,7 @@
 	color: #777777;
 }
 
-/* MEGAMENU GRID SYSTEM
-**********************************************************/
+
 .megamenu .row{
 	width: 100%;
 	margin-top: 15px;
@@ -312,8 +302,6 @@
 	width: 100%;
 }
 
-/* RIGHT ALIGNMENT (MENU ITEM)
-**********************************************************/
 .jetmenu > li.right{
 	float: right;
 }
@@ -321,8 +309,7 @@
 	right: 0;
 }
 
-/* COLLAPSIBLE MENU
-**********************************************************/
+
 .jetmenu > li.showhide{
 	display: none;
 	width: 100%;
@@ -347,16 +334,13 @@
 	background: #777777;
 }
 
-/* STYLES
-**********************************************************/
-/* blue */
-.blue > li:hover > a, .blue > li.active > a{border-top:3px solid #7fc04c; color: #777777; }
+
+.blue > li:hover > a, .blue > li.active > a{border-top:3px solid #7fc04c; color: #ce110a;}
 .blue ul.dropdown li:hover > a{ background: #F9F9F9; }
 .blue li > .megamenu form input[type="text"]:focus, .blue li > .megamenu form textarea:focus{ border-color: #7fc04c; }
 .blue li > .megamenu form input[type="submit"]:hover{ background: #7fc04c; color: #fff; }
 
-/* RESPONSIVE LAYOUT
-**********************************************************/
+
 @media (max-width: 768px) {
 	.jetmenu > li{
 		display: block;
