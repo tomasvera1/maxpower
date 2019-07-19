@@ -185,6 +185,30 @@ app.get('/plc-7', (req, resp)=>{
     resp.sendFile('plc-7.html', {root: path.join(__dirname, './files/productos-electricos/plc')});
 });
 
+app.get('/variador-1', (req, resp)=>{
+    resp.sendFile('variador-1.html', {root: path.join(__dirname, './files/productos-electricos/variadores')});
+});
+app.get('/variador-2', (req, resp)=>{
+    resp.sendFile('variador-2.html', {root: path.join(__dirname, './files/productos-electricos/variadores')});
+});
+app.get('/variador-3', (req, resp)=>{
+    resp.sendFile('variador-3.html', {root: path.join(__dirname, './files/productos-electricos/variadores')});
+});
+app.get('/variador-4', (req, resp)=>{
+    resp.sendFile('variador-4.html', {root: path.join(__dirname, './files/productos-electricos/variadores')});
+});
+app.get('/variador-5', (req, resp)=>{
+    resp.sendFile('variador-5.html', {root: path.join(__dirname, './files/productos-electricos/variadores')});
+});
+app.get('/variador-6', (req, resp)=>{
+    resp.sendFile('variador-6.html', {root: path.join(__dirname, './files/productos-electricos/variadores')});
+});
+app.get('/variador-7', (req, resp)=>{
+    resp.sendFile('variador-7.html', {root: path.join(__dirname, './files/productos-electricos/variadores')});
+});
+app.get('/variador-8', (req, resp)=>{
+    resp.sendFile('variador-8.html', {root: path.join(__dirname, './files/productos-electricos/variadores')});
+});
 
 
 app.get('/capacitores', (req, resp)=>{
