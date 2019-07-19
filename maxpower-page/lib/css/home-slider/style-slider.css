@@ -1,0 +1,116 @@
+body
+    {
+        background: #f9f9f9;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        overflow-x: hidden;
+    }
+
+/* start hr */
+hr
+    {
+        border: 1px solid #55acee;
+        width: 100px;
+        margin-top: 20px;
+    }
+/* end hr */
+
+/* start h4 */
+h4
+    {
+        text-align: center;
+        padding-bottom: 50px;
+    }
+/* end h4 */
+.btn {
+    background: transparent;
+    border-radius: 10px;
+    color: #ffffff;
+    margin-top: 40px;
+	padding: 12px 22px;
+    transition: all 0.4s ease-in-out;  
+}
+.btn:hover {
+    background: #55acee;
+    border-color: transparent;
+}
+
+/* start overlay */
+
+
+#home h1
+    {
+        font-size: 80px;
+        font-weight: bold;
+        line-height: 1em;
+        letter-spacing: 2px;
+        padding-top: 10px;
+    }
+#home span
+    {
+        color: #55acee;
+        font-weight: bold;
+    }
+#home .btn {
+    background: rgba(0,0,0,0.6);
+    border: none;
+}
+#home .btn:hover {
+    background: rgba(255,255,255,0.6);
+}
+.maxpower_homewrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.flexslider {
+    margin: 0 0 60px;
+    background: #fff;
+    padding: 0;
+    position: relative;
+    zoom: 1;
+    background-color: #371604;
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+}
+.flexslider .slides {
+    padding: 0;
+    zoom: 1;
+}
+.flexslider .slides img {
+    width: 100%;
+    min-width: 648px;
+    min-height: 270px;
+    display: block;
+}
+.flexslider .slides > li {
+    display: none;  
+    padding: 0;
+    position: relative;
+    
+}
+.flexslider img {
+    position: relative;
+    width: 100%;
+    height: 700px;
+}
+.slider-caption {
+    color:white;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-transform: uppercase;
+    z-index: 7;
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
