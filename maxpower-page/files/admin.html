@@ -1,41 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Admin</title>
+  <meta charset="utf-8">
+  <title> MaxPower Industrial Automation </title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Ruda:400,900,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="css/login/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/login/login.css" rel="stylesheet">
+
 </head>
 <body>
-    <div id='login' style="display: block;">
-        <input type="text" id="usr">
-        <input type="password" id="pwd">
-        <button onclick="log()">LOG IN</button>
-    </div>
 
-    <script>
-        async function log(){
-            const data = {
-                usr: document.getElementById('usr').value,
-                pwd: document.getElementById('pwd').value
-            };
-            
-            if(data.usr && data.pwd){
-                const options = { 
-                    method: 'POST',
-                    body: JSON.stringify(data), 
-                    headers:{
-                        'Content-Type': 'application/json'
-                    }
+   <section class="section1">
+  <div class="container-fluid">      
+        <div class="row no-gutter">
+          <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image">
+             
+            <div class="overlay">
+                  <div class="info">
+                <h3> MaxPower Industrial Automation </h3>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-8 col-lg-6">
+            <div class="login d-flex align-items-center py-5">           
+              <div class="container">
+                    <div class="logo"> 
+                            <img src="img/logo/logo.png">
+                        </div>
+                <div class="row">
+                  <div class="col-md-9 col-lg-8 mx-auto">
+                  </br>
+                    <h3 class="login-heading mb-4">Iniciar sesion</h3> 
+                    <form>
+                      <div class="form-label-group">
+                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                        <label for="inputEmail">Email address</label>
+                      </div>
+      
+                      <div class="form-label-group">
+                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                        <label for="inputPassword">Password</label>
+                      </div>
+      
+                      <div class="custom-control custom-checkbox mb-3">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Recordar contraseña</label>
+                      </div>
+                      <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" onclick="log()">Sign in</button>
+                      <div class="text-center">
+                        <a class="small" href="#">Forget your password?</a>
+                    </div>
+                </hr>
+                    <div class="text-center">
+                            <a class="small" href="register.html">Create your account</a>
+                    </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> 
+
+    
+      <!-- JavaScript Libraries -->
+      <script src="js/login/jquery.min.js"></script>
+      <script src="js/login/bootstrap.bundle.min.js"></script>
+
+      <script>
+            async function log(){
+                const data = {
+                    usr: document.getElementById('inputEmail').value,
+                    pwd: document.getElementById('inputPassword').value
                 };
-                const response = await fetch('/adLog', options).catch(error => console.error(error));
-                const json = await response.json();
-                if(json.status){
-                    document.getElementById('login').style.display = 'none';
+                
+                if(data.usr && data.pwd){
+                    const options = { 
+                        method: 'POST',
+                        body: JSON.stringify(data), 
+                        headers:{
+                            'Content-Type': 'application/json'
+                        }
+                    };
+                    const response = await fetch('/adLog', options).catch(error => console.error(error));
+                    const json = await response.json();
+                    if(json.status){
+                        document.getElementById('login').style.display = 'none';
+                    }
+    
                 }
-
             }
-        }
-    </script>
-</body>
-</html>
+        </script>
+
+           </body>
+    
+    </html>
+    

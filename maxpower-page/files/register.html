@@ -34,8 +34,13 @@
               <div class="container">
                 <div class="row">
                   <div class="col-md-9 col-lg-8 mx-auto">
-                    <h3 class="login-heading mb-4">Iniciar sesion</h3> 
+                    <h3 class="login-heading mb-4">Sing Up</h3>
                     <form>
+                      <div class="form-label-group">
+                        <input type="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+                        <label for="inputUsername">Username</label>
+                      </div>
+
                       <div class="form-label-group">
                         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
                         <label for="inputEmail">Email address</label>
@@ -44,20 +49,12 @@
                       <div class="form-label-group">
                         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
                         <label for="inputPassword">Password</label>
-                      </div>
+                      </div>                
       
-                      <div class="custom-control custom-checkbox mb-3">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                        <label class="custom-control-label" for="customCheck1">Recordar contraseña</label>
-                      </div>
-                      <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit" onclick="log()">Sign in</button>
+                      <button onclick="log()" 
+                      class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign up</button>
                       <div class="text-center">
-                        <a class="small" href="#">¿Olvidaste tu contraseña?</a>
-                    </div>
-                </hr>
-                    <div class="text-center">
-                            <a class="small" href="register.html">Create your account</a>
-                    </div>
+                        <a class="small" href="login.html">Sing In</a></div>
                     </form>
                   </div>
                 </div>
@@ -72,32 +69,6 @@
       <script src="js/login/jquery.min.js"></script>
       <script src="js/login/bootstrap.bundle.min.js"></script>
 
-      <script>
-            async function log(){
-                const data = {
-                    usr: document.getElementById('inputEmail').value,
-                    pwd: document.getElementById('inputPassword').value
-                };
-                
-                if(data.usr && data.pwd){
-                    const options = { 
-                        method: 'POST',
-                        body: JSON.stringify(data), 
-                        headers:{
-                            'Content-Type': 'application/json'
-                        }
-                    };
-                    const response = await fetch('/adLog', options).catch(error => console.error(error));
-                    const json = await response.json();
-                    if(json.status){
-                        document.getElementById('login').style.display = 'none';
-                    }
-    
-                }
-            }
-        </script>
-
            </body>
-    
     </html>
     

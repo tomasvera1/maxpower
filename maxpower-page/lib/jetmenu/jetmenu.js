@@ -1,9 +1,9 @@
 
 jQuery.fn.jetmenu = function(options){
 	var settings = {
-		 indicator	 		:true     			// indicator that indicates a submenu
-		,speed	 			:300     			// submenu speed
-		,hideClickOut		:true     			// hide submenus when click outside menu
+		 indicator	 		:true     			
+		,speed	 			:300     			
+		,hideClickOut		:true     			
 	}
 	$.extend( settings, options );
 	

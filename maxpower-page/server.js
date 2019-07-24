@@ -329,8 +329,13 @@ app.get('/admin', (req, resp) => {
     resp.sendFile('admin.html', {root: path.join(__dirname, './files')});
 });
 
+app.get('/login', (req, resp) => {
+    resp.sendFile('login.html', {root: path.join(__dirname, './files')});
+});
 
-
+app.get('/register', (req, resp) => {
+    resp.sendFile('register.html', {root: path.join(__dirname, './files')});
+});
 
 //search
 

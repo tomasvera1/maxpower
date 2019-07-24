@@ -24,7 +24,7 @@
 	#volume,
 	.post-meta a:hover,
 	 .title:after{
-		border-color:#ce110a
+		border-color:#ce110a;
 	}
 
 	.panel-primary > .panel-heading + .panel-collapse .panel-body,
@@ -86,6 +86,7 @@
 	.recent_posts li a.readmore {
 		color:#ce110a;
 	}
+	
 
 	.pagination > .active > a,
 	.pagination > .active > span,
@@ -136,7 +137,6 @@
 	.btn-primary.disabled.active,
 	.btn-primary[disabled].active,
 	fieldset[disabled] .btn-primary.active,
-	.topbar,
 	.progress-bar-danger,
 	.servicetitle hr,
 	.icn-container,
@@ -162,4 +162,8 @@
 	}
 	.transparent-wrap {
 		background-color: rgba(216, 20, 20, 0.6);
+	}
+
+	.topbar {
+		background: linear-gradient(to top right, #ce110a, #7c0e0a);
 	}
