@@ -962,12 +962,13 @@ body.nobg .section7 {
   margin: 10px 0 !important;
 }
 
-.services_lists hr, .servicetitle hr {
+.services_lists hr, .servicetitle hr  {
   border: 0 none;
   height: 3px;
   margin: 10px auto;
   width: 80px;
 }
+
 
 .checkout .quantity {
   width: 50px;
@@ -2497,3 +2498,65 @@ section {
  width: 100%
 }
 
+
+
+
+
+
+#desc_info {   
+  padding-bottom: 50px;
+  padding-top: 50px;
+  background: linear-gradient(to top right, #464646,gray);
+  width:  100%;
+ 
+}
+#desc_info p {
+  padding-bottom: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+#desc_info h4, a{
+  color: #fff;
+}
+
+
+#desc_info .feature-box {
+  transition: all .5s;
+  background: transparent;
+  padding: 20px 0 20px 0;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+#desc_info .feature-box:hover {
+  padding: 0;
+  color: #fff;
+}
+#desc_info .feature-box .feature-box-inner {
+  transition: all .5s;
+  background: linear-gradient(to top right, #464646,gray);
+}
+#desc_info .feature-box:hover .feature-box-inner {
+  padding: 60px 20px 60px 20px;
+  background: #d3321d;
+}
+#desc_info .feature-box p {
+  max-width: 250px;
+  min-height: 260px;
+  line-height: 32px;
+  padding-top: 30px;
+  font-size: 18px;
+  margin: auto;
+}
+#desc_info .feature-box .feature-box-icon {
+  border-radius: 0px;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-size: 40px;
+  color:#fff;
+}
