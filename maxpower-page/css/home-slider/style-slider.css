@@ -21,6 +21,8 @@ h4
         text-align: center;
         padding-bottom: 50px;
     }
+
+
 /* end h4 */
 .btn {
     background: transparent;
@@ -35,12 +37,16 @@ h4
     border-color: transparent;
 }
 
+h2{
+    text-align: center;
+    font-size: 20px;
+}
 /* start overlay */
 
 
 #home h1
     {
-        font-size: 80px;
+        font-size: 20px;
         font-weight: bold;
         line-height: 1em;
         letter-spacing: 2px;
@@ -48,7 +54,7 @@ h4
     }
 #home span
     {
-        color: #55acee;
+        color: #ce110a;
         font-weight: bold;
     }
 #home .btn {
@@ -68,7 +74,6 @@ h4
     padding: 0;
     position: relative;
     zoom: 1;
-    background-color: #371604;
     overflow: hidden;
     margin: 0;
     text-align: center;
