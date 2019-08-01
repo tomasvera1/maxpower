@@ -560,8 +560,7 @@ body.nobg .section7 {
 }
 
 .topbar {
-  background: #F8F8F8;
-  color: #ffffff;
+ 
 }
 
 .top-bar {
@@ -613,6 +612,7 @@ body.nobg .section7 {
 
 
 .social_buttons a {
+  font-family: "Poppins", sans-serif;
   width: 23px;
   height: 23px;
   margin-top: 8px;
@@ -694,13 +694,12 @@ body.nobg .section7 {
   font-size: 14px;
   border-top: 1px solid #3E4246;
   margin-top: 15px;
-  color: #fff;
 }
 
 .copyrights a {
   color: #fff;
-  
 }
+
 
 #nav {
   margin-top: 0;
@@ -2400,6 +2399,10 @@ a.readmore {
   list-style: none;
 }
 
+.img_contact {
+  padding-left: 30px;
+}
+
 .pricing li:before, .check li:before {
   content: "\f00c";
   font-family: "FontAwesome";
@@ -2689,3 +2692,5 @@ section {
   font-size: 40px;
   color:#fff;
 }
+
+
