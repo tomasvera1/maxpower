@@ -4,6 +4,24 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const verifier = require('email-verify');
+const mysql = require('mysql');
+
+var con = mysql.createConnection({
+    host: "localhost",
+    user: "francodinapoli",
+    password: "maxpowerautomation2019",
+    database: "maxpower"
+});
+
+con.connect(function(err) {
+    if (err) throw err;
+    console.log("Connected!");
+    var sql = "INSERT INTO p_electricos (id_electricos, nombre, categoria, marca, descripcion) VALUES ('1', 'test', 'cat', 'marcaA', 'desc')";
+    con.query(sql, function (err, result) {
+      if (err) throw err;
+      console.log("1 record inserted");
+    });
+});
 
 //email auth
 const transporter = nodemailer.createTransport({
