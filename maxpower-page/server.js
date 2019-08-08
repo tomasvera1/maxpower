@@ -1,4 +1,5 @@
 const express = require('express');
+const expbs = require('express-handlebars');
 const path = require('path');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
@@ -14,6 +15,24 @@ const transporter = nodemailer.createTransport({
 });
 
 const app = express();
+const hbs = expbs.create({
+    defaultLayout: 'main',
+    layoutsDir:'views/layouts'
+    // helpers: {
+    //     state: (a, b) =>{
+    //         if(a == 1)
+    //             return '<div class="tm-status-circle moving"></div>Created';
+    //         else if(a == 2)
+    //             return '<div class="tm-status-circle pending"></div>Pending';
+    //         else if(a == 3)
+    //             return '<div class="tm-status-circle cancelled"></div>Test';
+    //     }
+    // }
+});
+
+app.engine('handlebars', hbs.engine);
+
+app.set('view engine', 'handlebars');
 //import folders
 app.use('/css', express.static(__dirname + '/css'));
 app.use('/lib', express.static(__dirname + '/lib'));
@@ -25,39 +44,40 @@ app.use('/contactform', express.static(__dirname + '/contactform'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
+
+
+
 //redirects
 app.get('/', (req, resp)=>{
-    resp.sendFile('index.html', {root: path.join(__dirname, './files')});
+    resp.render('index', {title: "MaxPower Industrial Automation"});
 });
 
 app.get('/about', (req, resp)=>{
-    resp.sendFile('about.html', {root: path.join(__dirname, './files')});
+    resp.render('about', {title: "Sobre Nosotros"});
 });
 
 app.get('/productos', (req, resp) => {
-    resp.sendFile('productos.html', {root: path.join(__dirname, './files')})
+    resp.render('productos', {title: "Categoría de Productos"});
 });
 
 app.get('/productos-electricos', (req, resp) => {
-    resp.sendFile('productos-electricos.html', {root: path.join(__dirname, './files')})
+    resp.render('productos-electricos', {title: "Productos Eléctricos"});
 });
 
 app.get('/productos-electronicos', (req, resp) => {
-    resp.sendFile('productos-electronicos.html', {root: path.join(__dirname, './files')})
+    resp.render('productos-electronicos', {title: "Productos Electrónicos"});
 });
 
-app.get('/producto-detallado', (req, resp) => {
-    resp.sendFile('producto-detallado.html', {root: path.join(__dirname, './files')})
-});
 app.get('/productos-seguridad', (req, resp) => {
-    resp.sendFile('productos-seguridad.html', {root: path.join(__dirname, './files')})
+    resp.render('productos-seguridad', {title: "Protecciones"});
 });
 
 app.get('/services', (req, resp)=>{
-    resp.sendFile('services.html', {root: path.join(__dirname, './files')});
+    resp.render('services', {title: "Servicios"});
 });
+
 app.get('/contact', (req, resp)=>{
-    resp.sendFile('contact.html', {root: path.join(__dirname, './files')});
+    resp.render('contact', {title: "Contacto"});
 });
 
 app.get('/arrancadores-suaves-1', (req, resp)=>{
@@ -326,15 +346,11 @@ app.get('/single-portfolio-1', (req, resp)=>{
 });
 
 app.get('/admin', (req, resp) => {
-    resp.sendFile('admin.html', {root: path.join(__dirname, './files')});
-});
-
-app.get('/login', (req, resp) => {
-    resp.sendFile('login.html', {root: path.join(__dirname, './files')});
+    resp.render('admin', {layout: false});
 });
 
 app.get('/register', (req, resp) => {
-    resp.sendFile('register.html', {root: path.join(__dirname, './files')});
+    resp.render('register', {layout: false});
 });
 
 //search
