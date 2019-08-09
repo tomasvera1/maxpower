@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <label for="cars">Database: </label>
+    <select name="cars" id="db">
+        <option value="p_electricos">Electricos</option>
+        <option value="p_electronicos">Electronicos</option>
+        <option value="p_seguridad">Seguridad</option>
+    </select></br>
+    <label for="name">Nombre: </label><input type="text" name="name" id="name"></br>
+    <label for="mod">Modelo: </label><input type="text" name="mod" id="mod"></br>
+    <label for="marca">Marca: </label><input type="text" name="marca" id="marca"></br>
+    <label for="cod">Cod: </label><input type="number" name="cod" id="cod"></br>
+    <label for="desc">Descripción: </label><input type="textarea" name="desc" id="desc"></br>
+    <input type="file" name="fileupload" value="fileupload" id="file"><br><br>
+    <label for="fileupload"> Select a file to upload</label>
+    <button onclick="inst()">INSERT</button>
+</body>
+<script>
+    function inst(){       
+
+        const db = document.getElementById('db').value;
+        const name = document.getElementById('name').value;
+        const mod = document.getElementById('mod').value;
+        const marca = document.getElementById('marca').value;
+        const desc = document.getElementById('desc').value;
+        const cod = document.getElementById('cod').value;
+        const file = document.getElementById('file');
+        const reader = new FileReader();
+
+        reader.onload = async () => {
+            const base64 = reader.result.split(',')[1];
+            const data = {db: db, name: name, mod: mod, marca: marca, desc: desc, img: base64, cod: cod};
+            console.log(data);
+            if(data.db && data.name && data.mod && data.marca && data.desc && data.img && data.cod){
+                const options = { 
+                    method: 'POST',
+                    body: JSON.stringify(data), 
+                    headers:{
+                        'Content-Type': 'application/json'
+                    }
+                };
+            
+                const response = await fetch('/db', options).catch(error => console.error(error));
+                const json = await response.json();
+            }else{
+                console.log("adsaf");
+            }
+            let buffer=Uint8Array.from(atob(base64), c => c.charCodeAt(0));
+            let blob=new Blob([buffer], { type: "image/png" });
+            let url=URL.createObjectURL(blob);
+            let img=document.createElement("img");
+            img.src=url;
+            document.body.appendChild(img);
+            /*const img = new Image();
+            img.src = base64;
+            document.body.appendChild(img);*/
+        }
+    
+       reader.readAsDataURL(file.files[0]);
+
+    }
+</script>
+</html>
