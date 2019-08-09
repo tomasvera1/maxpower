@@ -6,22 +6,23 @@ const nodemailer = require('nodemailer');
 const verifier = require('email-verify');
 const mysql = require('mysql');
 
-var con = mysql.createConnection({
-    host: "localhost",
-    user: "francodinapoli",
-    password: "maxpowerautomation2019",
-    database: "maxpower"
+const con = mysql.createConnection({
+    host: "190.210.176.21",
+    port:'3306',
+    user: "maxpower_francoadinapoli",
+    password: "Fa42904558.;",
+    database: "maxpower_db" 
 });
 
-con.connect(function(err) {
-    if (err) throw err;
-    console.log("Connected!");
-    var sql = "INSERT INTO p_electricos (id_electricos, nombre, categoria, marca, descripcion) VALUES ('1', 'test', 'cat', 'marcaA', 'desc')";
-    con.query(sql, function (err, result) {
-      if (err) throw err;
-      console.log("1 record inserted");
-    });
-});
+// con.connect(function(err) {
+//     if (err) throw err;
+//     console.log("Connected!");
+//     var sql = "INSERT INTO p_electricos (id_electricos, nombre, categoria, marca, descripcion) VALUES ('1', 'test', 'cat', 'marcaA', 'desc')";
+//     con.query(sql, function (err, result) {
+//       if (err) throw err;
+//       console.log("1 record inserted");
+//     });
+// });
 
 //email auth
 const transporter = nodemailer.createTransport({
@@ -59,8 +60,8 @@ app.use('/fonts', express.static(__dirname + '/fonts'));
 app.use('/js', express.static(__dirname + '/js'));
 app.use('/contactform', express.static(__dirname + '/contactform'));
 //body-parser for responses
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json({limit:'50mb', extended:true}));
+app.use(bodyParser.urlencoded({limit:'50mb', extended:true}));
 
 
 
@@ -371,6 +372,10 @@ app.get('/register', (req, resp) => {
     resp.render('register', {layout: false});
 });
 
+app.get('/insert', (req, resp) => {
+    resp.render('insert', {layout: false});
+});
+
 //search
 
 //cambiar por query a db
@@ -451,14 +456,27 @@ app.post('/adLog', (req, resp) => {
         pwd2: 'f42904558'
     };
     const data = req.body;
-    if(data.usr == user.usr && (data.pwd == user.pwd || data.pwd == user.pwd2))
-        resp.json({status:true});
+    if(data.user == user.usr && (data.pwd == user.pwd || data.pwd == user.pwd2))
+        resp.redirect('/insert');
     else
-        resp.json({status:false});
+        resp.redirect('/admin');
 
 });
 
-
+app.post('/db', (req, resp) => {
+    // console.log(req.body);
+    const data = req.body;
+    const sql = `INSERT INTO ${data.db} (Nombre, Modelo, Marca, Descripcion, Imagen, Codigo) VALUES ('${data.name}', '${data.mod}', '${data.marca}', '${data.desc}', '${data.img}', '${data.cod}')`;
+    con.connect(function(err) {
+        if (err) throw err;
+        console.log("Connected!");
+        con.query(sql, function (err, result) {
+          if (err) throw err;
+          console.log("1 record inserted");
+          resp.json({status:true});
+        });
+    });
+});
 
 // server on port 3000
 app.listen(3000, () => console.log('Server running'));
