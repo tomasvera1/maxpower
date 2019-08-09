@@ -2,131 +2,312 @@
     <div class="container">
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <ul class="breadcrumb">
-          <li><a href="../index.html">Inicio</a></li>
-          <li>Protecciones</li>
+          <li><a href="/" method="get">Inicio</a></li>
+          <li> Productos eléctricos </li>
         </ul>
-        <h2>Protecciones</h2>
+        <h2> Productos eléctricos </h2>
       </div>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <!-- search -->
         <div class="search-bar">
           <form action="" method="get">
             <fieldset>
-              <input type="image" src="../img/pixel.gif" class="searchsubmit" alt="" />
-              <input type="text" class="search_text showtextback" name="s" id="s" value="Search on this site..." />
+              <input type="image" src="img/pixel.gif" class="searchsubmit" alt="" />
+              <input type="text" class="search_text showtextback" name="s" id="s" value="" placeholder="Search..." onkeypress="search(event)" onfocus="showList(true)" onfocusout="showList(false)" onkeydown="search(event)"/>
+              <!--CAMBIAR!!!!!--><div id="list"></div>
             </fieldset>
           </form>
         </div>
         <!-- / end div .search-bar -->
+
       </div>
     </div>
   </section>
   
 
   <section class="section1">
-    <div class="container clearfix">       
-            <div class="general-title text-center">
-              <h3> Protecciones </h3>
-            </div>
-    </section>
+    <div class="container clearfix">
+      <div class=" col-lg-12 col-md-12 col-sm-12 clearfix">
 
-            <section class="section4 text-center">
-              <div class="general-title">
-                <h2> Proteccion Auditiva </h2>
-                <hr>
-              </div>
-              <div class="portfolio-wrapper">
-                <div id="owl-demo" class="owl-carousel">
-                  <div class="item">
-                    <a data-rel="prettyPhoto" href="img/productos-electricos/example33.jpg">
-                                    <img class="lazyOwl" src="img/productos-electricos/example33.jpg" data-src="img/productos-electricos/example33.jpg" alt="">
-                                    <div>
-                                    </br>
-                                      <h3> PSR </h3>       
-                                    </div>
-                                  </a>
-                  </div>
-          
-                  <div class="item">
-                      <a data-rel="prettyPhoto" href="img/productos-electricos/example34.jpg">
-                                    <img class="lazyOwl" src="img/productos-electricos/example34.jpg" data-src="img/productos-electricos/example34.jpg" alt="">
-                                    <div>
-                                      </br>
-                                        <h3> PSR </h3>       
-                                      </div>
-                                  </a>
-                  </div>
-          
-                  <div class="item">
-                      <a data-rel="prettyPhoto" href="img/productos-electricos/example16.jpg">
-                                    <img class="lazyOwl" src="img/productos-electricos/example16.jpg" data-src="img/productos-electricos/example16.jpg" alt="">
-                                    <div>
-                                      </br>
-                                        <h3> PSR </h3>       
-                                      </div>
-                                  </a>
-                  </div>
-          
-          
-                  <div class="item">
-                      <a data-rel="prettyPhoto" href="img/productos-electricos/example24.jpg">
-                                    <img class="lazyOwl" src="img/productos-electricos/example24.jpg" data-src="img/productos-electricos/example24.jpg" alt="">
-                                    <div>
-                                      </br>
-                                        <h3> PSR </h3>       
-                                      </div>
-                                  </a>
-                  </div>
-          
-                  <div class="item">
-                    <a data-rel="prettyPhoto" href="img/productos-electricos/example25.jpg">
-                                  <img class="lazyOwl" src="img/productos-electricos/example25.jpg" data-src="img/productos-electricos/example25.jpg" alt="">
-                                  <div>
-                                    </br>
-                                      <h3> PSR </h3>       
-                                    </div>
-                                </a>
-                </div>
-          
-                <div class="item">
-                  <a data-rel="prettyPhoto" href="img/productos-electricos/example15.jpg">
-                                <img class="lazyOwl" src="img/productos-electricos/example15.jpg" data-src="img/productos-electricos/example15.jpg" alt="">
-                                <div>
-                                  </br>
-                                    <h3> PSR </h3>       
-                                  </div>
-                              </a>
-              </div>
-          
-              <div class="item">
-                <a data-rel="prettyPhoto" href="img/productos-electricos/example18.jpg">
-                              <img class="lazyOwl" src="img/productos-electricos/example18.jpg" data-src="img/productos-electricos/example18.jpg" alt="">
-                              <div>
-                                </br>
-                                  <h3> PSR </h3>       
-                                </div>
-                            </a>
+        <div class="divider"></div>
+
+        <nav class="portfolio-filter clearfix">
+          <ul>
+            <li><a href="#" class="dmbutton2" data-filter="*"> Todos </a></li>
+            <li><a href="#" class="dmbutton2" data-filter=".calzados"> Calzados </a></li>
+            <li><a href="#" class="dmbutton2" data-filter=".proteccion"> Protecciones </a></li>
+            <li><a href="#" class="dmbutton2" data-filter=".indumentaria"> Indumentaria </a></li>
+
+          </ul>
+        </nav>
+
+        <div class="portfolio-centered">
+          <div class="recentitems portfolio">
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example01.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> BOTÍN LINEA SAN LUIS ATT </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> BOTÍN LINEA SAN LUIS ATT </h3>
+              <p> Descripción producto </p>
             </div>
-          
-          <div class="item">
-            <a data-rel="prettyPhoto" href="img/productos-electricos/example36.jpg">
-                          <img class="lazyOwl" src="img/productos-electricos/example36.jpg" data-src="img/productos-electricos/example36.jpg" alt="">
-                          <div>
-                            </br>
-                              <h3> PSR </h3>       
-                            </div>
-                        </a>
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example02.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> ZAPATILLA LINEA SAN LUIS ATT </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> ZAPATILLA LINEA SAN LUIS ATT </h3>
+              <p> Descripción producto </p>
+            </div>
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example03.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> BORCEGUI LINEA SAN JUAN ATT</h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> BORCEGUI LINEA SAN JUAN ATT </h3>
+              <p> Descripción producto </p>
+            </div>
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example04.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> BOTIN LINEA CHACO 3.0 ATT </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> BOTIN LINEA CHACO 3.0 ATT </h3>
+              <p> Descripción producto </p>
+            </div>
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example05.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> BOTIN HOMOLOGADO GRAFA 70 </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> BOTIN HOMOLOGADO GRAFA 70 </h3>
+              <p> Descripción producto </p>
+            </div>
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example06.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> BOTIN DE SEGURIDAD CAUCHO 3002</h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> BOTIN DE SEGURIDAD CAUCHO 3002 </h3>
+              <p> Descripción producto </p>
+            </div>
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example07.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> BOTIN DE SEGURIDAD COBRA  </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> BOTIN DE SEGURIDAD COBRA </h3>
+              <p> Descripción producto </p>
+            </div>
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example08.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> BOTIN URBANO ULTRALIVIANO STREET VISON  </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> BOTIN URBANO ULTRALIVIANO STREET VISON </h3>
+              <p> Descripción producto </p>
+            </div>
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example09.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> ZAPATO DE SEGURIDAD CACUCHO 32201 </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> ZAPATO DE SEGURIDAD CACUCHO 32201 </h3>
+              <p> Descripción producto </p>
+            </div>
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example10.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> ZAPATO PRUSIANO IRON  </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> ZAPATO PRUSIANO IRON  </h3>
+              <p> Descripción producto </p>
+            </div>
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example11.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> ZAPATO DE SEGURIDAD JANO </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> ZAPATO DE SEGURIDAD JANO  </h3>
+              <p> Descripción producto </p>
+            </div>
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example12.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> BORCEGUI DE SEGURIDAD ARES MARRÓN </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> BORCEGUI DE SEGURIDAD ARES MARRÓN </h3>
+              <p> Descripción producto </p>
+            </div>
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example13.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> BOTIN DE SEGURIDAD ARGOS </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> BOTIN DE SEGURIDAD ARGOS </h3>
+              <p> Descripción producto </p>
+            </div>
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example14.jpg" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> BOTIN DE SEGURIDAD PAMPEANA CALFOR EVOLUTION PVC NEGRA </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> BOTIN DE SEGURIDAD PAMPEANA CALFOR EVOLUTION PVC NEGRA </h3>
+              <p> Descripción producto </p>
+            </div>
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example15.jpg" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> BOTIN NAUTICA CALFOR SIN CUELLO </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> BOTIN NAUTICA CALFOR SIN CUELLO </h3>
+              <p> Descripción producto </p>
+            </div>
+
+
+
+
+
+
+
+
+            
+            </div>
+           </div>    
           </div>
-          
-          <div class="item">
-            <a data-rel="prettyPhoto" href="img/productos-electricos/exampleACS880.jpg">
-                          <img class="lazyOwl" src="img/productos-electricos/exampleACS880.jpg" data-src="img/productos-electricos/ACS880.jpg" alt="">
-                          <div>
-                            </br>
-                              <h3> PSR </h3>       
-                            </div>
-                        </a>
-                 </div>
-                </div>
-              </div>             
-            </section>
+       </div>
+      </div>
+   </section>
+
+
+
+  
+
+  <section class="section3">
+      <div class="container withpadding">
+        <div class="message">
+          <div class="col-lg-9 col-md-9 col-sm-9">
+          </div>
+        </div>  
+      </div> 
+    </section>

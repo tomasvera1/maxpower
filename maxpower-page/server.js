@@ -6,7 +6,7 @@ const nodemailer = require('nodemailer');
 const verifier = require('email-verify');
 const mysql = require('mysql');
 
-var con = mysql.createConnection({
+/*var con = mysql.createConnection({
     host: "localhost",
     user: "francodinapoli",
     password: "maxpowerautomation2019",
@@ -21,7 +21,7 @@ con.connect(function(err) {
       if (err) throw err;
       console.log("1 record inserted");
     });
-});
+});*/
 
 //email auth
 const transporter = nodemailer.createTransport({
