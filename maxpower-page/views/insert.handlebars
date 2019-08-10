@@ -9,9 +9,9 @@
 <body>
     <label for="cars">Database: </label>
     <select name="cars" id="db">
-        <option value="p_electricos">Electricos</option>
-        <option value="p_electronicos">Electronicos</option>
         <option value="p_seguridad">Seguridad</option>
+        <option value="p_electronicos">Electronicos</option>
+        <option value="p_electricos">Electricos</option>
     </select></br>
     <label for="name">Nombre: </label><input type="text" name="name" id="name"></br>
     <label for="mod">Modelo: </label><input type="text" name="mod" id="mod"></br>
@@ -38,7 +38,7 @@
             const base64 = reader.result.split(',')[1];
             const data = {db: db, name: name, mod: mod, marca: marca, desc: desc, img: base64, cod: cod};
             console.log(data);
-            if(data.db && data.name && data.mod && data.marca && data.desc && data.img && data.cod){
+            if(data.db && data.name && data.desc && data.img && data.cod){
                 const options = { 
                     method: 'POST',
                     body: JSON.stringify(data), 

@@ -6,24 +6,6 @@ const nodemailer = require('nodemailer');
 const verifier = require('email-verify');
 const mysql = require('mysql');
 
-<<<<<<< HEAD
-/*var con = mysql.createConnection({
-    host: "localhost",
-    user: "francodinapoli",
-    password: "maxpowerautomation2019",
-    database: "maxpower"
-});
-
-con.connect(function(err) {
-    if (err) throw err;
-    console.log("Connected!");
-    var sql = "INSERT INTO p_electricos (id_electricos, nombre, categoria, marca, descripcion) VALUES ('1', 'test', 'cat', 'marcaA', 'desc')";
-    con.query(sql, function (err, result) {
-      if (err) throw err;
-      console.log("1 record inserted");
-    });
-});*/
-=======
 const con = mysql.createConnection({
     host: "190.210.176.21",
     port:'3306',
@@ -32,16 +14,6 @@ const con = mysql.createConnection({
     database: "maxpower_db" 
 });
 
-// con.connect(function(err) {
-//     if (err) throw err;
-//     console.log("Connected!");
-//     var sql = "INSERT INTO p_electricos (id_electricos, nombre, categoria, marca, descripcion) VALUES ('1', 'test', 'cat', 'marcaA', 'desc')";
-//     con.query(sql, function (err, result) {
-//       if (err) throw err;
-//       console.log("1 record inserted");
-//     });
-// });
->>>>>>> fc747dce65c6b564d0cf756bd13a035b653b4257
 
 //email auth
 const transporter = nodemailer.createTransport({
@@ -493,6 +465,7 @@ app.post('/db', (req, resp) => {
           if (err) throw err;
           console.log("1 record inserted");
           resp.json({status:true});
+          con.destroy();
         });
     });
 });
