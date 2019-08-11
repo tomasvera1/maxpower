@@ -6,13 +6,16 @@ const nodemailer = require('nodemailer');
 const verifier = require('email-verify');
 const mysql = require('mysql');
 
-const con = mysql.createConnection({
-    host: "190.210.176.21",
-    port:'3306',
-    user: "maxpower_francoadinapoli",
-    password: "Fa42904558.;",
-    database: "maxpower_db" 
-});
+function connectionSQL(){
+    const con = mysql.createConnection({
+        host: "190.210.176.21",
+        port:'3306',
+        user: "maxpower_francoadinapoli",
+        password: "Fa42904558.;",
+        database: "maxpower_db" 
+    });
+    return con;
+}
 
 
 //email auth
@@ -79,7 +82,33 @@ app.get('/productos-electronicos', (req, resp) => {
 });
 
 app.get('/productos-seguridad', (req, resp) => {
-    resp.render('productos-seguridad', {title: "Protecciones"});
+    const con = connectionSQL();
+    const sql =  'SELECT `id_seguridad`,`Nombre`,`Img`,`Codigo` FROM `p_seguridad` WHERE `Categoria`= "Zapatos" ORDER BY `id_seguridad` ASC';
+    con.connect(function(err) {
+        if (err) throw err;
+        con.query(sql, function (err, result, fields) {
+          if (err) throw err;
+          resp.render('productos-seguridad', {title: "Protecciones", prod: result});
+          con.end();
+        });
+    });
+
+});
+
+
+app.get('/productos-seguridad/:id', (req, resp) => {
+    const id = req.params.id;
+    const con = connectionSQL();
+    const sql =  'SELECT * FROM `p_seguridad` WHERE `id_seguridad` = ' + id;
+    con.connect(function(err) {
+        if (err) throw err;
+        con.query(sql, function (err, result, fields) {
+          if (err) throw err;
+          con.end();
+          resp.render('prod', {title: result[0].Nombre, name: result[0].Nombre, img: result[0].Img, cod: result[0].Codigo, mod: result[0].Modelo, marca: result[0].Marca, desc: result[0].Descripcion});
+            
+        });
+    });
 });
 
 app.get('/services', (req, resp)=>{
@@ -457,14 +486,15 @@ app.post('/adLog', (req, resp) => {
 app.post('/db', (req, resp) => {
     // console.log(req.body);
     const data = req.body;
-    const sql = `INSERT INTO ${data.db} (Nombre, Modelo, Marca, Descripcion, Imagen, Codigo) VALUES ('${data.name}', '${data.mod}', '${data.marca}', '${data.desc}', '${data.img}', '${data.cod}')`;
+    const con = connectionSQL();
+    const sql = `INSERT INTO ${data.db} (Nombre, Modelo, Marca, Descripcion, Img, Codigo, Categoria) VALUES ('${data.name}', '${data.mod}', '${data.marca}', '${data.desc}', '${data.img}', '${data.cod}', '${data.cat}')`;
     con.connect(function(err) {
         if (err) throw err;
         console.log("Connected!");
         con.query(sql, function (err, result) {
           if (err) throw err;
           console.log("1 record inserted");
-          resp.json({status:true});
+          resp.redirect('/insert');
           con.destroy();
         });
     });

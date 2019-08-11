@@ -2263,6 +2263,12 @@ button.small, .button.small {
   text-transform: uppercase;
 }
 
+.tpl6 h2 {
+  color: #d3321d;
+  font-size:20px;
+  text-transform: uppercase;
+}
+
 .tpl6 .dmbutton {
   display: inline-block;
   margin: 30px 5px 20px 5px;

@@ -8,63 +8,51 @@
 </head>
 <body>
     <label for="cars">Database: </label>
-    <select name="cars" id="db">
-        <option value="p_seguridad">Seguridad</option>
-        <option value="p_electronicos">Electronicos</option>
-        <option value="p_electricos">Electricos</option>
+    <select name="cars" id="selector" onchange="showForm()">
+        <option value="p_seguridad" selected="1">Seguridad</option>
+        <option value="p_electronicos" selected="2">Electronicos</option>
+        <option value="p_electricos" selected="3">Electricos</option>
     </select></br>
-    <label for="name">Nombre: </label><input type="text" name="name" id="name"></br>
-    <label for="mod">Modelo: </label><input type="text" name="mod" id="mod"></br>
-    <label for="marca">Marca: </label><input type="text" name="marca" id="marca"></br>
-    <label for="cod">Cod: </label><input type="number" name="cod" id="cod"></br>
-    <label for="desc">Descripción: </label><input type="textarea" name="desc" id="desc"></br>
-    <input type="file" name="fileupload" value="fileupload" id="file"><br><br>
-    <label for="fileupload"> Select a file to upload</label>
-    <button onclick="inst()">INSERT</button>
+    <form action="/db" method="POST" id="seg" style="display: none;">
+
+        <label for="name">Nombre: </label><input type="text" name="name" required id="name" ></br>
+        <label for="mod">Modelo: </label><input type="text" name="mod" id="mod"></br>
+        <label for="marca">Marca: </label><input type="text" name="marca" id="marca"></br>
+        <label for="cod">Cod: </label><input type="number" name="cod" id="cod" required></br>
+        <label for="desc">Descripción: </label><input type="textarea" name="desc" id="desc" required></br>
+        <label for="cat">Categoría</label>
+        <select name="cat">
+            <option value="Zapatos">Zapatos</option>
+        </select></br>
+        <input type="file" name="fileupload" value="" id="file" onchange="toBase64()" required><br><br>
+        <label for="fileupload"> Select a file to upload</label>
+        <input type="text" name="img" hidden id="img">
+        <input type="text" name="db" hidden value="p_seguridad">
+        <button type="submit">INSERT</button>
+    </form>
 </body>
 <script>
-    function inst(){       
-
-        const db = document.getElementById('db').value;
-        const name = document.getElementById('name').value;
-        const mod = document.getElementById('mod').value;
-        const marca = document.getElementById('marca').value;
-        const desc = document.getElementById('desc').value;
-        const cod = document.getElementById('cod').value;
+    function toBase64(){
         const file = document.getElementById('file');
+        const img = document.getElementById('img');
         const reader = new FileReader();
-
-        reader.onload = async () => {
+        reader.onload = () => {
             const base64 = reader.result.split(',')[1];
-            const data = {db: db, name: name, mod: mod, marca: marca, desc: desc, img: base64, cod: cod};
-            console.log(data);
-            if(data.db && data.name && data.desc && data.img && data.cod){
-                const options = { 
-                    method: 'POST',
-                    body: JSON.stringify(data), 
-                    headers:{
-                        'Content-Type': 'application/json'
-                    }
-                };
-            
-                const response = await fetch('/db', options).catch(error => console.error(error));
-                const json = await response.json();
-            }else{
-                console.log("adsaf");
-            }
-            let buffer=Uint8Array.from(atob(base64), c => c.charCodeAt(0));
-            let blob=new Blob([buffer], { type: "image/png" });
-            let url=URL.createObjectURL(blob);
-            let img=document.createElement("img");
-            img.src=url;
-            document.body.appendChild(img);
-            /*const img = new Image();
-            img.src = base64;
-            document.body.appendChild(img);*/
-        }
-    
-       reader.readAsDataURL(file.files[0]);
+            img.value = base64;
+        };
+        reader.readAsDataURL(file.files[0]);
+    }
+    function showForm(){
+        const sel = document.getElementById("selector");
+        const db = sel.options[sel.selectedIndex].value;
+        if(db == "p_seguridad"){
+            document.getElementById("seg").style.display = "block";
+        }else if(db == "p_electronicos"){
+            document.getElementById("seg").style.display = "none";
+        }else if(db == "p_electricos"){
+            document.getElementById("seg").style.display = "none";
 
+        }
     }
 </script>
 </html>
