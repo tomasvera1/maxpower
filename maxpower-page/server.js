@@ -111,6 +111,10 @@ app.get('/productos-seguridad/:id', (req, resp) => {
     });
 });
 
+app.get('/products-new', (req, resp)=>{
+    resp.render('products-new', {title: "Productos"});
+});
+
 app.get('/services', (req, resp)=>{
     resp.render('services', {title: "Servicios"});
 });

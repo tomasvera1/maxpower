@@ -31,6 +31,7 @@
         <button type="submit">INSERT</button>
     </form>
 
+<<<<<<< HEAD
     <form action="/db" method="POST" id="electronicos" style="display: none;">
 
         <label for="name">Nombre: </label><input type="text" name="name" required id="name" ></br>
@@ -86,6 +87,8 @@
         <input type="text" name="db" hidden value="p_electronicos">
         <button type="submit">INSERT</button>
     </form>
+=======
+>>>>>>> 9448c1c5a7ec80de9c998f3b6a7eae4201c67fad
 
 </body>
 <script>
@@ -130,9 +133,13 @@
             document.getElementById("electronicos").style.display = "none";
             document.getElementById("electricos").style.display = "none";
         }else if(db == "p_electronicos"){
+<<<<<<< HEAD
             document.getElementById("seg").style.display = "none";
             document.getElementById("electronicos").style.display = "block";
             document.getElementById("electricos").style.display = "none";
+=======
+            document.getElementById("electronicos").style.display = "none";
+>>>>>>> 9448c1c5a7ec80de9c998f3b6a7eae4201c67fad
         }else if(db == "p_electricos"){
             document.getElementById("seg").style.display = "none";
             document.getElementById("electronicos").style.display = "none";
