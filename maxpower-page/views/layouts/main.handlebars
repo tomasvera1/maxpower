@@ -6,7 +6,32 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
+  {{#if dou}}
+  <link href="../img/favicon.png" rel="icon">
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Ruda:400,900,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../lib/prettyphoto/css/prettyphoto.css" rel="stylesheet">
+  <link href="../lib/hover/hoverex-all.css" rel="stylesheet">
+  <link href="../lib/jetmenu/jetmenu.css" rel="stylesheet">
+  <link href="../lib/owl-carousel/owl-carousel.css" rel="stylesheet">
+
+  <!-- Home Slider CSS Files -->
+  <link rel="stylesheet" href="../css/home-slider/animate.min.css">
+	<link rel="stylesheet" href="../css/home-slider/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/home-slider/font-awesome.min.css">		
+	<link rel="stylesheet" href="../css/home-slider/style-slider.css">
+
+  <!-- Main Stylesheet File -->
+  <link href="../css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/colors/red.css">
+  {{else}}
   <!-- Favicons -->
   <link href="img/favicon.png" rel="icon">
 
@@ -32,7 +57,7 @@
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="css/colors/red.css">
-
+  {{/if}}
 
 
 </head>
@@ -63,7 +88,7 @@
         <div class="col-lg-3 col-md-3 col-sm-12 title-area">
           <div class="site-title" id="title">
             <a href="/" method="get" title="">
-             <h4> <img src="img/logo/logo.png"> </h4>
+             <h4>{{#if dou}}<img src="../img/logo/logo.png">{{else}}<img src="img/logo/logo.png">{{/if}} </h4>
             </a>   
           </div>
         </div>
@@ -391,6 +416,30 @@
   <div class="dmtop">Arriba</div>
 
   <!-- JavaScript Libraries -->
+  {{#if dou}}
+  <script src="../lib/jquery/jquery.min.js"></script>
+  <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../lib/php-mail-form/validate.js"></script>
+  <script src="../lib/prettyphoto/js/prettyphoto.js"></script>
+  <script src="../lib/isotope/isotope.min.js"></script>
+  <script src="../lib/hover/hoverdir.js"></script>
+  <script src="../lib/hover/hoverex.min.js"></script>
+  <script src="../lib/unveil-effects/unveil-effects.js"></script>
+  <script src="../lib/owl-carousel/owl-carousel.js"></script>
+  <script src="../lib/jetmenu/jetmenu.js"></script>
+  <script src="../lib/animate-enhanced/animate-enhanced.min.js"></script>
+  <script src="../lib/jigowatt/jigowatt.js"></script>
+  <script src="../lib/easypiechart/easypiechart.min.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="../js/main.js"></script>
+
+  <!-- Home Slider JS Files -->
+  <script src="../js/home-slider/jquery.js"></script>
+	<script src="../js/home-slider/jquery.flexslider.js"></script>
+	<script src="../js/home-slider/wow.min.js"></script>
+	<script src="../js/home-slider/custom.js"></script>
+  {{else}}
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="lib/php-mail-form/validate.js"></script>
@@ -413,7 +462,7 @@
 	<script src="js/home-slider/jquery.flexslider.js"></script>
 	<script src="js/home-slider/wow.min.js"></script>
 	<script src="js/home-slider/custom.js"></script>
-   
-       </body>
+  {{/if}}
+  </body>
 
 </html>

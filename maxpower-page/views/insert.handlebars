@@ -30,27 +30,113 @@
         <input type="text" name="db" hidden value="p_seguridad">
         <button type="submit">INSERT</button>
     </form>
+
+    <form action="/db" method="POST" id="electronicos" style="display: none;">
+
+        <label for="name">Nombre: </label><input type="text" name="name" required id="name" ></br>
+        <label for="mod">Modelo: </label><input type="text" name="mod" id="mod"></br>
+        <label for="marca">Marca: </label><input type="text" name="marca" id="marca"></br>
+        <label for="desc">Descripción: </label><input type="textarea" name="desc" id="desc" required></br>
+        <label for="cat">Categoría</label>
+        <select name="cat">
+            <option value="Capacitores">Capacitores</option>
+            <option value="Controladores">Controladores</option>
+            <option value="Diodos rectificadores">Diodos rectificadores</option>
+            <option value="Fusibles">Fusibles</option>
+            <option value="Interruptores térmicos">Interruptores térmicos</option>
+            <option value="Puentes">Puentes</option>
+            <option value="Relays">Relays</option>
+            <option value="Sensores">Sensores</option>
+            <option value="Sopladores para AC y DC">Sopladores para AC y DC</option>
+            <option value="Tirisitores (SRC)">Tirisitores (SRC)</option>
+            <option value="Transistores IGBTs">Transistores IGBTs</option>
+            <option value="Ventiladores Industriales">Ventiladores Industriales</option>
+        </select></br>
+        <input type="file" name="fileupload" value="" id="fileEl" onchange="toBase64()" required><br><br>
+        <label for="fileupload"> Select a file to upload</label>
+        <input type="text" name="img" hidden id="imgEl">
+        <input type="text" name="db" hidden value="p_electronicos">
+        <button type="submit">INSERT</button>
+    </form>
+
+    <form action="/db" method="POST" id="electricos" style="display: none;">
+
+        <label for="name">Nombre: </label><input type="text" name="name" required id="name" ></br>
+        <label for="mod">Modelo: </label><input type="text" name="mod" id="mod"></br>
+        <label for="marca">Marca: </label><input type="text" name="marca" id="marca"></br>
+        <label for="desc">Descripción: </label><input type="textarea" name="desc" id="desc" required></br>
+        <label for="cat">Categoría</label>
+        <select name="cat">
+            <option value="Capacitores">Capacitores</option>
+            <option value="Controladores">Controladores</option>
+            <option value="Diodos rectificadores">Diodos rectificadores</option>
+            <option value="Fusibles">Fusibles</option>
+            <option value="Interruptores térmicos">Interruptores térmicos</option>
+            <option value="Puentes">Puentes</option>
+            <option value="Relays">Relays</option>
+            <option value="Sensores">Sensores</option>
+            <option value="Sopladores para AC y DC">Sopladores para AC y DC</option>
+            <option value="Tirisitores (SRC)">Tirisitores (SRC)</option>
+            <option value="Transistores IGBTs">Transistores IGBTs</option>
+            <option value="Ventiladores Industriales">Ventiladores Industriales</option>
+        </select></br>
+        <input type="file" name="fileupload" value="" id="fileElectric" onchange="toBase64()" required><br><br>
+        <label for="fileupload"> Select a file to upload</label>
+        <input type="text" name="img" hidden id="imgElectric">
+        <input type="text" name="db" hidden value="p_electronicos">
+        <button type="submit">INSERT</button>
+    </form>
+
 </body>
 <script>
     function toBase64(){
-        const file = document.getElementById('file');
-        const img = document.getElementById('img');
-        const reader = new FileReader();
-        reader.onload = () => {
-            const base64 = reader.result.split(',')[1];
-            img.value = base64;
-        };
-        reader.readAsDataURL(file.files[0]);
+        const sel = document.getElementById("selector");
+        const db = sel.options[sel.selectedIndex].value;
+        if(db == "p_seguridad"){
+            const file = document.getElementById('file');
+            const img = document.getElementById('img');
+            const reader = new FileReader();
+            reader.onload = () => {
+                const base64 = reader.result.split(',')[1];
+                img.value = base64;
+            };
+            reader.readAsDataURL(file.files[0]);
+        }else if(db == "p_electronicos"){
+            const file = document.getElementById('fileEl');
+            const img = document.getElementById('imgEl');
+            const reader = new FileReader();
+            reader.onload = () => {
+                const base64 = reader.result.split(',')[1];
+                img.value = base64;
+            };
+            reader.readAsDataURL(file.files[0]);
+        }else if(db == "p_electricos"){
+            const file = document.getElementById('fileElectric');
+            const img = document.getElementById('imgElectric');
+            const reader = new FileReader();
+            reader.onload = () => {
+                const base64 = reader.result.split(',')[1];
+                img.value = base64;
+            };
+            reader.readAsDataURL(file.files[0]);
+        }
+        
     }
     function showForm(){
         const sel = document.getElementById("selector");
         const db = sel.options[sel.selectedIndex].value;
         if(db == "p_seguridad"){
             document.getElementById("seg").style.display = "block";
+            document.getElementById("electronicos").style.display = "none";
+            document.getElementById("electricos").style.display = "none";
         }else if(db == "p_electronicos"){
             document.getElementById("seg").style.display = "none";
+            document.getElementById("electronicos").style.display = "block";
+            document.getElementById("electricos").style.display = "none";
         }else if(db == "p_electricos"){
             document.getElementById("seg").style.display = "none";
+            document.getElementById("electronicos").style.display = "none";
+            document.getElementById("electricos").style.display = "block";
 
         }
     }
