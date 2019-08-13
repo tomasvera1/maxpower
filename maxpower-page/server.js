@@ -105,7 +105,7 @@ app.get('/productos-seguridad/:id', (req, resp) => {
         con.query(sql, function (err, result, fields) {
           if (err) throw err;
           con.end();
-          resp.render('prod', {title: result[0].Nombre, name: result[0].Nombre, img: result[0].Img, cod: result[0].Codigo, mod: result[0].Modelo, marca: result[0].Marca, desc: result[0].Descripcion});
+          resp.render('prod', {dou: true, title: result[0].Nombre, name: result[0].Nombre, img: result[0].Img, cod: result[0].Codigo, mod: result[0].Modelo, marca: result[0].Marca, desc: result[0].Descripcion});
             
         });
     });
@@ -490,18 +490,33 @@ app.post('/adLog', (req, resp) => {
 app.post('/db', (req, resp) => {
     // console.log(req.body);
     const data = req.body;
-    const con = connectionSQL();
-    const sql = `INSERT INTO ${data.db} (Nombre, Modelo, Marca, Descripcion, Img, Codigo, Categoria) VALUES ('${data.name}', '${data.mod}', '${data.marca}', '${data.desc}', '${data.img}', '${data.cod}', '${data.cat}')`;
-    con.connect(function(err) {
-        if (err) throw err;
-        console.log("Connected!");
-        con.query(sql, function (err, result) {
-          if (err) throw err;
-          console.log("1 record inserted");
-          resp.redirect('/insert');
-          con.destroy();
+    if(data.db == 'p_seguridad'){
+        const con = connectionSQL();
+        const sql = `INSERT INTO ${data.db} (Nombre, Modelo, Marca, Descripcion, Img, Codigo, Categoria) VALUES ('${data.name}', '${data.mod}', '${data.marca}', '${data.desc}', '${data.img}', '${data.cod}', '${data.cat}')`;
+        con.connect(function(err) {
+            if (err) throw err;
+            console.log("Connected!");
+            con.query(sql, function (err, result) {
+            if (err) throw err;
+            console.log("1 record inserted");
+            resp.redirect('/insert');
+            con.destroy();
+            });
         });
-    });
+    }else if(data.db == 'p_electronicos'){
+        const con = connectionSQL();
+        const sql = `INSERT INTO ${data.db} (Nombre, Modelo, Marca, Descripcion, Imagen, Categoria) VALUES ('${data.name}', '${data.mod}', '${data.marca}', '${data.desc}', '${data.img}', '${data.cat}')`;
+        con.connect(function(err) {
+            if (err) throw err;
+            console.log("Connected!");
+            con.query(sql, function (err, result) {
+            if (err) throw err;
+            console.log("1 record inserted");
+            resp.redirect('/insert');
+            con.destroy();
+            });
+        });
+    }
 });
 
 
