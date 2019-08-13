@@ -112,7 +112,11 @@ app.get('/productos-seguridad/:id', (req, resp) => {
 });
 
 app.get('/products-new', (req, resp)=>{
-    resp.render('products-new', {title: "Productos"});
+    resp.render('products-new', {title: "Productos Electricos"});
+});
+
+app.get('/products-electronicos', (req, resp)=>{
+    resp.render('products-electronicos', {title: "Productos Electronicos"});
 });
 
 app.get('/services', (req, resp)=>{
