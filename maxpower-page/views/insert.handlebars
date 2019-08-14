@@ -23,6 +23,19 @@
         <label for="cat">Categoría</label>
         <select name="cat">
             <option value="Zapatos">Zapatos</option>
+            <option value="Sistema de bloqueo">Sistema de bloqueo</option>
+            <option value="Cintas">Cintas</option>
+            <option value="Detectores de gas">Detectores de gas</option>
+            <option value="Equipo para incendio">Equipo para incendio</option>
+            <option value="Ergonómicos">Ergonómicos</option>
+            <option value="Indumentaria de trabajo">Indumentaria de trabajo</option>
+            <option value="Protección craneana">Protección craneana</option>
+            <option value="Protección para manos">Protección para manos</option>
+            <option value="Protección ocular">Protección ocular</option>
+            <option value="Protección química">Protección química</option>
+            <option value="Protección respiratoria">Protección respiratoria</option>
+            <option value="Protección soldador">Protección soldador</option>
+            <option value="Señalización">Señalización</option>
         </select></br>
         <input type="file" name="fileupload" value="" id="file" onchange="toBase64()" required><br><br>
         <label for="fileupload"> Select a file to upload</label>
@@ -31,7 +44,6 @@
         <button type="submit">INSERT</button>
     </form>
 
-<<<<<<< HEAD
     <form action="/db" method="POST" id="electronicos" style="display: none;">
 
         <label for="name">Nombre: </label><input type="text" name="name" required id="name" ></br>
@@ -87,8 +99,7 @@
         <input type="text" name="db" hidden value="p_electronicos">
         <button type="submit">INSERT</button>
     </form>
-=======
->>>>>>> 9448c1c5a7ec80de9c998f3b6a7eae4201c67fad
+
 
 </body>
 <script>
@@ -133,13 +144,10 @@
             document.getElementById("electronicos").style.display = "none";
             document.getElementById("electricos").style.display = "none";
         }else if(db == "p_electronicos"){
-<<<<<<< HEAD
             document.getElementById("seg").style.display = "none";
             document.getElementById("electronicos").style.display = "block";
             document.getElementById("electricos").style.display = "none";
-=======
-            document.getElementById("electronicos").style.display = "none";
->>>>>>> 9448c1c5a7ec80de9c998f3b6a7eae4201c67fad
+
         }else if(db == "p_electricos"){
             document.getElementById("seg").style.display = "none";
             document.getElementById("electronicos").style.display = "none";
