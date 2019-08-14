@@ -105,10 +105,20 @@ app.get('/productos-seguridad/:id', (req, resp) => {
         con.query(sql, function (err, result, fields) {
           if (err) throw err;
           con.end();
-          resp.render('prod', {dou: true, title: result[0].Nombre, name: result[0].Nombre, img: result[0].Img, cod: result[0].Codigo, mod: result[0].Modelo, marca: result[0].Marca, desc: result[0].Descripcion});
+          resp.render('prod', {dou: true, title: result[0].Nombre, prod: result[0]);
             
         });
     });
+    resp.render('prod', {dou: true});
+});
+app.get("/test/:id", (req, resp) => {
+    const prod = [
+        {
+            Nombre: "PRODUCTO 1 PRUEBA",
+            Descripcion: "fafasfgdsgsdgsgsdgdsgdsgsdgdsgsdgdsgsdgdsgsdgdsgdsgdsgdsgsgsdgsgdgsdgdsgfdsg,dsgsdglsgsdgsdmgmsdgmdg,sm,safafasfasfafasfafal,fslfmamkfakmfkmasfkmakmfakmfkmakmfskmfkmksafasfa"
+        }
+    ];
+    resp.render('prod', {dou:true, title: prod[0].Nombre, prod});
 });
 
 app.get('/products-new', (req, resp)=>{
@@ -503,7 +513,7 @@ app.post('/db', (req, resp) => {
             con.destroy();
             });
         });
-    }else if(data.db == 'p_electronicos'){
+    }else if(data.db == 'p_electronicos' || data.db == 'electricos'){
         const con = connectionSQL();
         const sql = `INSERT INTO ${data.db} (Nombre, Modelo, Marca, Descripcion, Imagen, Categoria) VALUES ('${data.name}', '${data.mod}', '${data.marca}', '${data.desc}', '${data.img}', '${data.cat}')`;
         con.connect(function(err) {
