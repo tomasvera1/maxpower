@@ -8,8 +8,7 @@ const mysql = require('mysql');
 
 function connectionSQL(){
     const con = mysql.createConnection({
-        host: "190.210.176.21",
-        port:'3306',
+        host: "localhost",
         user: "maxpower_francoadinapoli",
         password: "Fa42904558.;",
         database: "maxpower_db" 
@@ -17,6 +16,7 @@ function connectionSQL(){
     return con;
 }
 
+const a = connectionSQL();
 
 //email auth
 const transporter = nodemailer.createTransport({
@@ -522,4 +522,4 @@ app.post('/db', (req, resp) => {
 
 
 // server on port 3000
-app.listen(3000, () => console.log('Server running'));
+app.listen(3010, () => console.log('Server running'));
