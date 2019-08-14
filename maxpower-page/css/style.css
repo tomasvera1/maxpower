@@ -333,6 +333,12 @@ input, button, select, textarea {
   padding-right: 5px;
 }
 
+#wrapper .section9 {
+  box-shadow: none;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 
 #wrapper .footer {
   box-shadow: none;
@@ -372,6 +378,13 @@ body.nobg .section1 {
 }
 
 body.nobg .section7 {
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  position: relative;
+  top: 20%;
+}
+
+body.nobg .section9 {
   background: rgba(0, 0, 0, 0.4);
   z-index: 2;
   position: relative;
@@ -943,6 +956,11 @@ body.nobg .section7 {
   display: flex;
   justify-content: center;
 }
+
+.section9 {
+  background: #FFF;
+  padding: 30px 0;
+} 
 
 .withpadding {
   padding: 30px 0;

@@ -372,31 +372,50 @@ app.get('/ventiladores-industriales', (req, resp)=>{
     resp.sendFile('ventiladores-industriales.html', {root: path.join(__dirname, './files/productos-electronicos')});
 });
 
-app.get('/proteccion-auditiva', (req, resp)=>{
-    resp.sendFile('proteccion-auditiva', {root: path.join(__dirname, './files/productos-seguridad')});
+
+app.get('/calzados', (req, resp)=>{
+    resp.sendFile('calzados.html', {root: path.join(__dirname, './files/productos-seguridad')});
 });
-app.get('/proteccion-facial', (req, resp)=>{
-    resp.sendFile('proteccion-facial', {root: path.join(__dirname, './files/productos-seguridad')});
+app.get('/sistema-bloqueo', (req, resp)=>{
+    resp.sendFile('sistema-bloqueo.html', {root: path.join(__dirname, './files/productos-seguridad')});
+});
+app.get('/cintas', (req, resp)=>{
+    resp.sendFile('cintas.html', {root: path.join(__dirname, './files/productos-seguridad')});
+});
+app.get('/detectores-gas', (req, resp)=>{
+    resp.sendFile('detectores-gas.html', {root: path.join(__dirname, './files/productos-seguridad')});
+});
+app.get('/equipo-incendio', (req, resp)=>{
+    resp.sendFile('equipo-incendio.html', {root: path.join(__dirname, './files/productos-seguridad')});
+});
+app.get('/ergonomicos', (req, resp)=>{
+    resp.sendFile('ergonomicos.html', {root: path.join(__dirname, './files/productos-seguridad')});
+});
+app.get('/indumentaria-trabajo', (req, resp)=>{
+    resp.sendFile('indumentaria-trabajo.html', {root: path.join(__dirname, './files/productos-seguridad')});
+});
+app.get('/proteccion-craneana', (req, resp)=>{
+    resp.sendFile('proteccion-craneana.html', {root: path.join(__dirname, './files/productos-seguridad')});
 });
 app.get('/proteccion-manos', (req, resp)=>{
-    resp.sendFile('proteccion-manos', {root: path.join(__dirname, './files/productos-seguridad')});
+    resp.sendFile('proteccion-manos.html', {root: path.join(__dirname, './files/productos-seguridad')});
 });
 app.get('/proteccion-ocular', (req, resp)=>{
-    resp.sendFile('proteccion-ocular', {root: path.join(__dirname, './files/productos-seguridad')});
+    resp.sendFile('proteccion-ocular.html', {root: path.join(__dirname, './files/productos-seguridad')});
+});
+app.get('/proteccion-quimica', (req, resp)=>{
+    resp.sendFile('proteccion-quimica.html', {root: path.join(__dirname, './files/productos-seguridad')});
 });
 app.get('/proteccion-respiratoria', (req, resp)=>{
-    resp.sendFile('proteccion-respiratoria', {root: path.join(__dirname, './files/productos-seguridad')});
+    resp.sendFile('proteccion-respiratoria.html', {root: path.join(__dirname, './files/productos-seguridad')});
 });
-app.get('/zapatos-seguridad', (req, resp)=>{
-    resp.sendFile('zapatos-seguridad', {root: path.join(__dirname, './files/productos-seguridad')});
+app.get('/proteccion-soldador', (req, resp)=>{
+    resp.sendFile('proteccion-soldador.html', {root: path.join(__dirname, './files/productos-seguridad')});
 });
-app.get('/ropa-trabajo', (req, resp)=>{
-    resp.sendFile('ropa-trabajo', {root: path.join(__dirname, './files/productos-seguridad')});
+app.get('/señalizacion', (req, resp)=>{
+    resp.sendFile('señalizacion.html', {root: path.join(__dirname, './files/productos-seguridad')});
 });
 
-app.get('/single-portfolio-1', (req, resp)=>{
-    resp.sendFile('single-portfolio-1.html', {root: path.join(__dirname, './files')});
-});
 
 app.get('/admin', (req, resp) => {
     resp.render('admin', {layout: false});
