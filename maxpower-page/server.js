@@ -92,16 +92,21 @@ app.get('/productos-electronicos', (req, resp) => {
 });
 
 app.get('/productos-seguridad', (req, resp) => {
+    //SELECT DISTINCT `Marca` FROM `p_seguridad`
+    //SELECT DISTINCT `Categoria` FROM `p_seguridad`
     const con = connectionSQL();
     const sql =  'SELECT `id_seguridad`,`Nombre`,`Img`,`Codigo` FROM `p_seguridad` ORDER BY `id_seguridad` ASC';
+    let resultado;
     con.connect(function(err) {
         if (err) throw err;
         con.query(sql, function (err, result, fields) {
           if (err) throw err;
           resp.render('productos-seguridad', {title: "Protecciones", prod: result});
+          resultado = result;
           con.end();
         });
     });
+    console.log(resultado);
 
 });
 
@@ -115,7 +120,9 @@ app.get('/productos-seguridad/:id', (req, resp) => {
         con.query(sql, function (err, result, fields) {
           if (err) throw err;
           con.end();
-          resp.render('prod', {dou: true, title: result[0].Nombre, prod: result[0]});
+          resp.render('producto-detallado', {
+              dou:true, layout:false, name:result[0].Nombre, db:"Productos de seguridad", desc: result[0].Descripcion, img: result[0].Img, mod: result[0].Modelo, cod: result[0].Codigo
+          });
             
         });
     });
