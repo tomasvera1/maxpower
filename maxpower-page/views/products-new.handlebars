@@ -24,32 +24,52 @@
             <div class="container">
                 <div class="categories_main_inner">
                     <div class="row row_disable">
-                        <div class="col-lg-9 float-md-right">
-                            <div class="showing_fillter">
-                                <div class="row m0">
-                                    
-                                    {{!-- <div class="first_fillter">
-                                        <h4>Cargando 1 de 15 de 44 totales</h4>
+                        <div class="col-lg-9 float-md-right">    
+                            <div class="col-lg-3 float-md-right">
+                            <div class="categories_sidebar">
+                                <aside class="l_widgest l_menufacture_widget">
+                                    <div class="l_w_title">
+                                        <h3>Categorias</h3>
                                     </div>
-                                    <div class="secand_fillter">
-                                        <h4>Buscar por :</h4>
-                                        <select class="selectpicker">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                        </select>
-                                    </div>
-                                    <div class="third_fillter">
-                                        <h4>Cargar : </h4>
-                                        <select class="selectpicker">
-                                            <option>15</option>
-                                            <option>30</option>
-                                            <option>44</option>
-                                        </select>
-                                    </div> --}}
-                                </div>
-                            </div>
+                                    <ul>
+                                        {{#each category}}
+                                        <li><a href="#">{{this.Categoria}}</a></li>
+                                        {{/each}}
+                                        {{!-- <li><a href="#">Arrancadores Suaves</a></li>
+                                        <li><a href="#">Contactores</a></li>
+                                        <li><a href="#">Convertidores de frecuencia</a></li> 
+                                        <li><a href="#">Guardamotor </a></li>   
+                                        <li><a href="#">Interruptores en caja moldeada </a></li>                  
+                                        <li><a href="#">Motores </a></li>
+                                        <li><a href="#">Variadores </a></li> --}}
+                                    </ul>
+                                </aside>
+                               
 
+                                <!-- 
+                                <aside class="l_widgest l_fillter_widget">
+                                    <div class="l_w_title">
+                                        <h3>Filter section</h3>
+                                    </div>
+                                    <div id="slider-range" class="ui_slider"></div>
+                                    <label for="amount">Price:</label>
+                                    <input type="text" id="amount" readonly>
+                                </aside>
+                            -->
+
+                                <aside class="l_widgest l_menufacture_widget">
+                                    <div class="l_w_title">
+                                        <h3>Fabricantes</h3>
+                                    </div>
+                                    <ul>
+                                        {{#each marc}}
+                                        <li><a href="#">{{this.Marca}}</a></li>
+                                        {{/each}}
+                                        {{!-- <li><a href="products-1.html">ABB</a></li>
+                                        <li><a href="#">Schneider Electric</a></li>
+                                        <li><a href="#">Siemens</a></li>                       --}}
+                                    </ul>
+                                </aside>                  
                             <div class="categories_product_area">
                                 <div class="row">
                                     {{#each prod}}
@@ -64,6 +84,7 @@
                                                     <li><a class="view_product_btn" href="productos-seguridad/{{this.id_seguridad}}">Ver Producto</a></li>
                                                 </ul>
                                                 <h4>{{this.Nombre}}</h4>
+                                                <h5> Codigo: <del> {{this.Codigo}} </del></h5>
                                                 {{!-- <h5><del>U$D 1050 </del>  $1000</h5> --}}
                                             </div>
                                         </div>
@@ -335,51 +356,7 @@
                                   <!-- CATEGORIAS -->
 
 
-                      <div class="col-lg-3 float-md-right">
-                            <div class="categories_sidebar">
-                                <aside class="l_widgest l_menufacture_widget">
-                                    <div class="l_w_title">
-                                        <h3>Categorias</h3>
-                                    </div>
-                                    <ul>
-                                        {{#each category}}
-                                        <li><a href="#">{{this.Categoria}}</a></li>
-                                        {{/each}}
-                                        {{!-- <li><a href="#">Arrancadores Suaves</a></li>
-                                        <li><a href="#">Contactores</a></li>
-                                        <li><a href="#">Convertidores de frecuencia</a></li> 
-                                        <li><a href="#">Guardamotor </a></li>   
-                                        <li><a href="#">Interruptores en caja moldeada </a></li>                  
-                                        <li><a href="#">Motores </a></li>
-                                        <li><a href="#">Variadores </a></li> --}}
-                                    </ul>
-                                </aside>
-                               
-
-                                <!-- 
-                                <aside class="l_widgest l_fillter_widget">
-                                    <div class="l_w_title">
-                                        <h3>Filter section</h3>
-                                    </div>
-                                    <div id="slider-range" class="ui_slider"></div>
-                                    <label for="amount">Price:</label>
-                                    <input type="text" id="amount" readonly>
-                                </aside>
-                            -->
-
-                                <aside class="l_widgest l_menufacture_widget">
-                                    <div class="l_w_title">
-                                        <h3>Fabricantes</h3>
-                                    </div>
-                                    <ul>
-                                        {{#each marc}}
-                                        <li><a href="#">{{this.Marca}}</a></li>
-                                        {{/each}}
-                                        {{!-- <li><a href="products-1.html">ABB</a></li>
-                                        <li><a href="#">Schneider Electric</a></li>
-                                        <li><a href="#">Siemens</a></li>                       --}}
-                                    </ul>
-                                </aside>
+                      
 
 
 
