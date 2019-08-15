@@ -22,8 +22,8 @@ const a = connectionSQL();
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'ventas@maxpowerautomation.com',
-      pass: 'MICA1997'
+      user: 'francoadinapoli@gmail.com',
+      pass: 'f42904558'
     }
 });
 
