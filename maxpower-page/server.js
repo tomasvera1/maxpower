@@ -77,15 +77,15 @@ app.get('/productos', (req, resp) => {
 app.get('/productos-electricos', (req, resp) => {
     resp.render('productos-electricos', {title: "Productos Eléctricos"});
 });
-let queryA, queryB;
+
 app.get('/productos-electronicos', (req, resp) => {
     const con = connectionSQL();
-    const sql =  'SELECT `id_electronicos`,`Nombre`,`Imagen` FROM `p_electronicos` ORDER BY `id_electronicos` ASC';
+    const sql =  'SELECT `id_electronicos`,`Nombre`,`Imagen` FROM `p_electronicos` ORDER BY `id_electronicos` ASC; SELECT DISTINCT `Categoria` FROM `p_electronicos`; SELECT DISTINCT `Marca` FROM `p_electronicos`;';
     con.connect(function(err) {
         if (err) throw err;
         con.query(sql, function (err, result, fields) {
           if (err) throw err;
-          resp.render('productos-electronicos', {title: "Productos Electrónicos", prod: result});
+          resp.render('productos-electronicos', {title: "Productos Electrónicos", prod: result[0], category: result[1], marc: result[2]});
           con.end();
         });
     });
@@ -101,7 +101,6 @@ app.get('/productos-seguridad', (req, resp) => {
         if (err) throw err;
         con.query(sql, [1, 2, 3], function (err, result, fields) {
             if (err) throw err;
-            console.log(result[2]);
             resp.render('products-new', {title: "Protecciones", prod: result[0], category: result[1], marc: result[2]});
             con.end();
         });
