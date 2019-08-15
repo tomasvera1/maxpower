@@ -11,7 +11,8 @@ function connectionSQL(){
         host: "localhost",
         user: "maxpower_francoadinapoli",
         password: "Fa42904558.;",
-        database: "maxpower_db" 
+        database: "maxpower_db" ,
+        multipleStatements: true
     });
     return con;
 }
@@ -95,18 +96,17 @@ app.get('/productos-seguridad', (req, resp) => {
     //SELECT DISTINCT `Marca` FROM `p_seguridad`
     //SELECT DISTINCT `Categoria` FROM `p_seguridad`
     const con = connectionSQL();
-    const sql =  'SELECT `id_seguridad`,`Nombre`,`Img`,`Codigo` FROM `p_seguridad` ORDER BY `id_seguridad` ASC';
+    const sql =  'SELECT `id_seguridad`,`Nombre`,`Img`,`Codigo` FROM `p_seguridad` ORDER BY `id_seguridad` ASC; SELECT DISTINCT `Categoria`, `Marca` FROM `p_seguridad`';
     con.connect(function(err) {
         if (err) throw err;
-        con.query(sql, function (err, result, fields) {
+        con.query(sql, [1, 2], function (err, result, fields) {
             if (err) throw err;
-            queryA = result;
+            console.log(result);
             // resp.render('productos-seguridad', {title: "Protecciones", prod: result});
             con.end();
         });
 
     });
-    console.log(queryA);
 
 });
 
