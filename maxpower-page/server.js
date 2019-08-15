@@ -101,9 +101,7 @@ app.get('/productos-seguridad', (req, resp) => {
         if (err) throw err;
         con.query(sql, [1, 2, 3], function (err, result, fields) {
             if (err) throw err;
-            console.log(result[1]);
-            console.log(result[2]);
-            resp.render('productos-seguridad', {title: "Protecciones", prod: result[0]});
+            resp.render('products-new', {title: "Protecciones", prod: result[0], category: result[1], marc: result[3]});
             con.end();
         });
 

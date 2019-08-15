@@ -28,7 +28,7 @@
                             <div class="showing_fillter">
                                 <div class="row m0">
                                     
-                                    <div class="first_fillter">
+                                    {{!-- <div class="first_fillter">
                                         <h4>Cargando 1 de 15 de 44 totales</h4>
                                     </div>
                                     <div class="secand_fillter">
@@ -46,28 +46,31 @@
                                             <option>30</option>
                                             <option>44</option>
                                         </select>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
 
                             <div class="categories_product_area">
                                 <div class="row">
-                                       <div class="col-lg-4 col-sm-6">
+                                    {{#each prod}}
+                                    <div class="col-lg-4 col-sm-6">
                                         <div class="l_product_item">
                                             <div class="l_p_img">
-                                                <img src="img/productos-electricos/example0.jpg" alt="">
-                                                <h5 class="discount">Descuento</h5>
+                                                <img src="data:image/png;base64,{{this.Img}}" alt="">
+                                                {{!-- <h5 class="discount">Descuento</h5> --}}
                                             </div>
                                             <div class="l_p_text">
                                                <ul>
-                                                    <li><a class="view_product_btn" href="arrancadores-suaves-1">Ver Producto</a></li>
+                                                    <li><a class="view_product_btn" href="productos-seguridad/{{this.id_seguridad}}">Ver Producto</a></li>
                                                 </ul>
-                                                <h4>Arrancadores Suaves</h4>
-                                                <h5><del>U$D 1050 </del>  $1000</h5>
+                                                <h4>{{this.Nombre}}</h4>
+                                                {{!-- <h5><del>U$D 1050 </del>  $1000</h5> --}}
                                             </div>
                                         </div>
                                     </div>
-                                   <div class="col-lg-4 col-sm-6">
+                                    {{/each}}
+
+                                   {{!-- <div class="col-lg-4 col-sm-6">
                                         <div class="l_product_item">
                                             <div class="l_p_img">
                                                 <img src="img/productos-electricos/example1.jpg" alt="">
@@ -308,14 +311,14 @@
                                                 <h5></h5>
                                             </div>
                                         </div>
-                                    </div>
-
+                                    </div> 
+    --}}
                                 </div>
 
                                   <!-- NAVEGADOR -->
 
                                 <nav aria-label="Page navigation example" class="pagination_area">
-                                  <ul class="pagination">
+                                  {{!-- <ul class="pagination">
                                     <li class="page-item"><a class="page-link" href="#">1</a></li>
                                     <li class="page-item"><a class="page-link" href="#">2</a></li>
                                     <li class="page-item"><a class="page-link" href="#">3</a></li>
@@ -323,10 +326,10 @@
                                     <li class="page-item"><a class="page-link" href="#">5</a></li>
                                     <li class="page-item"><a class="page-link" href="#">6</a></li>
                                     <li class="page-item next"><a class="page-link" href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-                                  </ul>
+                                  </ul> --}}
                                 </nav>
                             </div>
-                        </div>
+                        </div> 
 
 
                                   <!-- CATEGORIAS -->
