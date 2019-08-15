@@ -121,9 +121,10 @@ app.get("/test/:id", (req, resp) => {
     resp.render('prod', {dou:true, title: prod[0].Nombre, prod});
 });
 
-app.get('/products-new', (req, resp)=>{
-    resp.render('products-new', {title: "Productos"});
+app.get('/products-electricos', (req, resp)=>{
+    resp.render('products-electricos', {title: "Productos electricos"});
 });
+
 
 app.get('/services', (req, resp)=>{
     resp.render('services', {title: "Servicios"});
