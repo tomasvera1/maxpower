@@ -96,18 +96,17 @@ app.get('/productos-seguridad', (req, resp) => {
     //SELECT DISTINCT `Categoria` FROM `p_seguridad`
     const con = connectionSQL();
     const sql =  'SELECT `id_seguridad`,`Nombre`,`Img`,`Codigo` FROM `p_seguridad` ORDER BY `id_seguridad` ASC';
-    let res;
+    var res;
     con.connect(function(err) {
         if (err) throw err;
-        res = con.query(sql, function (err, result, fields) {
+        con.query(sql, async function (err, result, fields) {
           if (err) throw err;
-          const resultado = result;
         //   resp.render('productos-seguridad', {title: "Protecciones", prod: result});
+            res = await result;
           con.end();
-          return result;
         });
     });
-    console.log(res);
+    console.log(res)
 
 });
 
