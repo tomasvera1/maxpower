@@ -93,15 +93,16 @@ app.get('/productos-electronicos', (req, resp) => {
 });
 
 app.get('/productos-seguridad', (req, resp) => {
-    //SELECT DISTINCT `Marca` FROM `p_seguridad`
-    //SELECT DISTINCT `Categoria` FROM `p_seguridad`
+
+    
     const con = connectionSQL();
     const sql =  'SELECT `id_seguridad`,`Nombre`,`Img`,`Codigo` FROM `p_seguridad` ORDER BY `id_seguridad` ASC; SELECT DISTINCT `Categoria` FROM `p_seguridad`; SELECT DISTINCT `Marca` FROM `p_seguridad`;';
     con.connect(function(err) {
         if (err) throw err;
         con.query(sql, [1, 2, 3], function (err, result, fields) {
             if (err) throw err;
-            resp.render('products-new', {title: "Protecciones", prod: result[0], category: result[1], marc: result[3]});
+            console.log(result[2]);
+            resp.render('products-new', {title: "Protecciones", prod: result[0], category: result[1], marc: result[2]});
             con.end();
         });
 
