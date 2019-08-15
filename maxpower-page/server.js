@@ -79,7 +79,7 @@ app.get('/productos-electricos', (req, resp) => {
 
 app.get('/productos-electronicos', (req, resp) => {
     const con = connectionSQL();
-    const sql =  'SELECT `id_electronicos`,`Nombre`,`Imagen`,`Codigo` FROM `p_seguridad` ORDER BY `id_electronicos` ASC';
+    const sql =  'SELECT `id_electronicos`,`Nombre`,`Imagen` FROM `p_electronicos` ORDER BY `id_electronicos` ASC';
     con.connect(function(err) {
         if (err) throw err;
         con.query(sql, function (err, result, fields) {
