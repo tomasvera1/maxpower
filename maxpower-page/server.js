@@ -76,7 +76,7 @@ app.get('/productos', (req, resp) => {
 app.get('/productos-electricos', (req, resp) => {
     resp.render('productos-electricos', {title: "Productos Eléctricos"});
 });
-
+let queryA, queryB;
 app.get('/productos-electronicos', (req, resp) => {
     const con = connectionSQL();
     const sql =  'SELECT `id_electronicos`,`Nombre`,`Imagen` FROM `p_electronicos` ORDER BY `id_electronicos` ASC';
@@ -96,17 +96,17 @@ app.get('/productos-seguridad', (req, resp) => {
     //SELECT DISTINCT `Categoria` FROM `p_seguridad`
     const con = connectionSQL();
     const sql =  'SELECT `id_seguridad`,`Nombre`,`Img`,`Codigo` FROM `p_seguridad` ORDER BY `id_seguridad` ASC';
-    var res;
     con.connect(function(err) {
         if (err) throw err;
-        con.query(sql, async function (err, result, fields) {
-          if (err) throw err;
-        //   resp.render('productos-seguridad', {title: "Protecciones", prod: result});
-            res = await result;
-          con.end();
+        con.query(sql, function (err, result, fields) {
+            if (err) throw err;
+            queryA = result;
+            // resp.render('productos-seguridad', {title: "Protecciones", prod: result});
+            con.end();
         });
+
     });
-    console.log(res)
+    console.log(queryA);
 
 });
 
