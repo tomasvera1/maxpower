@@ -1,4 +1,3 @@
-'use strict';
 const express = require('express');
 const expbs = require('express-handlebars');
 const path = require('path');
@@ -97,13 +96,12 @@ app.get('/productos-seguridad', (req, resp) => {
     //SELECT DISTINCT `Categoria` FROM `p_seguridad`
     const con = connectionSQL();
     const sql =  'SELECT `id_seguridad`,`Nombre`,`Img`,`Codigo` FROM `p_seguridad` ORDER BY `id_seguridad` ASC';
-    let resultado;
     con.connect(function(err) {
         if (err) throw err;
         con.query(sql, function (err, result, fields) {
           if (err) throw err;
+          const resultado = result;
           resp.render('productos-seguridad', {title: "Protecciones", prod: result});
-          resultado = result;
           con.end();
         });
     });
