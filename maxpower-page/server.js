@@ -131,7 +131,7 @@ app.get("/productos-electronicos/:id", (req, resp) => {
         con.query(sql, function (err, result, fields) {
           if (err) throw err;
           con.end();
-          resp.render('producto-detallado', {layout:false, name: result[0].Nombre, db: "Productos electrónicos", desc: result[0].Descripcion, img: result[0].Imagen});
+          resp.render('producto-detallado', {dou: true, layout:false, name: result[0].Nombre, db: "Productos electrónicos", desc: result[0].Descripcion, img: result[0].Imagen});
         });
     });
     
