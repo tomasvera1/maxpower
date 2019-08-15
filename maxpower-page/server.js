@@ -105,7 +105,7 @@ app.get('/productos-seguridad/:id', (req, resp) => {
         con.query(sql, function (err, result, fields) {
           if (err) throw err;
           con.end();
-          resp.render('prod', {dou: true, title: result[0].Nombre, prod: result[0]);
+          resp.render('prod', {dou: true, title: result[0].Nombre, prod: result[0]});
             
         });
     });
