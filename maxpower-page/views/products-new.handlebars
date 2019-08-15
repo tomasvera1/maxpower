@@ -342,13 +342,16 @@
                                         <h3>Categorias</h3>
                                     </div>
                                     <ul>
-                                        <li><a href="#">Arrancadores Suaves</a></li>
+                                        {{#each category}}
+                                        <li><a href="#">{{this}}</a></li>
+                                        {{/each}}
+                                        {{!-- <li><a href="#">Arrancadores Suaves</a></li>
                                         <li><a href="#">Contactores</a></li>
                                         <li><a href="#">Convertidores de frecuencia</a></li> 
                                         <li><a href="#">Guardamotor </a></li>   
                                         <li><a href="#">Interruptores en caja moldeada </a></li>                  
                                         <li><a href="#">Motores </a></li>
-                                        <li><a href="#">Variadores </a></li>
+                                        <li><a href="#">Variadores </a></li> --}}
                                     </ul>
                                 </aside>
                                
@@ -369,9 +372,12 @@
                                         <h3>Fabricantes</h3>
                                     </div>
                                     <ul>
-                                        <li><a href="products-1.html">ABB</a></li>
+                                        {{#each marc}}
+                                        <li><a href="#">{{this}}</a></li>
+                                        {{/each}}
+                                        {{!-- <li><a href="products-1.html">ABB</a></li>
                                         <li><a href="#">Schneider Electric</a></li>
-                                        <li><a href="#">Siemens</a></li>                      
+                                        <li><a href="#">Siemens</a></li>                       --}}
                                     </ul>
                                 </aside>
 
