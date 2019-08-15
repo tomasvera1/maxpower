@@ -2,19 +2,19 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title> Producto detallado </title>
+  <title> {{name}}</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
   
-  <link href="../img/favicon.png" rel="icon">
+  <link href="../../img/favicon.png" rel="icon">
 
 <!-- Bootstrap files-->
-<link href="css/product-detail/bootstrap.css" rel="stylesheet" type="text/css"/>
+<link href="../css/product-detail/bootstrap.css" rel="stylesheet" type="text/css"/>
 <!-- Font awesome  -->
-<link href="fonts/fontawesome/css/fontawesome-all.min.css" type="text/css" rel="stylesheet"><!-- custom style -->
+<link href="../fonts/fontawesome/css/fontawesome-all.min.css" type="text/css" rel="stylesheet"><!-- custom style -->
 <!-- Style file-->
-<link href="css/product-detail/product-detail.css" rel="stylesheet" type="text/css"/>
+<link href="../css/product-detail/product-detail.css" rel="stylesheet" type="text/css"/>
 
 </head>
 <body>
@@ -23,8 +23,8 @@
 <nav class="mb-3">
 <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-    <li class="breadcrumb-item"><a href="#">Productos electronicos</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Capacitores electroliticos</li>
+    <li class="breadcrumb-item"><a href="#">{{db}}</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{name}}</li>
 </ol> 
 </nav>
 
@@ -37,7 +37,7 @@
 		<aside class="col-sm-6 border-right">
 <article class="gallery-wrap"> 
 <div class="img-big-wrap">
-    <div> <img src="img/items/example01.jpeg"></a></div>
+    <div> <img src="data:image/png;base64,{{img}}"></a></div>
 </div> 
 <div class="img-small-wrap">
   <!--   
@@ -51,28 +51,27 @@
 		<aside class="col-sm-6">
 <article class="card-body">
 
-	<h3 class="title mb-3">Capacitores electroliticos</h3>
+	<h3 class="title mb-3">{{name}}</h3>
 
 
 <dl>
   <dt>Descripcion</dt>
-  <dd><p> SAJNDSAHJDASKHJDKSAD ASKJDBHSAKDJ
-      JSANDASLDNSAKLDSANKDS
-      ASDASHDKJBSADSABDSAJGKDVGSADK
+  <dd><p> {{desc}}
   </p></dd>
 </dl>
 <dl class="row">
-  <dt class="col-sm-3">Modelo:</dt>
-  <dd class="col-sm-9"> - </dd>
+  <dt class="col-sm-3">Modelo</dt>
+  <dd class="col-sm-9">{{#if mod}} {{mod}} {{else}} - {{/if}}
+  </dd>
 
-  <dt class="col-sm-3">Colores: </dt>
-  <dd class="col-sm-9"> - </dd>
+  {{!-- <dt class="col-sm-3">Colores: </dt>
+  <dd class="col-sm-9"> - </dd> --}}
 
-  <dt class="col-sm-3">Codigo: </dt>
-  <dd class="col-sm-9"> - </dd>
+  <dt class="col-sm-3">Codigo </dt>
+  <dd class="col-sm-9"> {{#if cod}} {{cod}} {{else}} - {{/if}} </dd>
 </dl>
 
-<hr>
+{{!-- <hr>
 	<div class="row">
 		<div class="col-sm-5">
 			<dl class="dlist-inline">
@@ -106,7 +105,7 @@
 			</dl>  
 		</div> 
 	</div> 
-	<hr>
+	<hr> --}}
 	<a href="contact" method="get" class="btn  btn-warning"> <i class="fa fa-envelope"></i> Contacto </a>
 	
         </article> 
@@ -114,7 +113,7 @@
 	</div> 
 </main> 
 
-<article class="card mt-3">
+{{!-- <article class="card mt-3">
 	<div class="card-body">
 		<h4>Descripcion detallada </h4>
             <p> Descripcion </p>
@@ -129,7 +128,7 @@
 	<div class="card-header">
 	    Informacion Tecnica
 	</div>
-	<div class="card-body small">
+	<div class="card-body small"> --}}
 
 		 
 						</div> 

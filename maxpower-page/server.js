@@ -78,12 +78,22 @@ app.get('/productos-electricos', (req, resp) => {
 });
 
 app.get('/productos-electronicos', (req, resp) => {
-    resp.render('productos-electronicos', {title: "Productos Electrónicos"});
+    const con = connectionSQL();
+    const sql =  'SELECT `id_electronicos`,`Nombre`,`Imagen`,`Codigo` FROM `p_seguridad` ORDER BY `id_electronicos` ASC';
+    con.connect(function(err) {
+        if (err) throw err;
+        con.query(sql, function (err, result, fields) {
+          if (err) throw err;
+          resp.render('productos-electronicos', {title: "Productos Electrónicos", prod: result});
+          con.end();
+        });
+    });
+    // resp.render('productos-electronicos', {title: "Productos Electrónicos", prod: result});
 });
 
 app.get('/productos-seguridad', (req, resp) => {
     const con = connectionSQL();
-    const sql =  'SELECT `id_seguridad`,`Nombre`,`Img`,`Codigo` FROM `p_seguridad` WHERE `Categoria`= "Zapatos" ORDER BY `id_seguridad` ASC';
+    const sql =  'SELECT `id_seguridad`,`Nombre`,`Img`,`Codigo` FROM `p_seguridad` ORDER BY `id_seguridad` ASC';
     con.connect(function(err) {
         if (err) throw err;
         con.query(sql, function (err, result, fields) {
@@ -109,16 +119,22 @@ app.get('/productos-seguridad/:id', (req, resp) => {
             
         });
     });
-    resp.render('prod', {dou: true});
+    // resp.render('prod', {dou: true});
 });
-app.get("/test/:id", (req, resp) => {
-    const prod = [
-        {
-            Nombre: "PRODUCTO 1 PRUEBA",
-            Descripcion: "fafasfgdsgsdgsgsdgdsgdsgsdgdsgsdgdsgsdgdsgsdgdsgdsgdsgdsgsgsdgsgdgsdgdsgfdsg,dsgsdglsgsdgsdmgmsdgmdg,sm,safafasfasfafasfafal,fslfmamkfakmfkmasfkmakmfakmfkmakmfskmfkmksafasfa"
-        }
-    ];
-    resp.render('prod', {dou:true, title: prod[0].Nombre, prod});
+
+app.get("/productos-electronicos/:id", (req, resp) => {
+    const id = req.params.id;
+    const con = connectionSQL();
+    const sql =  'SELECT * FROM `p_electronicos` WHERE `id_electronicos` = ' + id;
+    con.connect(function(err) {
+        if (err) throw err;
+        con.query(sql, function (err, result, fields) {
+          if (err) throw err;
+          con.end();
+          resp.render('producto-detallado', {layout:false, name: result[0].Nombre, db: "Productos electrónicos", desc: result[0].Descripcion, img: result[0].Imagen});
+        });
+    });
+    
 });
 
 app.get('/products-new', (req, resp)=>{
