@@ -372,6 +372,10 @@ app.get('/ventiladores-industriales', (req, resp)=>{
     resp.sendFile('ventiladores-industriales.html', {root: path.join(__dirname, './files/productos-electronicos')});
 });
 
+app.get('/producto-detallado', (req, resp)=>{
+    resp.render('producto-detallado', {layout: false});
+});
+
 
 app.get('/calzados', (req, resp)=>{
     resp.sendFile('calzados.html', {root: path.join(__dirname, './files/productos-seguridad')});
