@@ -11,7 +11,8 @@ function connectionSQL(){
         host: "localhost",
         user: "maxpower_francoadinapoli",
         password: "Fa42904558.;",
-        database: "maxpower_db" 
+        database: "maxpower_db" ,
+        multipleStatements: true
     });
     return con;
 }
@@ -22,8 +23,8 @@ const a = connectionSQL();
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'ventas@maxpowerautomation.com',
-      pass: 'MICA1997'
+      user: 'francoadinapoli@gmail.com',
+      pass: 'f42904558'
     }
 });
 
@@ -78,19 +79,32 @@ app.get('/productos-electricos', (req, resp) => {
 });
 
 app.get('/productos-electronicos', (req, resp) => {
-    resp.render('productos-electronicos', {title: "Productos Electrónicos"});
-});
-
-app.get('/productos-seguridad', (req, resp) => {
     const con = connectionSQL();
-    const sql =  'SELECT `id_seguridad`,`Nombre`,`Img`,`Codigo` FROM `p_seguridad` WHERE `Categoria`= "Zapatos" ORDER BY `id_seguridad` ASC';
+    const sql =  'SELECT `id_electronicos`,`Nombre`,`Imagen` FROM `p_electronicos` ORDER BY `id_electronicos` ASC; SELECT DISTINCT `Categoria` FROM `p_electronicos`; SELECT DISTINCT `Marca` FROM `p_electronicos`;';
     con.connect(function(err) {
         if (err) throw err;
         con.query(sql, function (err, result, fields) {
           if (err) throw err;
-          resp.render('productos-seguridad', {title: "Protecciones", prod: result});
+          resp.render('new-elect', {title: "Productos Electrónicos", prod: result[0], category: result[1], marc: result[2]});
           con.end();
         });
+    });
+    // resp.render('productos-electronicos', {title: "Productos Electrónicos", prod: result});
+});
+
+app.get('/productos-seguridad', (req, resp) => {
+
+    
+    const con = connectionSQL();
+    const sql =  'SELECT `id_seguridad`,`Nombre`,`Img`,`Codigo` FROM `p_seguridad` ORDER BY `id_seguridad` ASC; SELECT DISTINCT `Categoria` FROM `p_seguridad`; SELECT DISTINCT `Marca` FROM `p_seguridad`;';
+    con.connect(function(err) {
+        if (err) throw err;
+        con.query(sql, [1, 2, 3], function (err, result, fields) {
+            if (err) throw err;
+            resp.render('products-new', {title: "Protecciones", prod: result[0], category: result[1], marc: result[2]});
+            con.end();
+        });
+
     });
 
 });
@@ -105,20 +119,28 @@ app.get('/productos-seguridad/:id', (req, resp) => {
         con.query(sql, function (err, result, fields) {
           if (err) throw err;
           con.end();
-          resp.render('prod', {dou: true, title: result[0].Nombre, prod: result[0]});
+          resp.render('producto-detallado', {
+              dou:true, layout:false, name:result[0].Nombre, db:"Productos de seguridad", desc: result[0].Descripcion, img: result[0].Img, mod: result[0].Modelo, cod: result[0].Codigo
+          });
             
         });
     });
-    resp.render('prod', {dou: true});
+    // resp.render('prod', {dou: true});
 });
-app.get("/test/:id", (req, resp) => {
-    const prod = [
-        {
-            Nombre: "PRODUCTO 1 PRUEBA",
-            Descripcion: "fafasfgdsgsdgsgsdgdsgdsgsdgdsgsdgdsgsdgdsgsdgdsgdsgdsgdsgsgsdgsgdgsdgdsgfdsg,dsgsdglsgsdgsdmgmsdgmdg,sm,safafasfasfafasfafal,fslfmamkfakmfkmasfkmakmfakmfkmakmfskmfkmksafasfa"
-        }
-    ];
-    resp.render('prod', {dou:true, title: prod[0].Nombre, prod});
+
+app.get("/productos-electronicos/:id", (req, resp) => {
+    const id = req.params.id;
+    const con = connectionSQL();
+    const sql =  'SELECT * FROM `p_electronicos` WHERE `id_electronicos` = ' + id;
+    con.connect(function(err) {
+        if (err) throw err;
+        con.query(sql, function (err, result, fields) {
+          if (err) throw err;
+          con.end();
+          resp.render('producto-detallado', {dou: true, layout:false, name: result[0].Nombre, db: "Productos electrónicos", desc: result[0].Descripcion, img: result[0].Imagen});
+        });
+    });
+    
 });
 
 app.get('/products-electricos', (req, resp)=>{

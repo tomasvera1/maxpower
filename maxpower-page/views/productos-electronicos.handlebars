@@ -1,11 +1,11 @@
-<section class="post-wrapper-top">
+<section class="post-wrapper-top" onload="ls()">
     <div class="container">
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <ul class="breadcrumb">
           <li><a href="/" method="get">Inicio</a></li>
-          <li> Productos eléctricos </li>
+          <li> Productos electrónicos </li>
         </ul>
-        <h2> Productos eléctricos </h2>
+        <h2> Productos electrónicos </h2>
       </div>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <!-- search -->
@@ -31,373 +31,502 @@
 
         <div class="divider"></div>
 
-        <nav class="portfolio-filter clearfix">
+        {{!-- <nav class="portfolio-filter clearfix">
           <ul>
             <li><a href="#" class="dmbutton2" data-filter="*"> Todos </a></li>
-            <li><a href="#" class="dmbutton2" data-filter=".asd"> ABB </a></li>
-            <li><a href="#" class="dmbutton2" data-filter=".scheneider-electric"> Schneider Electric </a></li>
-            <li><a href="#" class="dmbutton2" data-filter=".siemens"> Siemens </a></li>
+            <li><a href="#" class="dmbutton2" data-filter=".calzados"> Calzados </a></li>
+            <li><a href="#" class="dmbutton2" data-filter=".proteccion"> Protecciones </a></li>
+            <li><a href="#" class="dmbutton2" data-filter=".indumentaria"> Indumentaria </a></li>
+
           </ul>
-        </nav>
+        </nav> --}}
 
         <div class="portfolio-centered">
           <div class="recentitems portfolio">
-
-            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 abb">
+            {{#each prod}}
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
               <div class="he-wrap tpl6 market-item">
-                <img src="img/productos-electronicos/example01.jpeg" alt="">
+                <img src="data:image/png;base64,{{this.Imagen}}" alt=" ">
                 <div class="he-view">
                   <div class="bg a0" data-animate="fadeIn">
-                    <h3 class="big a1" data-animate="fadeInDown"> Capacitores eléctricos </h3>
+                    <h3 class="big a1" data-animate="fadeInDown"> {{this.Nombre}} </h3>
+                    <a href="productos-electronicos/{{this.id_electronicos}}" method="get" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> {{this.Nombre}} </h3>
+              <p> Descripción producto </p>
+            </div>
+            {{/each}}
+            
+            {{!-- <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                 <img src="img/productos-seguridad/calzados/example02.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown">{{this.Nombre}} </h3>
                     <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
                     <div class="portfolio_category text-center a2" data-animate="fadeIn">
                     </div>         
                   </div>              
                 </div>            
               </div>          
-              <h3 class="title"> Capacitores electrolíticos </h3>
+              <h3 class="title"> {{this.Nombre}} </h3>
+              <p> Descripción producto </p>
+            </div> --}}
+      
+          {{!--
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example03.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> BORCEGUI LINEA SAN JUAN ATT</h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> BORCEGUI LINEA SAN JUAN ATT </h3>
               <p> Descripción producto </p>
             </div>
-           
-           
 
-            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 siemens">
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
               <div class="he-wrap tpl6 market-item">
-                <img src="img/productos-electronicos/example02.jpg " alt="">
+                <img src="img/productos-seguridad/calzados/example04.png" alt="">
                 <div class="he-view">
                   <div class="bg a0" data-animate="fadeIn">
-                    <h3 class="big a1" data-animate="fadeInDown"> Lazo 4-20mA</h3>
+                    <h3 class="big a1" data-animate="fadeInDown"> BOTIN LINEA CHACO 3.0 ATT </h3>
                     <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
                     <div class="portfolio_category text-center a2" data-animate="fadeIn">
-                    </div>
-               </div>
-             </div>
-          </div>
-          <h3 class="title"> Controladores de lazo 4-20 mA </h3>
-          <p> Descripción prducto </p>
-        </div>
-
-        
-
-        <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 scheneider-electric">
-          <div class="he-wrap tpl6 market-item">
-            <img src="img/productos-electronicos/example03.jpg" alt="">
-            <div class="he-view">
-              <div class="bg a0" data-animate="fadeIn">
-                <h3 class="big a1" data-animate="fadeInDown"> Diodos Rectificadores </h3>
-                <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
-                <div class="portfolio_category text-center a2" data-animate="fadeIn">
-                </div>
-           </div>
-         </div>
-      </div>
-      <h3 class="title"> Diodos rectificadores </h3>
-      <p> Descripción prducto </p>
-    </div>
-
-    <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 scheneider-electric">
-      <div class="he-wrap tpl6 market-item">
-        <img src="img/productos-electronicos/example04.jpg" alt="">
-        <div class="he-view">
-          <div class="bg a0" data-animate="fadeIn">
-            <h3 class="big a1" data-animate="fadeInDown"> Fusibles ultra-rápidos  </h3>
-            <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
-            <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> BOTIN LINEA CHACO 3.0 ATT </h3>
+              <p> Descripción producto </p>
             </div>
-       </div>
-     </div>
-  </div>
-  <h3 class="title"> Fusibles ultra-rápidos </h3>
-  <p> Descripción prducto </p>
-</div>
 
-<div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 scheneider-electric">
-  <div class="he-wrap tpl6 market-item">
-    <img src="img/productos-electronicos/example05.jpg" alt="">
-    <div class="he-view">
-      <div class="bg a0" data-animate="fadeIn">
-        <h3 class="big a1" data-animate="fadeInDown"> Serie 170M </h3>
-        <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
-        <div class="portfolio_category text-center a2" data-animate="fadeIn">
-        </div>
-   </div>
- </div>
-</div>
-<h3 class="title"> Fusible ultra-rápido Serie 170M </h3>
-<p> Descripción prducto </p>
-</div>
-
-<div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 scheneider-electric">
-  <div class="he-wrap tpl6 market-item">
-    <img src="img/productos-electronicos/example06.png" alt="">
-    <div class="he-view">
-      <div class="bg a0" data-animate="fadeIn">
-        <h3 class="big a1" data-animate="fadeInDown"> 8GDB1-35A  </h3>
-        <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
-        <div class="portfolio_category text-center a2" data-animate="fadeIn">
-        </div>
-   </div>
- </div>
-</div>
-<h3 class="title"> Interruptor termico 8GDB1-35A </h3>
-<p> Descripción prducto </p>
-</div>
-
-<div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 scheneider-electric">
-    <div class="he-wrap tpl6 market-item">
-      <img src="img/productos-electronicos/example07.jpg" alt="">
-      <div class="he-view">
-        <div class="bg a0" data-animate="fadeIn">
-          <h3 class="big a1" data-animate="fadeInDown"> Puentes de diodos </h3>
-          <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
-          <div class="portfolio_category text-center a2" data-animate="fadeIn">
-          </div>
-     </div>
-   </div>
-  </div>
-  <h3 class="title"> Puentes de diodos </h3>
-  <p> Descripción prducto </p>
-  </div>
-  <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 scheneider-electric">
-    <div class="he-wrap tpl6 market-item">
-      <img src="img/productos-electronicos/example08.jpg" alt="">
-      <div class="he-view">
-        <div class="bg a0" data-animate="fadeIn">
-          <h3 class="big a1" data-animate="fadeInDown"> Relays electromecánicos </h3>  
-          <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
-          <div class="portfolio_category text-center a2" data-animate="fadeIn">
-          </div>
-     </div>
-   </div>
-  </div>
-  <h3 class="title"> Relays electromecánicos </h3>
-  <p> Descripción prducto </p>
-  </div>
-
-  <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 scheneider-electric">
-      <div class="he-wrap tpl6 market-item">
-        <img src="img/productos-electronicos/example09.jpg" alt="">
-        <div class="he-view">
-          <div class="bg a0" data-animate="fadeIn">
-            <h3 class="big a1" data-animate="fadeInDown"> Relays de estado sólido </h3>  
-            <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
-            <div class="portfolio_category text-center a2" data-animate="fadeIn">
-            </div>
-       </div>
-     </div>
-    </div>
-    <h3 class="title"> Relays de estado sólido </h3>
-    <p> Descripción prducto </p>
-    </div>
-    
-    <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 scheneider-electric">
-        <div class="he-wrap tpl6 market-item">
-          <img src="img/productos-electronicos/example10.jpg" alt="">
-          <div class="he-view">
-            <div class="bg a0" data-animate="fadeIn">
-              <h3 class="big a1" data-animate="fadeInDown"> Sensores capacitivos </h3>  
-              <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
-              <div class="portfolio_category text-center a2" data-animate="fadeIn">
-              </div>
-         </div>
-       </div>
-      </div>
-      <h3 class="title"> Sensores capacitivos </h3>
-      <p> Descripción prducto </p>
-      </div>
-
-      <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 scheneider-electric">
-          <div class="he-wrap tpl6 market-item">
-            <img src="img/productos-electronicos/example11.jpg" alt="">
-            <div class="he-view">
-              <div class="bg a0" data-animate="fadeIn">
-                <h3 class="big a1" data-animate="fadeInDown"> Sensores de posición </h3>  
-                <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
-                <div class="portfolio_category text-center a2" data-animate="fadeIn">
-                </div>
-           </div>
-         </div>
-        </div>
-        <h3 class="title"> Sensores de posición </h3>
-        <p> Descripción prducto </p>
-        </div>
-
-        <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 scheneider-electric">
-            <div class="he-wrap tpl6 market-item">
-              <img src="img/productos-electronicos/example12.jpg" alt="">
-              <div class="he-view">
-                <div class="bg a0" data-animate="fadeIn">
-                  <h3 class="big a1" data-animate="fadeInDown"> Sensores de presión </h3>  
-                  <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
-                  <div class="portfolio_category text-center a2" data-animate="fadeIn">
-                  </div>
-             </div>
-           </div>
-          </div>
-          <h3 class="title"> Sensores de presión </h3>
-          <p> Descripción prducto </p>
-          </div>
-          
-          <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 scheneider-electric">
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
               <div class="he-wrap tpl6 market-item">
-                <img src="img/productos-electronicos/example13.jpg" alt="">
+                <img src="img/productos-seguridad/calzados/example05.png" alt="">
                 <div class="he-view">
                   <div class="bg a0" data-animate="fadeIn">
-                    <h3 class="big a1" data-animate="fadeInDown"> Sensores de proximidad COMUS  </h3>  
+                    <h3 class="big a1" data-animate="fadeInDown"> BOTIN HOMOLOGADO GRAFA 70 </h3>
                     <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
                     <div class="portfolio_category text-center a2" data-animate="fadeIn">
-                    </div>
-               </div>
-             </div>
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> BOTIN HOMOLOGADO GRAFA 70 </h3>
+              <p> Descripción producto </p>
             </div>
-            <h3 class="title"> Sensores de proximidad COMUS  </h3>
-            <p> Descripción prducto </p>
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example06.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> BOTIN DE SEGURIDAD CAUCHO 3002</h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> BOTIN DE SEGURIDAD CAUCHO 3002 </h3>
+              <p> Descripción producto </p>
             </div>
 
-            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 scheneider-electric">
-                <div class="he-wrap tpl6 market-item">
-                  <img src="img/productos-electronicos/example14.jpg" alt="">
-                  <div class="he-view">
-                    <div class="bg a0" data-animate="fadeIn">
-                      <h3 class="big a1" data-animate="fadeInDown"> Ultra-sonido  </h3>  
-                      <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
-                      <div class="portfolio_category text-center a2" data-animate="fadeIn">
-                      </div>
-                 </div>
-               </div>
-              </div>
-              <h3 class="title"> Sensores de ultrasonido  </h3>
-              <p> Descripción prducto </p>
-              </div>
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example07.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> BOTIN DE SEGURIDAD COBRA  </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> BOTIN DE SEGURIDAD COBRA </h3>
+              <p> Descripción producto </p>
+            </div>
 
-              <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 scheneider-electric">
-                  <div class="he-wrap tpl6 market-item">
-                    <img src="img/productos-electronicos/example15.png" alt="">
-                    <div class="he-view">
-                      <div class="bg a0" data-animate="fadeIn">
-                        <h3 class="big a1" data-animate="fadeInDown"> Ultra-sonido  </h3>  
-                        <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
-                        <div class="portfolio_category text-center a2" data-animate="fadeIn">
-                        </div>
-                   </div>
-                 </div>
-                </div>
-                <h3 class="title"> Sensores inductivos </h3>
-                <p> Descripción prducto </p>
-                </div>
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example08.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> BOTIN URBANO ULTRALIVIANO STREET VISON  </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> BOTIN URBANO ULTRALIVIANO STREET VISON </h3>
+              <p> Descripción producto </p>
+            </div>
 
-                <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 scheneider-electric">
-                    <div class="he-wrap tpl6 market-item">
-                      <img src="img/productos-electronicos/example16.png" alt="">
-                      <div class="he-view">
-                        <div class="bg a0" data-animate="fadeIn">
-                          <h3 class="big a1" data-animate="fadeInDown"> Magnéticos  </h3>  
-                          <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
-                          <div class="portfolio_category text-center a2" data-animate="fadeIn">
-                          </div>
-                     </div>
-                   </div>
-                  </div>
-                  <h3 class="title"> Sensores magnéticos</h3>
-                  <p> Descripción prducto </p>
-                  </div>
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example09.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> ZAPATO DE SEGURIDAD CACUCHO 32201 </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> ZAPATO DE SEGURIDAD CACUCHO 32201 </h3>
+              <p> Descripción producto </p>
+            </div>
 
-                  <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 scheneider-electric">
-                      <div class="he-wrap tpl6 market-item">
-                        <img src="img/productos-electronicos/example17.jpeg" alt="">
-                        <div class="he-view">
-                          <div class="bg a0" data-animate="fadeIn">
-                            <h3 class="big a1" data-animate="fadeInDown"> Sensores de vacío </h3>  
-                            <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
-                            <div class="portfolio_category text-center a2" data-animate="fadeIn">
-                            </div>
-                       </div>
-                     </div>
-                    </div>
-                    <h3 class="title"> Sensores de vacío </h3>
-                    <p> Descripción prducto </p>
-                    </div>
-                  
-                    <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 scheneider-electric">
-                        <div class="he-wrap tpl6 market-item">
-                          <img src="img/productos-electronicos/example18.png" alt="">
-                          <div class="he-view">
-                            <div class="bg a0" data-animate="fadeIn">
-                              <h3 class="big a1" data-animate="fadeInDown"> SCR </h3>  
-                              <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
-                              <div class="portfolio_category text-center a2" data-animate="fadeIn">
-                              </div>
-                         </div>
-                       </div>
-                      </div>
-                      <h3 class="title"> Tiristores (SCR)</h3>
-                      <p> Descripción prducto </p>
-                      </div>
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example10.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> ZAPATO PRUSIANO IRON  </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> ZAPATO PRUSIANO IRON  </h3>
+              <p> Descripción producto </p>
+            </div>
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example11.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> ZAPATO DE SEGURIDAD JANO </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> ZAPATO DE SEGURIDAD JANO  </h3>
+              <p> Descripción producto </p>
+            </div>
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example12.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> BORCEGUI DE SEGURIDAD ARES MARRÓN </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> BORCEGUI DE SEGURIDAD ARES MARRÓN </h3>
+              <p> Descripción producto </p>
+            </div>
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example13.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> BOTIN DE SEGURIDAD ARGOS </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> BOTIN DE SEGURIDAD ARGOS </h3>
+              <p> Descripción producto </p>
+            </div>
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example14.jpg" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> BOTIN DE SEGURIDAD PAMPEANA CALFOR EVOLUTION PVC NEGRA </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> BOTIN DE SEGURIDAD PAMPEANA CALFOR EVOLUTION PVC NEGRA </h3>
+              <p> Descripción producto </p>
+            </div>
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example15.jpg" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> BOTIN NAUTICA CALFOR SIN CUELLO </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> BOTIN NAUTICA CALFOR SIN CUELLO </h3>
+              <p> Descripción producto </p>
+            </div>
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example16.jpg" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> BOTIN NAUTICA CALFOR SIN CUELLO </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> BOTIN NAUTICA CALFOR SIN CUELLO </h3>
+              <p> Descripción producto </p>
+            </div>
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example17.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> BOTIN CRONOS N VORAN </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> BOTIN CRONOS N VORAN </h3>
+              <p> Descripción producto </p>
+            </div>
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example18.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> BOTIN FUNCIONAL MOD. 3002 MARRÓN </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> BOTIN FUNCIONAL MOD. 3002 MARRÓN </h3>
+              <p> Descripción producto </p>
+            </div>
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example19.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> BOTIN VORAN NEPTUNO, SUELA PU BIDENSIDAD, 100% DIELÉCTRICA, NEGRO  </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> BOTIN VORAN NEPTUNO, SUELA PU BIDENSIDAD, 100% DIELÉCTRICA, NEGRO  </h3>
+              <p> Descripción producto </p>
+            </div>
+
+            <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example20.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> ZAPATO VORAN JANO, SUELA PU BIDENSIDAD, 100% DIELÉCTRICA, NEGRO  </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> ZAPATO VORAN JANO, SUELA PU BIDENSIDAD, 100% DIELÉCTRICA, NEGRO  </h3>
+              <p> Descripción producto </p>
+            </div>
+
+              <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example21.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> Botin Frances KUPRA  </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> Botin Frances KUPRA  </h3>
+              <p> Descripción producto </p>
+            </div>
+
+              <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example22.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> Botín Neptuno c/p acero  </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> Botín Neptuno c/p acero  </h3>
+              <p> Descripción producto </p>
+            </div>
+
+              <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example23.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> Botín Frances FENIX  </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> Botín Frances FENIX </h3>
+              <p> Descripción producto </p>
+            </div>
+
+              <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example24.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> Botin STREET Marron Ultraliviano  </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> Botin STREET Marron Ultraliviano </h3>
+              <p> Descripción producto </p>
+            </div>
+
+              <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example25.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> Zapato Jano c/p acero  </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> Zapato Jano c/p acero </h3>
+              <p> Descripción producto </p>
+            </div>
+            
+              <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example26.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> Zapato Iron suela PU. Infinit  </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> Zapato Iron suela PU. Infinit </h3>
+              <p> Descripción producto </p>
+            </div>
+
+              <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example27.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> Bota Industrial Sin puntera  </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> Bota Industrial Sin puntera </h3>
+              <p> Descripción producto </p>
+            </div>
+
+
+              <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example28.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> Botin de seguridad COBRA  </h3>
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> Botin de seguridad COBRA </h3>
+              <p> Descripción producto </p>
+            </div>
+
+              <div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 calzados">
+              <div class="he-wrap tpl6 market-item">
+                <img src="img/productos-seguridad/calzados/example29.png" alt="">
+                <div class="he-view">
+                  <div class="bg a0" data-animate="fadeIn">
+                    <h3 class="big a1" data-animate="fadeInDown"> Zapato de seguridad IRON  </h3>
+                    
+                    <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
+                    <div class="portfolio_category text-center a2" data-animate="fadeIn">
+                    </div>         
+                  </div>              
+                </div>            
+              </div>          
+              <h3 class="title"> Zapato de seguridad IRON</h3>
+              <p> Descripción producto </p>
+            </div> --}}
 
 
 
-<div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 scheneider-electric">
-  <div class="he-wrap tpl6 market-item">
-    <img src="img/productos-electronicos/example99.jpg" alt="">
-    <div class="he-view">
-      <div class="bg a0" data-animate="fadeIn">
-        <h3 class="big a1" data-animate="fadeInDown"> Sopladores AC y DC </h3>
-        <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
-        <div class="portfolio_category text-center a2" data-animate="fadeIn">
-        </div>
-   </div>
- </div>
-</div>
-<h3 class="title"> Sopladores para AC y DC </h3>
-<p> Descripción prducto </p>
-</div>
 
-<div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 scheneider-electric">
-  <div class="he-wrap tpl6 market-item">
-    <img src="img/productos-electronicos/example100.jpg" alt="">
-    <div class="he-view">
-      <div class="bg a0" data-animate="fadeIn">
-        <h3 class="big a1" data-animate="fadeInDown">Termostatos Bimetálicos</h3>
-        <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
-        <div class="portfolio_category text-center a2" data-animate="fadeIn">
-        </div>
-   </div>
- </div>
-</div>
-<h3 class="title"> Termostatos bimetálicos </h3>
-<p> Descripción prducto </p>
-</div>
 
-<div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 scheneider-electric">
-  <div class="he-wrap tpl6 market-item">
-    <img src="img/productos-electronicos/example101.jpg" alt="">
-    <div class="he-view">
-      <div class="bg a0" data-animate="fadeIn">
-        <h3 class="big a1" data-animate="fadeInDown"> Transistores IGBT  </h3>  <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
-        <div class="portfolio_category text-center a2" data-animate="fadeIn">
-        </div>
-   </div>
- </div>
-</div>
-<h3 class="title"> Transistores IGBT </h3>
-<p> Descripción prducto </p>
-</div>
 
-<div class="portfolio-item col-lg-4 col-md-4 col-sm-4 col-xs-12 scheneider-electric">
-  <div class="he-wrap tpl6 market-item">
-    <img src="img/productos-electronicos/example102.jpg" alt="">
-    <div class="he-view">
-      <div class="bg a0" data-animate="fadeIn">
-        <h3 class="big a1" data-animate="fadeInDown"> Ventiladores Industriales  </h3>
-        <a href="#" class="dmbutton a2" data-animate="bounceInRight"><i class="fa fa-mouse-pointer"></i></a>
-        <div class="portfolio_category text-center a2" data-animate="fadeIn">
-        </div>
-   </div>
- </div>
-</div>
-<h3 class="title"> Ventiladores Industriales </h3>
-<p> Descripción prducto </p>
-</div>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -420,4 +549,21 @@
           </div>
         </div>  
       </div> 
-    </section>
+  </section>
+
+  <script>
+    /*let images = document.getElementsByTagName('img');
+    console.log('afasfas');
+    for(let img in images){
+      if(img.value){
+        let base64 = img.value;
+        console.log(base64);
+        let buffer=Uint8Array.from(atob(base64), c => c.charCodeAt(0));
+        let blob=new Blob([buffer], { type: "image/png" });
+        let url=URL.createObjectURL(blob);
+        img.src=url;
+      }
+      
+    }*/
+    
+  </script>
