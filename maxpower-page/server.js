@@ -120,7 +120,7 @@ app.get('/productos-seguridad/:id', (req, resp) => {
           if (err) throw err;
           con.end();
           resp.render('producto-detallado', {
-              dou:true, layout:false, name:result[0].Nombre, db:"Productos de seguridad", desc: result[0].Descripcion, img: result[0].Img, mod: result[0].Modelo, cod: result[0].Codigo
+              dou:true, name:result[0].Nombre, db:"Productos de seguridad", desc: result[0].Descripcion, img: result[0].Img, mod: result[0].Modelo, cod: result[0].Codigo
           });
             
         });
