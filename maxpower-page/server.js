@@ -595,7 +595,7 @@ app.get("/seguridad-cat/:cat", (req, resp) => {
         if (err) throw err;
         con.query(sql, [1, 2, 3], function (err, result, fields) {
             if (err) throw err;
-            resp.render('products-new', {title: "Productos de seguridad", prod: result[0], category: result[1], marc: result[2]});
+            resp.render('products-new', {dou:true, title: "Productos de seguridad", prod: result[0], category: result[1], marc: result[2]});
             con.end();
         });
 
@@ -608,7 +608,7 @@ app.get("/seguridad-marca/:marca", (req, resp) => {
         if (err) throw err;
         con.query(sql, [1, 2, 3], function (err, result, fields) {
             if (err) throw err;
-            resp.render('products-new', {title: "Productos de seguridad", prod: result[0], category: result[1], marc: result[2]});
+            resp.render('products-new', {dou: true, title: "Productos de seguridad", prod: result[0], category: result[1], marc: result[2]});
             con.end();
         });
 
