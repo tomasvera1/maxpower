@@ -8,11 +8,19 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
+  {{#if dou}}
+  <link href="../img/favicon.png" rel="icon">
+
+  <link href="../css/products/font-awesome.min.css" rel="stylesheet">
+  <link href="../css/products/bootstrap.min.css" rel="stylesheet">  
+  <link href="../css/products/products.css" rel="stylesheet">  
+  {{else}}
   <link href="img/favicon.png" rel="icon">
 
   <link href="css/products/font-awesome.min.css" rel="stylesheet">
   <link href="css/products/bootstrap.min.css" rel="stylesheet">  
-  <link href="css/products/products.css" rel="stylesheet">     
+  <link href="css/products/products.css" rel="stylesheet">   
+  {{/if}}  
 
   
 
@@ -71,264 +79,12 @@
                                     </div>
                                     {{/each}}
 
-                                   {{!-- <div class="col-lg-4 col-sm-6">
-                                        <div class="l_product_item">
-                                            <div class="l_p_img">
-                                                <img src="img/productos-electricos/example1.jpg" alt="">
-                                            </div>
-                                            <div class="l_p_text">
-                                               <ul>
-                                                    <li><a class="view_product_btn" href="#">Ver Producto</a></li>
-                                                </ul>
-                                                <h4>Arranque Suave Altistar 01</h4>     
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                      <div class="col-lg-4 col-sm-6">
-                                        <div class="l_product_item">
-                                            <div class="l_p_img">
-                                                <img src="img/productos-electricos/example4.jpg" alt="">
-                                            </div>
-                                            <div class="l_p_text">
-                                               <ul>
-                                                    <li><a class="view_product_btn" href="#">Ver Producto</a></li>
-                                                </ul>
-                                                <h4>Arranque Suave Altistar 48</h4>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4 col-sm-6">
-                                        <div class="l_product_item">
-                                            <div class="l_p_img">
-                                                <img src="img/productos-electricos/example2.png" alt="">
-                                                <h5 class="outstanding">Destacado</h5>
-                                            </div>
-                                            <div class="l_p_text">
-                                               <ul>
-                                                    <li><a class="view_product_btn" href="#">Ver Producto</a></li>
-                                                </ul>
-                                                <h4>Arranque Suave Estandar Sirius3RW44</h4>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-sm-6">
-                                        <div class="l_product_item">
-                                            <div class="l_p_img">
-                                                <img src="img/productos-electricos/example3.jpg" alt="">
-                                                <h5 class="new">Nuevo</h5>
-                                            </div>
-                                            <div class="l_p_text">
-                                               <ul>
-                                                    <li><a class="view_product_btn" href="#">Ver Producto</a></li>
-                                                </ul>
-                                                <h4>Arranque Suave Estandar Sirius3RW30</h4>
-                                                <h5></h5>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-lg-4 col-sm-6">
-                                        <div class="l_product_item">
-                                            <div class="l_p_img">
-                                                <img src="img/productos-electricos/example5.jpg" alt="">
-                                                <h5 class="new">Nuevo</h5>
-                                            </div>
-                                            <div class="l_p_text">
-                                               <ul>
-                                                    <li><a class="view_product_btn" href="#">Ver Producto</a></li>
-                                                </ul>
-                                                <h4> Contactores A-Line </h4>
-                                                <h5></h5>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-lg-4 col-sm-6">
-                                        <div class="l_product_item">
-                                            <div class="l_p_img">
-                                                <img src="img/productos-electricos/example6.jpg" alt="">           
-                                            </div>
-                                            <div class="l_p_text">
-                                               <ul>
-                                                    <li><a class="view_product_btn" href="#">Ver Producto</a></li>
-                                                </ul>
-                                                <h4> Contactores de Vacio S10,S12,S14 </h4>
-                                                <h5></h5>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-4 col-sm-6">
-                                        <div class="l_product_item">
-                                            <div class="l_p_img">
-                                                <img src="img/productos-electricos/example7.png" alt="">
-                                            </div>
-                                            <div class="l_p_text">
-                                               <ul>
-                                                    <li><a class="view_product_btn" href="#">Ver Producto</a></li>
-                                                </ul>
-                                                <h4>Contactores tripolares 3RT</h4>
-                                                <h5></h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="col-lg-4 col-sm-6">
-                                        <div class="l_product_item">
-                                            <div class="l_p_img">
-                                                <img src="img/productos-electricos/example8.jpg" alt="">               
-                                            </div>
-                                            <div class="l_p_text">
-                                               <ul>
-                                                    <li><a class="view_product_btn" href="#">Ver Producto</a></li>
-                                                </ul>    
-                                                <h4>Contactores tripolares 3RT Mini</h4>
-                                                <h5></h5>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-                                     <div class="col-lg-4 col-sm-6">
-                                        <div class="l_product_item">
-                                            <div class="l_p_img">
-                                                <img src="img/productos-electricos/example9.jpg" alt="">               
-                                            </div>
-                                            <div class="l_p_text">
-                                               <ul>
-                                                    <li><a class="view_product_btn" href="#">Ver Producto</a></li>
-                                                </ul>    
-                                                <h4>Contactores Serie F</h4>
-                                                <h5></h5>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                     <div class="col-lg-4 col-sm-6">
-                                        <div class="l_product_item">
-                                            <div class="l_p_img">
-                                                <img src="img/productos-electricos/example10.jpg" alt="">               
-                                            </div>
-                                            <div class="l_p_text">
-                                               <ul>
-                                                    <li><a class="view_product_btn" href="#">Ver Producto</a></li>
-                                                </ul>    
-                                                <h4>Contactores Serie D</h4>
-                                                <h5></h5>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-                                     <div class="col-lg-4 col-sm-6">
-                                        <div class="l_product_item">
-                                            <div class="l_p_img">
-                                                <img src="img/productos-electricos/example11.jpeg" alt="">               
-                                            </div>
-                                            <div class="l_p_text">
-                                               <ul>
-                                                    <li><a class="view_product_btn" href="#">Ver Producto</a></li>
-                                                </ul>    
-                                                <h4>Contactor Telemecanique</h4>
-                                                <h5></h5>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                     <div class="col-lg-4 col-sm-6">
-                                        <div class="l_product_item">
-                                            <div class="l_p_img">
-                                                <img src="img/productos-electricos/example12a.jpg" alt="">               
-                                            </div>
-                                            <div class="l_p_text">
-                                               <ul>
-                                                    <li><a class="view_product_btn" href="#">Ver Producto</a></li>
-                                                </ul>    
-                                                <h4> Minicontactores Telemecanique  </h4>
-                                                <h5></h5>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- Espacio entre productos -->
-                                     <div class="col-lg-4 col-sm-6">
-                                        <div class="l_product_item_space">
-                                        </div>
-                                     </div>
-                                     <div class="col-lg-4 col-sm-6">
-                                        <div class="l_product_item_space">
-                                        </div>
-                                     </div>
-
-                                     <div class="col-lg-4 col-sm-6">
-                                        <div class="l_product_item">
-                                            <div class="l_p_img">
-                                                <img src="img/productos-electricos/ACS150.jpg" alt="">               
-                                            </div>
-                                            <div class="l_p_text">
-                                               <ul>
-                                                    <li><a class="view_product_btn" href="#">Ver Producto</a></li>
-                                                </ul>    
-                                                <h4> Convertidores de frecuencia ACS150  </h4>
-                                                <h5></h5>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                     <div class="col-lg-4 col-sm-6">
-                                        <div class="l_product_item">
-                                            <div class="l_p_img">
-                                                <img src="img/productos-electricos/ACS355.jpg" alt="">               
-                                            </div>
-                                            <div class="l_p_text">
-                                               <ul>
-                                                    <li><a class="view_product_btn" href="#">Ver Producto</a></li>
-                                                </ul>    
-                                                <h4> Convertidores de frecuencia ACS355  </h4>
-                                                <h5></h5>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                     <div class="col-lg-4 col-sm-6">
-                                        <div class="l_product_item">
-                                            <div class="l_p_img">
-                                                <img src="img/productos-electricos/ACS880.jpg" alt="">               
-                                            </div>
-                                            <div class="l_p_text">
-                                               <ul>
-                                                    <li><a class="view_product_btn" href="#">Ver Producto</a></li>
-                                                </ul>    
-                                                <h4> Convertidores de frecuencia ACS880  </h4>
-                                                <h5></h5>
-                                            </div>
-                                        </div>
-                                    </div> 
-    --}}
+                                  
                                 </div>
 
                                   <!-- NAVEGADOR -->
 
-                                <nav aria-label="Page navigation example" class="pagination_area">
-                                  {{!-- <ul class="pagination">
-                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">6</a></li>
-                                    <li class="page-item next"><a class="page-link" href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-                                  </ul> --}}
-                                </nav>
+
                             </div>
                         </div> 
 
@@ -344,29 +100,13 @@
                                     </div>
                                     <ul>
                                         {{#each category}}
-                                        <li><a href="#">{{this.Categoria}}</a></li>
+                                        <li><a href="/seguridad-cat/{{this.Categoria}}">{{this.Categoria}}</a></li>
                                         {{/each}}
-                                        {{!-- <li><a href="#">Arrancadores Suaves</a></li>
-                                        <li><a href="#">Contactores</a></li>
-                                        <li><a href="#">Convertidores de frecuencia</a></li> 
-                                        <li><a href="#">Guardamotor </a></li>   
-                                        <li><a href="#">Interruptores en caja moldeada </a></li>                  
-                                        <li><a href="#">Motores </a></li>
-                                        <li><a href="#">Variadores </a></li> --}}
+
                                     </ul>
                                 </aside>
                                
 
-                                <!-- 
-                                <aside class="l_widgest l_fillter_widget">
-                                    <div class="l_w_title">
-                                        <h3>Filter section</h3>
-                                    </div>
-                                    <div id="slider-range" class="ui_slider"></div>
-                                    <label for="amount">Price:</label>
-                                    <input type="text" id="amount" readonly>
-                                </aside>
-                            -->
 
                                 <aside class="l_widgest l_menufacture_widget">
                                     <div class="l_w_title">
@@ -374,11 +114,8 @@
                                     </div>
                                     <ul>
                                         {{#each marc}}
-                                        <li><a href="#">{{this.Marca}}</a></li>
+                                        <li><a href="/seguridad-marca/{{this.Marca}}">{{this.Marca}}</a></li>
                                         {{/each}}
-                                        {{!-- <li><a href="products-1.html">ABB</a></li>
-                                        <li><a href="#">Schneider Electric</a></li>
-                                        <li><a href="#">Siemens</a></li>                       --}}
                                     </ul>
                                 </aside>
 
@@ -421,10 +158,14 @@
         </section>
         <!--================End Categories Product Area =================-->
          
-
+        {{#if dou}}
+        <script src="../js/products/jquery-3.2.1.min.js"></script>
+        <script src="../js/products/popper.min.js"></script>
+        <script src="../js/products/bootstrap.min.js"></script>
+        {{else}}
         <script src="js/products/jquery-3.2.1.min.js"></script>
         <script src="js/products/popper.min.js"></script>
         <script src="js/products/bootstrap.min.js"></script> 
-
+        {{/if}}
  </body>
  </html>   

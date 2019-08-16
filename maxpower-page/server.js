@@ -101,7 +101,7 @@ app.get('/productos-seguridad', (req, resp) => {
         if (err) throw err;
         con.query(sql, [1, 2, 3], function (err, result, fields) {
             if (err) throw err;
-            resp.render('products-new', {title: "Protecciones", prod: result[0], category: result[1], marc: result[2]});
+            resp.render('products-new', {title: "Productos de seguridad", prod: result[0], category: result[1], marc: result[2]});
             con.end();
         });
 
@@ -576,7 +576,6 @@ app.post('/db', (req, resp) => {
 });
 
 app.get("/electronicos/:cat", (req, resp)=> {
-    console.log(req.params.cat)
     const con = connectionSQL();
     const sql =  'SELECT `id_electronicos`,`Nombre`,`Imagen` FROM `p_electronicos` WHERE `Categoria` = "' + req.params.cat+ '" ORDER BY `id_electronicos` ASC; SELECT DISTINCT `Categoria` FROM `p_electronicos`; SELECT DISTINCT `Marca` FROM `p_electronicos`;';
     con.connect(function(err) {
@@ -586,6 +585,33 @@ app.get("/electronicos/:cat", (req, resp)=> {
           resp.render('new-elect', {dou: true,title: "Productos Electrónicos", prod: result[0], category: result[1], marc: result[2]});
           con.end();
         });
+    });
+});
+
+app.get("/seguridad-cat/:cat", (req, resp) => {
+    const con = connectionSQL();
+    const sql =  'SELECT `id_seguridad`,`Nombre`,`Img`,`Codigo` FROM `p_seguridad` WHERE `Categoria` = "'+req.params.cat+'" ORDER BY `id_seguridad` ASC; SELECT DISTINCT `Categoria` FROM `p_seguridad`; SELECT DISTINCT `Marca` FROM `p_seguridad`;';
+    con.connect(function(err) {
+        if (err) throw err;
+        con.query(sql, [1, 2, 3], function (err, result, fields) {
+            if (err) throw err;
+            resp.render('products-new', {title: "Productos de seguridad", prod: result[0], category: result[1], marc: result[2]});
+            con.end();
+        });
+
+    });
+});
+app.get("/seguridad-marca/:marca", (req, resp) => {
+    const con = connectionSQL();
+    const sql =  'SELECT `id_seguridad`,`Nombre`,`Img`,`Codigo` FROM `p_seguridad` WHERE `Marca` = "'+req.params.marca+'" ORDER BY `id_seguridad` ASC; SELECT DISTINCT `Categoria` FROM `p_seguridad`; SELECT DISTINCT `Marca` FROM `p_seguridad`;';
+    con.connect(function(err) {
+        if (err) throw err;
+        con.query(sql, [1, 2, 3], function (err, result, fields) {
+            if (err) throw err;
+            resp.render('products-new', {title: "Productos de seguridad", prod: result[0], category: result[1], marc: result[2]});
+            con.end();
+        });
+
     });
 });
 
