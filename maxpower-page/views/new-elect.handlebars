@@ -8,11 +8,20 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
+  {{#if dou}}
+  <link href="../img/favicon.png" rel="icon">
+
+  <link href="../css/products/font-awesome.min.css" rel="stylesheet">
+  <link href="../css/products/bootstrap.min.css" rel="stylesheet">  
+  <link href="../css/products/products.css" rel="stylesheet">     
+
+  {{else}}
   <link href="img/favicon.png" rel="icon">
 
   <link href="css/products/font-awesome.min.css" rel="stylesheet">
   <link href="css/products/bootstrap.min.css" rel="stylesheet">  
-  <link href="css/products/products.css" rel="stylesheet">     
+  <link href="css/products/products.css" rel="stylesheet">  
+  {{/if}}   
 
   
 
@@ -149,10 +158,14 @@
         </section>
         <!--================End Categories Product Area =================-->
          
-
+        {{#if dou}}
+        <script src="../js/products/jquery-3.2.1.min.js"></script>
+        <script src="../js/products/popper.min.js"></script>
+        <script src="../js/products/bootstrap.min.js"></script> 
+        {{else}}
         <script src="js/products/jquery-3.2.1.min.js"></script>
         <script src="js/products/popper.min.js"></script>
         <script src="js/products/bootstrap.min.js"></script> 
-
+        {{/if}}
  </body>
  </html>   

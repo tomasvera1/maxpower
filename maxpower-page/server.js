@@ -583,7 +583,7 @@ app.get("/electronicos/:cat", (req, resp)=> {
         if (err) throw err;
         con.query(sql, function (err, result, fields) {
           if (err) throw err;
-          resp.render('new-elect', {title: "Productos Electrónicos", prod: result[0], category: result[1], marc: result[2]});
+          resp.render('new-elect', {dou: true,title: "Productos Electrónicos", prod: result[0], category: result[1], marc: result[2]});
           con.end();
         });
     });
