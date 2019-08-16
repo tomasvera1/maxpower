@@ -89,6 +89,7 @@ app.get('/productos-electronicos', (req, resp) => {
           con.end();
         });
     });
+    // resp.render('productos-electronicos', {title: "Productos Electrónicos", prod: result});
 });
 
 app.get('/productos-seguridad', (req, resp) => {
@@ -140,6 +141,10 @@ app.get("/productos-electronicos/:id", (req, resp) => {
         });
     });
     
+});
+
+app.get('/products-electricos', (req, resp)=>{
+    resp.render('products-electricos', {title: "Productos electricos"});
 });
 
 
@@ -390,9 +395,9 @@ app.get('/variador-8', (req, resp)=>{
 //     resp.sendFile('ventiladores-industriales.html', {root: path.join(__dirname, './files/productos-electronicos')});
 // });
 
-app.get('/producto-detallado', (req, resp)=>{
-    resp.render('producto-detallado', {layout: false});
-});
+// app.get('/producto-detallado', (req, resp)=>{
+//     resp.render('producto-detallado', {layout: false});
+// });
 
 
 // app.get('/calzados', (req, resp)=>{
@@ -433,10 +438,10 @@ app.get('/producto-detallado', (req, resp)=>{
 // });
 // app.get('/proteccion-soldador', (req, resp)=>{
 //     resp.sendFile('proteccion-soldador.html', {root: path.join(__dirname, './files/productos-seguridad')});
-});
-app.get('/señalizacion', (req, resp)=>{
-    resp.sendFile('señalizacion.html', {root: path.join(__dirname, './files/productos-seguridad')});
-});
+// });
+// app.get('/señalizacion', (req, resp)=>{
+//     resp.sendFile('señalizacion.html', {root: path.join(__dirname, './files/productos-seguridad')});
+// });
 
 
 app.get('/admin', (req, resp) => {
@@ -573,7 +578,7 @@ app.post('/db', (req, resp) => {
 app.get("/:cat", (req, resp)=> {
     console.log(req.params.cat)
     const con = connectionSQL();
-    const sql =  'SELECT `id_electronicos`,`Nombre`,`Imagen` FROM `p_electronicos` WHERE `Categoria` = ' +req.params.cat+ 'ORDER BY `id_electronicos` ASC; SELECT DISTINCT `Categoria` FROM `p_electronicos`; SELECT DISTINCT `Marca` FROM `p_electronicos`;';
+    const sql =  'SELECT `id_electronicos`,`Nombre`,`Imagen` FROM `p_electronicos` WHERE `Categoria` = ' + req.params.cat+ 'ORDER BY `id_electronicos` ASC; SELECT DISTINCT `Categoria` FROM `p_electronicos`; SELECT DISTINCT `Marca` FROM `p_electronicos`;';
     con.connect(function(err) {
         if (err) throw err;
         con.query(sql, function (err, result, fields) {
