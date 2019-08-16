@@ -254,8 +254,8 @@ app.get('/interruptor-10', (req, resp)=>{
 });
 
 
-app.get('/motores', (req, resp)=>{
-    resp.sendFile('motores.html', {root: path.join(__dirname, './files/productos-electricos/motores')});
+app.get('/motores-1', (req, resp)=>{
+    resp.sendFile('motores-1.html', {root: path.join(__dirname, './files/productos-electricos/motores')});
 });
 
 
@@ -479,7 +479,93 @@ app.get("/seguridad-marca/:marca", (req, resp) => {
     });
 });
 
+app.get("/:cat", (req, resp) => {
+    const cat = req.params.cat;
+    const prod = {
+        arr:[
+            {img: 'example0.jpg', name: "Arrancadores suaves", href:'arrancadores-suaves-1'},
+            {img: 'example1.jpg', name: "Arranque suaves Altistar 01", href:'arrancadores-suaves-2'},
+            {img: 'example4.jpg', name: "Arranque suaves Altistar 48", href:'arrancadores-suaves-3'},
+            {img: 'example2.png', name: "Arranque suaves Exigente SIRIUS 3RW44", href:'arrancadores-suaves-4'},
+            {img: 'example3.jpg', name: "Arranque suaves Exigente SIRIUS 3RW30", href:'arrancadores-suaves-5'}
 
+        ],
+        cont:[
+            {img: 'example5.jpg', name:'Contactores A-Line', href:'contactores-1'},
+            {img: 'example6.jpg', name:'Contactores de Vacio SIEMENS', href:'contactores-2'},
+            {img: 'example7.png', name:'Contatores tripolares 3RT', href:'contactores-3'},
+            {img: 'example8.jpg', name:'Contatores tripolares 3RT Mini', href:'contactores-4'},
+            {img: 'example9.jpg', name:'Contactores Serie F', href:'contactores-5'},
+            {img: 'example10.jpg', name:'Contactores Serie D', href:'contactores-6'},
+            {img: 'example11.jpeg', name:'Contactores Telemecanique', href:'contactores-7'},
+            {img: 'example12a.jpg', name:'Minicontactores Telemecanique', href:'contactores-8'}
+        ],
+        frec:[
+            {img: 'ACS150.jpg', name:'Convertidores de frecuencia ACS150', href:'convertidor-1'},
+            {img: 'ACS355.jpg', name:'Convertidores de frecuencia ACS355', href:'convertidor-2'},
+            {img: 'ACS880.jpg', name:'Convertidores de frecuencia ACS880', href:'convertidor-3'}
+        ],
+        guard:[
+            {img: 'example12.jpg', name:'Guardamotores ABB', href:'guardamotor-1'},
+            {img: 'example13.jpg', name:'Guardamotores Telemecanique GV', href:'guardamotor-2'},
+            {img: 'example14.jpg', name:'Guardamotores 3RV', href:'guardamotor-3'}
+        ],
+        int:[
+            {img: 'example22.jpg', name:'Interruptores diferenciales', href:'interruptor-1'},
+            {img: 'example23.jpg', name:'Interruptores Tmax', href:'interruptor-2'},
+            {img: 'example24.jpg', name:'Interruptores Termomagneticos', href:'interruptor-3'},
+            {img: 'example25.jpg', name:'Interruptores SACE Emax2', href:'interruptor-4'},
+            {img: 'example26.jpg', name:'Interruptores Automaticos Merlin-Gerin', href:'interruptor-5'},
+            {img: 'example27.jpg', name:'Interruptores manuales 3LD2', href:'interruptor-6'},
+            {img: 'example28.jpg', name:'Interruptor compacto Sentron', href:'interruptor-7'},
+            {img: 'example29.jpg', name:'Seccionadores tripolares bajo carga 3NP4', href:'interruptor-8'},
+            {img: 'example30.jpg', name:'CInterruptor de posicion SIGUARD', href:'interruptor-9'},
+            {img: 'example31.jpg', name:'Interruptores Termomagneticos', href:'interruptor-10'},
+        ],
+        mot:[
+            {img: 'example15.jpg', name:'Motores de aplicación general en hierro fundido', href:'motores-1'}
+        ],
+        plc:[
+            {img: 'example16.jpg', name:'Zelio Logic – Relés programables de 10 a 40 I/O', href:'plc-1'},
+            {img: 'example17.jpg', name:'PLC-SIMATIC S7-300', href:'plc-2'},
+            {img: 'example18.jpg', name:'PLC SIMATIC S7-200', href:'plc-3'},
+            {img: 'example19.jpg', name:'Pantallas Gráficas SIMATIC HMI', href:'plc-4'},
+            {img: 'example20.png', name:'Miniautómata LOGO!', href:'plc-5'},
+            {img: 'example21.jpg', name:'Fuentes SITOP', href:'plc-6'}
+        ],
+        var:[
+            {img: 'example32.jpg', name:'Convertidores de frecuencia de baja tensión de CA', href:'variador-1'},
+            {img: 'example33.jpg', name:'Variador ATV71', href:'variador-2'},
+            {img: 'example34.jpg', name:'Variador ATV312', href:'variador-3'},
+            {img: 'example35.jpg', name:'Variador ATV12', href:'variador-4'},
+            {img: 'example36.jpg', name:'Variador Process ATV600', href:'variador-5'},
+            {img: 'example39.jpg', name:'Variadores SINAMICS G110', href:'variador-6'},
+            {img: 'example37.png', name:'Variadores MICROMASTER 430', href:'variador-7'},
+            {img: 'example38.jpg', name:'Variadores MICROMASTER 420', href:'variador-8'}
+        ]
+    };
+    if(cat == "arrancadores-suaves"){
+        resp.render('electricos-new', {prod: prod.arr});
+    }else if(cat == "contactores"){
+        resp.render('electricos-new', {prod: prod.cont});
+    }else if(cat == "convertidores-de-frecuencia"){
+        resp.render('electricos-new', {prod: prod.frec});
+    }else if(cat == "guardamotor"){
+        resp.render('electricos-new', {prod: prod.guard});
+    }else if(cat == "interruptores-en-caja-moldeada"){
+        resp.render('electricos-new', {prod: prod.int});
+    }else if(cat == "motores"){
+        resp.render('electricos-new', {prod: prod.mot});
+    }else if(cat == "plc"){
+        resp.render('electricos-new', {prod: prod.plc});
+    }else if(cat == "variadores"){
+        resp.render('electricos-new', {prod: prod.var});
+    }
+});
+
+app.get("/test", (req, resp) => {
+    resp.render('electricos-new', {img:"example1.jpg"});
+});
 
 // server on port 3000
 app.listen(3010, () => console.log('Server running'));
