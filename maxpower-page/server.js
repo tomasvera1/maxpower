@@ -575,6 +575,11 @@ app.post('/db', (req, resp) => {
     }
 });
 
+app.get("/:cat", (req, resp)=> {
+    console.log(req.params.cat)
+    resp.redirect('/index');
+});
+
 
 
 // server on port 3000
