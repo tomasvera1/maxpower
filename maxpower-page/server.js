@@ -89,7 +89,6 @@ app.get('/productos-electronicos', (req, resp) => {
           con.end();
         });
     });
-    // resp.render('productos-electronicos', {title: "Productos Electrónicos", prod: result});
 });
 
 app.get('/productos-seguridad', (req, resp) => {
@@ -141,10 +140,6 @@ app.get("/productos-electronicos/:id", (req, resp) => {
         });
     });
     
-});
-
-app.get('/products-electricos', (req, resp)=>{
-    resp.render('products-electricos', {title: "Productos electricos"});
 });
 
 
@@ -307,137 +302,137 @@ app.get('/variador-8', (req, resp)=>{
 });
 
 
-app.get('/capacitores', (req, resp)=>{
-    resp.sendFile('capacitores.html', {root: path.join(__dirname, './files/productos-electronicos')});
-});
+// app.get('/capacitores', (req, resp)=>{
+//     resp.sendFile('capacitores.html', {root: path.join(__dirname, './files/productos-electronicos')});
+// });
 
-app.get('/controladores', (req, resp)=>{
-    resp.sendFile('controladores.html', {root: path.join(__dirname, './files/productos-electronicos')});
-});
+// app.get('/controladores', (req, resp)=>{
+//     resp.sendFile('controladores.html', {root: path.join(__dirname, './files/productos-electronicos')});
+// });
 
-app.get('/diodos-rectificadores', (req, resp)=>{
-    resp.sendFile('diodos-rectificadores.html', {root: path.join(__dirname, './files/productos-electronicos')});
-});
+// app.get('/diodos-rectificadores', (req, resp)=>{
+//     resp.sendFile('diodos-rectificadores.html', {root: path.join(__dirname, './files/productos-electronicos')});
+// });
 
-app.get('/fusibles-1', (req, resp)=>{
-    resp.sendFile('fusibles.html', {root: path.join(__dirname, './files/productos-electronicos')});
-});
+// app.get('/fusibles-1', (req, resp)=>{
+//     resp.sendFile('fusibles.html', {root: path.join(__dirname, './files/productos-electronicos')});
+// });
 
-app.get('/fusibles-2', (req, resp)=>{
-    resp.sendFile('fusibles-2.html', {root: path.join(__dirname, './files/productos-electronicos')});
-});
+// app.get('/fusibles-2', (req, resp)=>{
+//     resp.sendFile('fusibles-2.html', {root: path.join(__dirname, './files/productos-electronicos')});
+// });
 
-app.get('/interruptores-termicos', (req, resp)=>{
-    resp.sendFile('interruptores-termicos.html', {root: path.join(__dirname, './files/productos-electronicos')});
-});
+// app.get('/interruptores-termicos', (req, resp)=>{
+//     resp.sendFile('interruptores-termicos.html', {root: path.join(__dirname, './files/productos-electronicos')});
+// });
 
-app.get('/puentes', (req, resp)=>{
-    resp.sendFile('puentes.html', {root: path.join(__dirname, './files/productos-electronicos')});
-});
+// app.get('/puentes', (req, resp)=>{
+//     resp.sendFile('puentes.html', {root: path.join(__dirname, './files/productos-electronicos')});
+// });
 
-app.get('/relays-1', (req, resp)=>{
-    resp.sendFile('relays-1.html', {root: path.join(__dirname, './files/productos-electronicos')});
-});
+// app.get('/relays-1', (req, resp)=>{
+//     resp.sendFile('relays-1.html', {root: path.join(__dirname, './files/productos-electronicos')});
+// });
 
-app.get('/relays-2', (req, resp)=>{
-    resp.sendFile('relays-2.html', {root: path.join(__dirname, './files/productos-electronicos')});
-});
+// app.get('/relays-2', (req, resp)=>{
+//     resp.sendFile('relays-2.html', {root: path.join(__dirname, './files/productos-electronicos')});
+// });
 
-app.get('/sensores-1', (req, resp)=>{
-    resp.sendFile('sensores-1.html', {root: path.join(__dirname, './files/productos-electronicos')});
-});
+// app.get('/sensores-1', (req, resp)=>{
+//     resp.sendFile('sensores-1.html', {root: path.join(__dirname, './files/productos-electronicos')});
+// });
 
-app.get('/sensores-2', (req, resp)=>{
-    resp.sendFile('sensores-2.html', {root: path.join(__dirname, './files/productos-electronicos')});
-});
+// app.get('/sensores-2', (req, resp)=>{
+//     resp.sendFile('sensores-2.html', {root: path.join(__dirname, './files/productos-electronicos')});
+// });
 
-app.get('/sensores-3', (req, resp)=>{
-    resp.sendFile('sensores-3.html', {root: path.join(__dirname, './files/productos-electronicos')});
-});
+// app.get('/sensores-3', (req, resp)=>{
+//     resp.sendFile('sensores-3.html', {root: path.join(__dirname, './files/productos-electronicos')});
+// });
 
-app.get('/sensores-4', (req, resp)=>{
-    resp.sendFile('sensores-4.html', {root: path.join(__dirname, './files/productos-electronicos')});
-});
+// app.get('/sensores-4', (req, resp)=>{
+//     resp.sendFile('sensores-4.html', {root: path.join(__dirname, './files/productos-electronicos')});
+// });
 
-app.get('/sensores-5', (req, resp)=>{
-    resp.sendFile('sensores-5.html', {root: path.join(__dirname, './files/productos-electronicos')});
-});
+// app.get('/sensores-5', (req, resp)=>{
+//     resp.sendFile('sensores-5.html', {root: path.join(__dirname, './files/productos-electronicos')});
+// });
 
-app.get('/sensores-6', (req, resp)=>{
-    resp.sendFile('sensores-6.html', {root: path.join(__dirname, './files/productos-electronicos')});
-});
+// app.get('/sensores-6', (req, resp)=>{
+//     resp.sendFile('sensores-6.html', {root: path.join(__dirname, './files/productos-electronicos')});
+// });
 
-app.get('/sensores-7', (req, resp)=>{
-    resp.sendFile('sensores-7.html', {root: path.join(__dirname, './files/productos-electronicos')});
-});
+// app.get('/sensores-7', (req, resp)=>{
+//     resp.sendFile('sensores-7.html', {root: path.join(__dirname, './files/productos-electronicos')});
+// });
 
-app.get('/sensores-8', (req, resp)=>{
-    resp.sendFile('sensores-8.html', {root: path.join(__dirname, './files/productos-electronicos')});
-});
+// app.get('/sensores-8', (req, resp)=>{
+//     resp.sendFile('sensores-8.html', {root: path.join(__dirname, './files/productos-electronicos')});
+// });
 
-app.get('/sopladores', (req, resp)=>{
-    resp.sendFile('sopladores.html', {root: path.join(__dirname, './files/productos-electronicos')});
-});
+// app.get('/sopladores', (req, resp)=>{
+//     resp.sendFile('sopladores.html', {root: path.join(__dirname, './files/productos-electronicos')});
+// });
 
-app.get('/termostatos', (req, resp)=>{
-    resp.sendFile('termostatos.html', {root: path.join(__dirname, './files/productos-electronicos')});
-});
+// app.get('/termostatos', (req, resp)=>{
+//     resp.sendFile('termostatos.html', {root: path.join(__dirname, './files/productos-electronicos')});
+// });
 
-app.get('/tiristores', (req, resp)=>{
-    resp.sendFile('tiristores.html', {root: path.join(__dirname, './files/productos-electronicos')});
-});
+// app.get('/tiristores', (req, resp)=>{
+//     resp.sendFile('tiristores.html', {root: path.join(__dirname, './files/productos-electronicos')});
+// });
 
-app.get('/transistores', (req, resp)=>{
-    resp.sendFile('transistores.html', {root: path.join(__dirname, './files/productos-electronicos')});
-});
+// app.get('/transistores', (req, resp)=>{
+//     resp.sendFile('transistores.html', {root: path.join(__dirname, './files/productos-electronicos')});
+// });
 
-app.get('/ventiladores-industriales', (req, resp)=>{
-    resp.sendFile('ventiladores-industriales.html', {root: path.join(__dirname, './files/productos-electronicos')});
-});
+// app.get('/ventiladores-industriales', (req, resp)=>{
+//     resp.sendFile('ventiladores-industriales.html', {root: path.join(__dirname, './files/productos-electronicos')});
+// });
 
 app.get('/producto-detallado', (req, resp)=>{
     resp.render('producto-detallado', {layout: false});
 });
 
 
-app.get('/calzados', (req, resp)=>{
-    resp.sendFile('calzados.html', {root: path.join(__dirname, './files/productos-seguridad')});
-});
-app.get('/sistema-bloqueo', (req, resp)=>{
-    resp.sendFile('sistema-bloqueo.html', {root: path.join(__dirname, './files/productos-seguridad')});
-});
-app.get('/cintas', (req, resp)=>{
-    resp.sendFile('cintas.html', {root: path.join(__dirname, './files/productos-seguridad')});
-});
-app.get('/detectores-gas', (req, resp)=>{
-    resp.sendFile('detectores-gas.html', {root: path.join(__dirname, './files/productos-seguridad')});
-});
-app.get('/equipo-incendio', (req, resp)=>{
-    resp.sendFile('equipo-incendio.html', {root: path.join(__dirname, './files/productos-seguridad')});
-});
-app.get('/ergonomicos', (req, resp)=>{
-    resp.sendFile('ergonomicos.html', {root: path.join(__dirname, './files/productos-seguridad')});
-});
-app.get('/indumentaria-trabajo', (req, resp)=>{
-    resp.sendFile('indumentaria-trabajo.html', {root: path.join(__dirname, './files/productos-seguridad')});
-});
-app.get('/proteccion-craneana', (req, resp)=>{
-    resp.sendFile('proteccion-craneana.html', {root: path.join(__dirname, './files/productos-seguridad')});
-});
-app.get('/proteccion-manos', (req, resp)=>{
-    resp.sendFile('proteccion-manos.html', {root: path.join(__dirname, './files/productos-seguridad')});
-});
-app.get('/proteccion-ocular', (req, resp)=>{
-    resp.sendFile('proteccion-ocular.html', {root: path.join(__dirname, './files/productos-seguridad')});
-});
-app.get('/proteccion-quimica', (req, resp)=>{
-    resp.sendFile('proteccion-quimica.html', {root: path.join(__dirname, './files/productos-seguridad')});
-});
-app.get('/proteccion-respiratoria', (req, resp)=>{
-    resp.sendFile('proteccion-respiratoria.html', {root: path.join(__dirname, './files/productos-seguridad')});
-});
-app.get('/proteccion-soldador', (req, resp)=>{
-    resp.sendFile('proteccion-soldador.html', {root: path.join(__dirname, './files/productos-seguridad')});
+// app.get('/calzados', (req, resp)=>{
+//     resp.sendFile('calzados.html', {root: path.join(__dirname, './files/productos-seguridad')});
+// });
+// app.get('/sistema-bloqueo', (req, resp)=>{
+//     resp.sendFile('sistema-bloqueo.html', {root: path.join(__dirname, './files/productos-seguridad')});
+// });
+// app.get('/cintas', (req, resp)=>{
+//     resp.sendFile('cintas.html', {root: path.join(__dirname, './files/productos-seguridad')});
+// });
+// app.get('/detectores-gas', (req, resp)=>{
+//     resp.sendFile('detectores-gas.html', {root: path.join(__dirname, './files/productos-seguridad')});
+// });
+// app.get('/equipo-incendio', (req, resp)=>{
+//     resp.sendFile('equipo-incendio.html', {root: path.join(__dirname, './files/productos-seguridad')});
+// });
+// app.get('/ergonomicos', (req, resp)=>{
+//     resp.sendFile('ergonomicos.html', {root: path.join(__dirname, './files/productos-seguridad')});
+// });
+// app.get('/indumentaria-trabajo', (req, resp)=>{
+//     resp.sendFile('indumentaria-trabajo.html', {root: path.join(__dirname, './files/productos-seguridad')});
+// });
+// app.get('/proteccion-craneana', (req, resp)=>{
+//     resp.sendFile('proteccion-craneana.html', {root: path.join(__dirname, './files/productos-seguridad')});
+// });
+// app.get('/proteccion-manos', (req, resp)=>{
+//     resp.sendFile('proteccion-manos.html', {root: path.join(__dirname, './files/productos-seguridad')});
+// });
+// app.get('/proteccion-ocular', (req, resp)=>{
+//     resp.sendFile('proteccion-ocular.html', {root: path.join(__dirname, './files/productos-seguridad')});
+// });
+// app.get('/proteccion-quimica', (req, resp)=>{
+//     resp.sendFile('proteccion-quimica.html', {root: path.join(__dirname, './files/productos-seguridad')});
+// });
+// app.get('/proteccion-respiratoria', (req, resp)=>{
+//     resp.sendFile('proteccion-respiratoria.html', {root: path.join(__dirname, './files/productos-seguridad')});
+// });
+// app.get('/proteccion-soldador', (req, resp)=>{
+//     resp.sendFile('proteccion-soldador.html', {root: path.join(__dirname, './files/productos-seguridad')});
 });
 app.get('/señalizacion', (req, resp)=>{
     resp.sendFile('señalizacion.html', {root: path.join(__dirname, './files/productos-seguridad')});
@@ -577,7 +572,16 @@ app.post('/db', (req, resp) => {
 
 app.get("/:cat", (req, resp)=> {
     console.log(req.params.cat)
-    resp.redirect('/index');
+    const con = connectionSQL();
+    const sql =  'SELECT `id_electronicos`,`Nombre`,`Imagen` FROM `p_electronicos` WHERE `Categoria` = ' +req.params.cat+ 'ORDER BY `id_electronicos` ASC; SELECT DISTINCT `Categoria` FROM `p_electronicos`; SELECT DISTINCT `Marca` FROM `p_electronicos`;';
+    con.connect(function(err) {
+        if (err) throw err;
+        con.query(sql, function (err, result, fields) {
+          if (err) throw err;
+          resp.render('new-elect', {title: "Productos Electrónicos", prod: result[0], category: result[1], marc: result[2]});
+          con.end();
+        });
+    });
 });
 
 
