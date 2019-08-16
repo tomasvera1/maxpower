@@ -42,6 +42,25 @@
 
                             <div class="categories_product_area">
                                 <div class="row">
+                                    {{#if dou}}
+                                    <div class="col-lg-4 col-sm-6">
+                                        <div class="l_product_item">
+                                            <div class="l_p_img">
+                                                <img src="data:image/png;base64,{{this.Imagen}}" alt="">
+                                                {{!-- <h5 class="discount">Descuento</h5> --}}
+                                            </div>
+                                            <div class="l_p_text">
+                                               <ul> 
+                                                    <li><a class="view_product_btn" href="../productos-electronicos/{{this.id_electronicos}}">Ver Producto</a></li>
+                                                </ul>
+                                                <h4>{{this.Nombre}}</h4>
+                                                <h5> Codigo:&nbsp;{{this.Codigo}}</h5>
+                                                {{!-- <h5><del>U$D 1050 </del>  $1000</h5> --}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{/each}}
+                                    {{else}}
                                     {{#each prod}}
                                     <div class="col-lg-4 col-sm-6">
                                         <div class="l_product_item">
@@ -51,11 +70,7 @@
                                             </div>
                                             <div class="l_p_text">
                                                <ul> 
-                                                    {{#if dou}}
-                                                    <li><a class="view_product_btn" href="../productos-electronicos/{{this.id_electronicos}}">Ver Producto</a></li>
-                                                    {{else}}
                                                     <li><a class="view_product_btn" href="productos-electronicos/{{this.id_electronicos}}">Ver Producto</a></li>
-                                                    {{/if}}
                                                 </ul>
                                                 <h4>{{this.Nombre}}</h4>
                                                 <h5> Codigo:&nbsp;{{this.Codigo}}</h5>
@@ -64,6 +79,7 @@
                                         </div>
                                     </div>
                                     {{/each}}
+                                    {{/if}}
 
 
                                 </div>
