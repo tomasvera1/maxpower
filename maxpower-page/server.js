@@ -23,8 +23,8 @@ const a = connectionSQL();
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'francoadinapoli@gmail.com',
-      pass: 'f42904558'
+      user: 'ventas@maxpower-ar.com',
+      pass: 'ventaspower1960'
     }
 });
 
@@ -363,8 +363,8 @@ app.post('/email', (req, resp) => {
     const email = req.body;
     console.log(email);
     const mailOptions = {
-        from: 'ventas@maxpowerautomation.com',
-        to: 'ventas@maxpowerautomation.com',
+        from: 'ventas@maxpower-ar.com',
+        to: 'ventas@maxpower-ar.com',
         subject: email.sub,
         text: `Nombre: ${email.name}\nEmail: ${email.email}\nEmpresa: ${email.ent}\nTeléfono: ${email.tel}\n\n\n${email.msg}`
     };
