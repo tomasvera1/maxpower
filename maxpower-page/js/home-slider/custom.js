@@ -1,18 +1,11 @@
-
-// preloader
 $(window).load(function(){
-    $('.preloader').fadeOut(1000); // set duration in brackets    
+    $('.preloader').fadeOut(1000);   
 });
 
 $(document).ready(function() {
-
-	/* Hide mobile menu after clicking on a link
-    -----------------------------------------------*/
     $('.navbar-collapse a').click(function(){
         $(".navbar-collapse").collapse('hide');
     });
-
-    // jQuery to collapse the navbar on scroll //
 	$(window).scroll(function() {
 	    if ($(".navbar").offset().top > 50) {
 	        $(".navbar-fixed-top").addClass("top-nav-collapse");
@@ -20,16 +13,10 @@ $(document).ready(function() {
 	        $(".navbar-fixed-top").removeClass("top-nav-collapse");
 	    }
 	});
-	
-	/* FlexSlider
-	-----------------------------*/ 
   	$('.flexslider').flexslider({
       animation: "fade",
       directionNav: false,
   	});
-
-  	/* isotope
-  	------------------------------*/
   	if ( $('.iso-box-wrapper').length > 0 ) { 
 
 	    var $container 	= $('.iso-box-wrapper'), 
@@ -48,7 +35,6 @@ $(document).ready(function() {
 
 	    });
 
-	    //filter items on button click
 	    $('.filter-wrapper li a').click(function(){
 
 	        var $this = $(this), filterValue = $this.attr('data-filter');
@@ -61,8 +47,6 @@ $(document).ready(function() {
 				    queue: false, 
 				}              	 
 			});	            
-
-			// don't proceed if already selected 
 			if ( $this.hasClass('selected') ) { 
 				return false; 
 			}
@@ -74,8 +58,5 @@ $(document).ready(function() {
 	      return false;
 	    }); 
 	}
-
-	/* wow
-	-------------------------------*/
 	new WOW().init();
 });
