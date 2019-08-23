@@ -40,7 +40,8 @@ html {
     opacity: .6; }
 
 .gallery-wrap .img-big-wrap {
-  margin-bottom: 10px;
+  text-align: center;
+  vertical-align: middle;
   overflow: hidden;
   background-color: #fff; }
   .gallery-wrap .img-big-wrap a {
@@ -50,31 +51,9 @@ html {
     height: 450px;
     width: auto;
     display: inline-block;
-    cursor: -webkit-zoom-in;
-    cursor: zoom-in; }
-.gallery-wrap .img-small-wrap {
-  text-align: center; }
-  .gallery-wrap .img-small-wrap .item-gallery {
-    width: 60px;
-    height: 60px;
-    border: 1px solid #ddd;
-    margin: 7px 2px;
-    display: inline-block;
-    overflow: hidden;
-   }
-  .gallery-wrap .img-small-wrap img {
-    max-width: 100%;
-    max-height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-radius: 4px;
-    cursor: -webkit-zoom-in;
-    cursor: zoom-in; }
-    .gallery-wrap .img-small-wrap img:hover {
-      -webkit-filter: brightness(1.1);
-              filter: brightness(1.1);
-      cursor: -webkit-zoom-in;
-      cursor: zoom-in; }
+    vertical-align: middle;
+    text-align: center;
+     }
 
 [class*="dlist-"] {
   margin-bottom: 5px; }
