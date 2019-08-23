@@ -3,7 +3,8 @@
 html {
   font-size: 15px; }
 
-  
+ 
+
 .input-icon {
   position: relative; }
   .input-icon i + input, .input-icon i + select {
@@ -219,4 +220,7 @@ ul.row, ul.row-sm {
   .card-group-item:last-child {
     border-bottom: 0; }
 
+.card-body p {
+  color: #000;
+}
 
