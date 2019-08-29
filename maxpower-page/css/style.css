@@ -886,9 +886,9 @@ body.nobg .section9 {
 
 .section5 {
   position: relative;
-  background-color: black;
-  height: 50vh;
-  min-height: 25rem;
+  background: url();
+  background-size: 100%;
+  height: 800px;
   width: 100%;
   overflow: hidden;
 }
@@ -897,13 +897,23 @@ body.nobg .section9 {
  color: white;
 }
 
-.section5 video {
+.section5 #vid1 {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 100%;
-  min-height: 100%;
   width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.section5 #vid2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1500px;
   height: auto;
   z-index: 0;
   -ms-transform: translateX(-50%) translateY(-50%);
@@ -913,6 +923,7 @@ body.nobg .section9 {
 }
 
 .section5 .container {
+  
   position: relative;
   z-index: 2;
 }
@@ -923,7 +934,7 @@ body.nobg .section9 {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: black;
+  background-color: #fff;
   opacity: 0.5;
   z-index: 1;
 
