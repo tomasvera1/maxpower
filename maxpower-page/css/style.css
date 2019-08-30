@@ -882,7 +882,26 @@ body.nobg .section9 {
 }
 
 
-
+.div-video{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.div-video video{
+  align-items: center;
+  z-index: 1;
+}
+.cont{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+}
+/* 
 
 .section5 {
   position: relative;
@@ -946,7 +965,7 @@ body.nobg .section9 {
   .section5 video {
     display: none;
   }
-}
+} */
 
 .section6 {
   background: white;
