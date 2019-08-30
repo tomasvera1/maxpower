@@ -884,7 +884,7 @@ body.nobg .section9 {
 
 
 
-.section5 {
+/* .section5 {
   height: 1500px;
   width: 100%;
   overflow: hidden;
@@ -913,7 +913,7 @@ body.nobg .section9 {
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-}
+} */
 
 
 
