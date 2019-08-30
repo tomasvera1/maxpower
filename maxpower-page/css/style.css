@@ -884,26 +884,31 @@ body.nobg .section9 {
 
 
 
-.div-video {
+.div-video  {
+  position: relative;
   background-size: 100%;
-  height: 1500px;
+  height: 800px;
   width: 100%;
   overflow: hidden;
 }
 
+.div-video  p,h1{
+ color: white;
+}
 
-.div-video #vid1 {
-  width: 1500px;
-  height: 1500px;
+.div-video  #vid1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
   z-index: 0;
   -ms-transform: translateX(-50%) translateY(-50%);
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
-
-
-.div-video #vid2 {
+.div-video  #vid2 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -916,8 +921,32 @@ body.nobg .section9 {
   transform: translateX(-50%) translateY(-50%);
 }
 
+.div-video  .container {
+  
+  position: relative;
+  z-index: 2;
+}
 
+.div-video  .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  opacity: 0.5;
+  z-index: 1;
 
+}
+
+@media (pointer: coarse) and (hover: none) {
+  .div-video  {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+  }
+  .div-video  video {
+    display: none;
+  }
+}
 
 .section6 {
   background: white;
