@@ -882,17 +882,26 @@ body.nobg .section9 {
 }
 
 
-.div-video{
-
-}
 
 
-/* .section5 {
+.div-video {
+  background-size: 100%;
   height: 1500px;
   width: 100%;
   overflow: hidden;
 }
-*/
+
+
+.div-video #vid1 {
+  width: 1500px;
+  height: 1500px;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
 
 .div-video #vid2 {
   position: absolute;
@@ -907,19 +916,6 @@ body.nobg .section9 {
   transform: translateX(-50%) translateY(-50%);
 }
 
-
-.div-video #vid1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: auto;
-  height: auto;
-  z-index: 0;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-} 
 
 
 
