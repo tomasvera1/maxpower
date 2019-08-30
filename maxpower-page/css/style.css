@@ -896,8 +896,7 @@ body.nobg .section9 {
 }
 
 .section5 #vid1 {
-
-  width: auto;
+  width: 1500px;
   height: auto;
   z-index: 0;
   -ms-transform: translateX(-50%) translateY(-50%);
