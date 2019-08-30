@@ -884,7 +884,7 @@ body.nobg .section9 {
 
 
 
-.div-video  {
+.section5 {
   position: relative;
   background-size: 100%;
   height: 800px;
@@ -892,11 +892,11 @@ body.nobg .section9 {
   overflow: hidden;
 }
 
-.div-video  p,h1{
+.section5 p,h1{
  color: white;
 }
 
-.div-video  #vid1 {
+.section5 #vid1 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -908,7 +908,7 @@ body.nobg .section9 {
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
-.div-video  #vid2 {
+.section5 #vid2 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -921,13 +921,13 @@ body.nobg .section9 {
   transform: translateX(-50%) translateY(-50%);
 }
 
-.div-video  .container {
+.section5 .container {
   
   position: relative;
   z-index: 2;
 }
 
-.div-video  .overlay {
+.section5 .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -940,10 +940,10 @@ body.nobg .section9 {
 }
 
 @media (pointer: coarse) and (hover: none) {
-  .div-video  {
+  .section5 {
     background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
   }
-  .div-video  video {
+  .section5 video {
     display: none;
   }
 }
