@@ -1,20 +1,13 @@
-.post-wrapper-top strong,a {
-  color: #fff;
+#nav strong {
+ color: #ce110a;
 }
+ .social_buttons strong {
+  color: #fff;
 
+}
 .footer-menu strong {
   color: #fff;
 }
-
-.nav strong,a
-{
-  color: #ce110a;
-}
-a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
 
 .post-wrapper-top .container {}
 
