@@ -3,6 +3,12 @@
  *  Typography
  *
  **/
+
+ a, strong {
+ color: #fff;
+
+}
+
 .btn i, .btn-large i, .btn-floating i, .btn-large i, .btn-flat i {
   font-size: 1em;
   line-height: inherit; }
@@ -528,7 +534,7 @@ td, th {
   font-size: 24px; }
 
 b, i, sup, sub, u, del {
-  color: #ea6c5d; }
+  color: #fff; }
 
 h1 {
   font-size: 36px; }
@@ -572,7 +578,7 @@ h1, h2, h3, h4, h5, h6 {
         color: #fff; }
     .menutop-wrap .menu-top .list li a {
       font-weight: 600;
-      color: #222;
+      color: #fff;
       text-transform: uppercase; }
       @media (max-width: 462px) {
         .menutop-wrap .menu-top .list li a {

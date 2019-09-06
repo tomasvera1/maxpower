@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head> 
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CRoboto%7CJosefin+Sans:100,300,400,500" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/contact/bootstrap.min.css">
+    <link rel="stylesheet" href="css/contact/style.css">
+    <link rel="stylesheet" href="../lib/font-awesome/css/font-awesome.min.css">
+
+</head>
+<body> 
+
 <section class="post-wrapper-top">
     <div class="container">
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -5,71 +17,114 @@
           <li><a href="/" method="get">Inicio</a></li>
           <li> Contacto </li>
         </ul>
+        </br>
         <h2> Contactanos </h2>
-      </div>
-      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
       </div>
     </div>
   </section>
 
-<section class="section1">
-    <div class="container clearfix">
-      <div class="content col-lg-12 col-md-12 col-sm-12 clearfix">
-          <div class="col-lg-3 col-md-3 col-sm-3">
-            <div class="servicebox text-center">
-              <div class="service-icon">
-                <div class="dm-icon-effect-1" data-effect="slide-bottom">
-                  <a href="https://www.facebook.com/MaxPower-Industrial-Automation-100690231314367/" class=""> <i class="dm-icon fa fa-facebook fa-3x"></i> </a>
-                </div>
-                <div class="servicetitle">
-                  <h4>Facebook</h4>
-                </div>
-              </div>
-      
-            </div>
-            
-          </div>
-                 
-          <div class="col-lg-3 col-md-3 col-sm-3">
-            <div class="servicebox text-center">
-              <div class="service-icon">
-                <div class="dm-icon-effect-1" data-effect="slide-bottom">
-                  <a href="https://www.instagram.com/maxpower.industrial/?igshid=1q4yb71nbyhec" class=""> <i class="dm-icon fa fa-instagram fa-3x"></i> </a>
-                </div>
-                <div class="servicetitle">
-                  <h4>Instagram</h4>
-                </div>
-              </div>     
-            </div>  
-          </div>
-          
-          <div class="col-lg-3 col-md-3 col-sm-3">
-            <div class="servicebox text-center">
-              <div class="service-icon">
-                <div class="dm-icon-effect-1" data-effect="slide-bottom">
-                  <a href="https://www.linkedin.com/in/maxpower-industrial-automation-8186903a" class=""> <i class="dm-icon fa fa-linkedin fa-3x"></i> </a>
-                </div>
-                <div class="servicetitle">
-                  <h4>LinkedIn</h4>
-                </div>
-              </div>     
-            </div>
-          </div>
 
-         <div class="col-lg-3 col-md-3 col-sm-3">
-              <div class="servicebox text-center">
-                <div class="service-icon">
-                  <div class="dm-icon-effect-1" data-effect="slide-bottom">
-                    <a href="#" class=""> <i class="active dm-icon fa fa-phone fa-3x"></i> </a>
-                  </div>
-                  <div class="servicetitle">
-                    <h4> Atención al cliente </h4>
-                  </div>
-                </div>              
-              </div>           
+  <div id="contact" class="contact">
+      <div class="map">
+        <iframe height="400" id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.500734107821!2d-58.56899338476933!3d-34.642055080449566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x18ef337b0c3b235b!2sMAXPOWER+INDUSTRIAL+AUTOMATION!5e0!3m2!1ses-419!2sar!4v1561753598461!5m2!1ses-419!2sar"></iframe>
+      </div>
+
+
+
+      <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">
+              <h1 class="contact-heading">Formulario de contacto</h1>
+              <p> Otras formas de contactar con nosotros: </p>
+
+                <div class="row margin-15px-bottom">
+                    <div class="col-sm-1 no-padding">
+                        <div class="contact-icon text-red">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="col-sm-11">
+                        <p class="text-small">Buenos Aires, Ramos Mejia, Belgrano 180,<br> Oficina 5</p>
+                    </div>
+                </div>
+
+                <div class="row margin-15px-bottom">
+                    <div class="col-sm-1 no-padding">
+                        <div class="contact-icon text-red">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="col-sm-11">
+                        <p class="text-small">(011) 7524-1400 <br> (011) 7520-5667 <br> (011) 75029920</p>
+                    </div>
+                </div>
+
+                <div class="row margin-15px-bottom">
+                    <div class="col-sm-1 no-padding">
+                        <div class="contact-icon text-red">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="col-sm-11 xs-margin-50px-bottom">
+                        <p class="text-small">agutierrez@maxpower-ar.com<br>ventas@maxpower-ar.com<br>contacto@maxpower-ar.com</p>
+                    </div>
+                </div>
+
+
             </div>
 
 
+        <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">
+          <div id="message"></div>
+          <form role="form">
+
+            <div class="form-group">
+              <input type="name" name="name" class="form-control" required id="contact-name" placeholder="Nombre Apellido" data-rule="minlen:6" data-msg="Please enter at least 6 chars" >
+              <div class="validate"></div>
+            </div>
+
+            <div class="form-group">
+              <input type="name" name="enterprise" class="form-control" id="contact-enterprise" placeholder="Empresa" data-rule="minlen:6" data-msg="Please enter at least 6 chars" >
+              <div class="validate"></div>
+            </div>
+
+            <div class="form-group">
+              <input type="email" name="email" class="form-control" required id="contact-email" placeholder="Correo electrónico" data-rule="email" data-msg="Please enter a valid email">
+              <div class="validate"></div>
+            </div>
+
+            <div class="form-group">
+              <input type="tel" name="tel" class="form-control" id="contact-tel" placeholder="Teléfono" pattern="[0-9]{3} [0-9]{3} [0-9]{3}">
+              <div class="validate"></div>
+            </div>
+
+            <div class="form-group">
+              <input type="text" name="subject" class="form-control" required id="contact-subject" placeholder="Tema" data-rule="minlen:4" data-msg="Please enter at least 4 chars of subject">
+              <div class="validate"></div>
+            </div>
+
+            <div class="form-group">
+              <textarea class="form-control" name="message" id="contact-message"  required placeholder="Mensaje" rows="5" data-rule="required" data-msg="Please write something for us"></textarea>
+              <div class="validate"></div>
+            </div>
+            <div id="msg" style="display: none;"></div>
+            <div class="form-send">
+              <button type="button" class="button large" onclick="sendEmail()">Enviar</button>
+            </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+
+<!-- 
         <div class="col-lg-6 col-md-6 col-sm-6">
           <h4 class="title"> Formulario de contacto </h4>
           <div id="message"></div>
@@ -121,6 +176,7 @@
           <ul class="contact_details">
             <li><i class="fa fa-envelope-o"></i> ventas@maxpower-ar.com</li>
             <li><i class="fa fa-envelope-o"></i> agutierrez@maxpower-ar.com </li>
+            <li><i class="fa fa-envelope-o"></i> contacto@maxpower-ar.com </li>
             <li><i class="fa fa-phone-square"></i> (011) 7524-1400 </li>
             <li><i class="fa fa-phone-square"></i> (011) 7520-5667 </li>
             <li><i class="fa fa-home"></i> Belgrano 180, Oficina-5, Ramos Mejía.</li>
@@ -135,3 +191,7 @@
       </div>    
     </div>  
   </section>
+  -->
+
+  </body>
+  </html>
