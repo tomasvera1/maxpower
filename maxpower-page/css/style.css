@@ -259,7 +259,7 @@ input, button, select, textarea {
 
 .author_box .social_buttons a {
   color: #2B2E31;
-  font-size: 18px
+  font-size: 16px;
 }
 
 .author_box img {
@@ -629,7 +629,7 @@ body.nobg .section9 {
   width: 23px;
   height: 23px;
   margin-top: 8px;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   margin-left: 0;
   line-height: 35px;
@@ -673,6 +673,7 @@ body.nobg .section9 {
 }
 
 .footer-left p {
+  font-size: 16px;
   display: inline-block;
   color: #fff;
 }
@@ -694,7 +695,7 @@ body.nobg .section9 {
 }
 
 .footer-menu a{
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .footer .widget h4 {
@@ -704,12 +705,13 @@ body.nobg .section9 {
 .copyrights {
   background: linear-gradient(to top right, #464646, rgb(35, 37, 39));
   padding: 0;
-  font-size: 14px;
+  font-size: 16px;
   border-top: 1px solid #3E4246;
   margin-top: 15px;
 }
 
 .copyrights a {
+  font-size: 16px;
   color: #fff;
 }
 
@@ -2600,11 +2602,7 @@ section {
 }
 
 .logo {
-  padding-top: 30px;
-  margin-bottom: 30px;
-  margin-top: 30px;
-  width: 300px;
-  height: 300px;
+
 
 }
 
