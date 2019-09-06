@@ -1,8 +1,15 @@
- strong {
+.post-wrapper-top strong {
   color: #fff;
 }
 
+.footer-menu strong {
+  color: #fff;
+}
 
+.nav strong 
+{
+  color: #ce110a;
+}
 a:hover {
   color: #ffffff;
   text-decoration: underline;
