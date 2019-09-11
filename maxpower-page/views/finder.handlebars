@@ -1,0 +1,37 @@
+<form action="/find" method="post">
+    <label for="f">Código: </label><input type="number" name="f" id="">
+    <input type="hidden" name="find" value="Codigo">
+    <button type="submit">Buscar</button>
+</form>
+
+</br>
+
+<form action="/find" method="post">
+    <label for="f">Nombre: </label><input type="text" name="f" id="">
+    <input type="hidden" name="find" value="Nombre">
+    <button type="submit">Buscar</button>
+</form>
+
+</br></br>
+
+{{#if sec}}
+    <p>Productos de seguridad</p>
+    {{#each}}
+        <p>
+            Nombre: {{this.Nombre}}, Descripcion: {{this.Descripcion}}
+            Marca: {{this.Marca}}, Modelo: {{this.Modelo}}, 
+            Categoria: {{this.Categoria}}, Codigo: {{this.Codigo}}
+        </p>
+    {{/each}}
+{{/if}}
+
+{{#if electronic}}
+    <p>Productos electrónicos</p>
+    {{#each}}
+        <p>
+            Nombre: {{this.Nombre}}, Descripcion: {{this.Descripcion}}
+            Marca: {{this.Marca}}, Modelo: {{this.Modelo}}, 
+            Categoria: {{this.Categoria}}
+        </p>
+    {{/each}}
+{{/if}}
