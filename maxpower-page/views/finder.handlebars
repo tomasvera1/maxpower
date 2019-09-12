@@ -28,10 +28,65 @@
 {{#if electronic}}
     <p>Productos electrónicos</p>
     {{#each electronic}}
-        <p>
+        <!--<p>
             Nombre: {{this.Nombre}}, Descripcion: {{this.Descripcion}}
             Marca: {{this.Marca}}, Modelo: {{this.Modelo}}, 
             Categoria: {{this.Categoria}}
-        </p>
+        </p>-->
+        <main class="card">
+	<div class="row no-gutters">
+		<aside class="col-sm-6 border-right">
+<article class="gallery-wrap"> 
+<div class="img-big-wrap">
+    <div> <img src="data:image/png;base64,{{img}}" style="width: 400px;"></a></div>
+</div> 
+<div class="img-small-wrap">
+  <!--   
+  <div class="item-gallery"> <img src="img/items/example02.jpg"></div>
+  <div class="item-gallery"> <img src="img/items/example03.jpg"></div>
+  <div class="item-gallery"> <img src="img/items/example04.jpg"></div>
+  <div class="item-gallery"> <img src="img/items/example05.jpg"></div>
+  -->
+</article> 
+		</aside>
+		<aside class="col-sm-6">
+<article class="card-body">
+
+	<h3 class="title mb-3">{{name}}</h3>
+
+
+    <dl>
+    <dt>Descripcion</dt>
+    <dd><p> {{desc}}
+    </p></dd>
+    </dl>
+    <dl class="row">
+    <dt class="col-sm-3">Modelo</dt>
+    <dd class="col-sm-9">{{#if mod}} {{mod}} {{else}} - {{/if}}
+    </dd>
+
+    {{!-- <dt class="col-sm-3">Colores: </dt>
+    <dd class="col-sm-9"> - </dd> --}}
+
+    <dt class="col-sm-3">Codigo </dt>
+    <dd class="col-sm-9"> {{#if cod}} {{cod}} {{else}} - {{/if}} </dd>
+    </dl>
+
+	<a href="/contact" method="get" class="btn  btn-warning"> <i class="fa fa-envelope"></i> Contacto </a>
+	
+        </article> 
+		</aside> 
+	</div> 
+</main> 
+
+
+        <article class="card mt-3">
+            <div class="card-body">
+                {{!-- 
+                <h4>Descripcion detallada </h4>
+                    <p> Descripcion </p>
+            --}}
+            </div> 
+        </article> 
     {{/each}}
 {{/if}}
