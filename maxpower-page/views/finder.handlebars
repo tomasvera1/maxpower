@@ -16,7 +16,7 @@
 
 {{#if sec}}
     <p>Productos de seguridad</p>
-    {{#each}}
+    {{#each sec}}
         <p>
             Nombre: {{this.Nombre}}, Descripcion: {{this.Descripcion}}
             Marca: {{this.Marca}}, Modelo: {{this.Modelo}}, 
@@ -27,7 +27,7 @@
 
 {{#if electronic}}
     <p>Productos electrónicos</p>
-    {{#each}}
+    {{#each electronic}}
         <p>
             Nombre: {{this.Nombre}}, Descripcion: {{this.Descripcion}}
             Marca: {{this.Marca}}, Modelo: {{this.Modelo}}, 
