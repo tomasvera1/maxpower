@@ -18,11 +18,7 @@
 {{#if sec}}
     <p>Productos de seguridad</p>
     {{#each sec}}
-        <!--<p>
-            Nombre: {{this.Nombre}}, Descripcion: {{this.Descripcion}}
-            Marca: {{this.Marca}}, Modelo: {{this.Modelo}}, 
-            Categoria: {{this.Categoria}}, Codigo: {{this.Codigo}}
-        </p>-->
+        
         <section class="section-content bg padding-y-sm">
 <div class="container">
 
@@ -93,11 +89,70 @@
 {{#if electronic}}
     <p>Productos electrónicos</p>
     {{#each electronic}}
-        <!--<p>
-            Nombre: {{this.Nombre}}, Descripcion: {{this.Descripcion}}
-            Marca: {{this.Marca}}, Modelo: {{this.Modelo}}, 
-            Categoria: {{this.Categoria}}
-        </p>-->
+        <section class="section-content bg padding-y-sm">
+<div class="container">
+
+
+<div class="row">
+<div class="col-xl-10 col-md-9 col-sm-12">
+
+
+<main class="card">
+	<div class="row no-gutters">
+		<aside class="col-sm-6 border-right">
+<article class="gallery-wrap"> 
+<div class="img-big-wrap">
+    <div> <img src="data:image/png;base64,{{this.Img}}" style="width: 400px;"></a></div>
+</div> 
+<div class="img-small-wrap">
+
+</article> 
+		</aside>
+		<aside class="col-sm-6">
+<article class="card-body">
+
+	<h3 class="title mb-3">{{this.Nombre}}</h3>
+
+
+<dl>
+  <dt>Descripcion</dt>
+  <dd><p> {{this.Descripcion}}
+  </p></dd>
+</dl>
+<dl class="row">
+  <dt class="col-sm-3">Modelo</dt>
+  <dd class="col-sm-9">{{#if this.Modelo}} {{this.Modelo}} {{else}} - {{/if}}
+  </dd>
+
+
+
+  <dt class="col-sm-3">Codigo </dt>
+  <dd class="col-sm-9"> {{#if this.Codigo}} {{this.Codigo}} {{else}} - {{/if}} </dd>
+</dl>
+
+	
+        </article> 
+		</aside> 
+	</div> 
+    </main> 
+
+
+    <article class="card mt-3">
+        <div class="card-body">
+
+        </div> 
+    </article> 
+
+
+
+
+                            </div> 
+                        </div>  
+                    </div>
+                </aside> 
+            </div> 
+        </div>
+    </section>
         
     {{/each}}
 {{/if}}
