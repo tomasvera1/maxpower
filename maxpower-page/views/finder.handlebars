@@ -23,48 +23,71 @@
             Marca: {{this.Marca}}, Modelo: {{this.Modelo}}, 
             Categoria: {{this.Categoria}}, Codigo: {{this.Codigo}}
         </p>-->
-        <main class="card">
-            <div class="row no-gutters">
-                <aside class="col-sm-6 border-right">
-        <article class="gallery-wrap"> 
-        <div class="img-big-wrap">
-            <div> <img src="data:image/png;base64,{{this.Img}}" style="width: 400px;"></a></div>
-        </div> 
-        <div class="img-small-wrap">
-        <!--   
-        <div class="item-gallery"> <img src="img/items/example02.jpg"></div>
-        <div class="item-gallery"> <img src="img/items/example03.jpg"></div>
-        <div class="item-gallery"> <img src="img/items/example04.jpg"></div>
-        <div class="item-gallery"> <img src="img/items/example05.jpg"></div>
-        -->
+        <section class="section-content bg padding-y-sm">
+<div class="container">
+
+
+<div class="row">
+<div class="col-xl-10 col-md-9 col-sm-12">
+
+
+<main class="card">
+	<div class="row no-gutters">
+		<aside class="col-sm-6 border-right">
+<article class="gallery-wrap"> 
+<div class="img-big-wrap">
+    <div> <img src="data:image/png;base64,{{this.Img}}" style="width: 400px;"></a></div>
+</div> 
+<div class="img-small-wrap">
+
+</article> 
+		</aside>
+		<aside class="col-sm-6">
+<article class="card-body">
+
+	<h3 class="title mb-3">{{this.Nombre}}</h3>
+
+
+<dl>
+  <dt>Descripcion</dt>
+  <dd><p> {{this.Descripcion}}
+  </p></dd>
+</dl>
+<dl class="row">
+  <dt class="col-sm-3">Modelo</dt>
+  <dd class="col-sm-9">{{#if this.Modelo}} {{this.Modelo}} {{else}} - {{/if}}
+  </dd>
+
+
+
+  <dt class="col-sm-3">Codigo </dt>
+  <dd class="col-sm-9"> {{#if this.Codigo}} {{this.Codigo}} {{else}} - {{/if}} </dd>
+</dl>
+
+	<a href="/contact" method="get" class="btn  btn-warning"> <i class="fa fa-envelope"></i> Contacto </a>
+	
         </article> 
-                </aside>
-                <aside class="col-sm-6">
-        <article class="card-body">
-
-            <h3 class="title mb-3">{{this.Nombre}}</h3>
+		</aside> 
+	</div> 
+</main> 
 
 
-        <dl>
-        <dt>Descripcion</dt>
-        <dd><p> {{this.Descripcion}}
-        </p></dd>
-        </dl>
-        <dl class="row">
-        <dt class="col-sm-3">Modelo</dt>
-        <dd class="col-sm-9">{{#if this.Modelo}} {{this.Modelo}} {{else}} - {{/if}}
-        </dd>
+<article class="card mt-3">
+	<div class="card-body">
 
-        <dt class="col-sm-3">Codigo </dt>
-        <dd class="col-sm-9"> {{#if this.Codigo}} {{this.Codigo}} {{else}} - {{/if}} </dd>
-        </dl>
+    </div> 
+</article> 
 
 
-            
-                </article> 
-                </aside> 
-            </div> 
-        </main> 
+
+
+						</div> 
+					</div>  
+				</div>
+			</aside> 
+		</div> 
+	</div>
+</section>
     {{/each}}
 {{/if}}
 
