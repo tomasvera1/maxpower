@@ -421,6 +421,10 @@ body.nobg .section9 {
 
 .post-wrapper-top .container {}
 
+.post-wrapper-top a {
+  color: #ce110a;
+}
+
 .breadcrumb>li+li:before {
   color: #798184;
   font-size: 11px;
