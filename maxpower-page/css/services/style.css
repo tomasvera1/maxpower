@@ -180,3 +180,55 @@ h1, h2, h3, h4, h5,
         color: #fff; }
 
 
+    /* --------------------- PREGUNTAS FRECUENTES -------------------- */
+
+    .pb_section {
+      padding: 9em 0;
+      position: relative;
+      display: block; }
+      @media (max-width: 991px) {
+        .pb_section {
+          padding: 4em 0; } }
+      .pb_section.pb_bg-half:before {
+        top: 50%;
+        content: "";
+        background: #f8f9fa;
+        bottom: 0%;
+        width: 100%;
+        left: 0;
+        position: absolute; }
+    
+    .pb_accordion .item > a {
+      font-size: 15px;
+      display: block;
+      border-bottom: 1px solid #e9ecef;
+      padding: 10px 0;
+      position: relative;
+      color: #495057; }
+      .pb_accordion .item > a:after {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        font-family: 'Ionicons';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\f2c7"; }
+      .pb_accordion .item > a[aria-expanded="true"] {
+        color: #1d82ff;
+        border-bottom: 1px solid transparent; }
+        .pb_accordion .item > a[aria-expanded="true"]:after {
+          content: "\f2f4"; }
+    
+    .pb_accordion .item > div *:last-child {
+      margin-bottom: 0; }
+    
+    
