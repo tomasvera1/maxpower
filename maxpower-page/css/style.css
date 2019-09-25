@@ -1042,6 +1042,8 @@ body.nobg .section9 {
 }
 
 .general-title-b {
+  background: linear-gradient(to bottom right, #464646, rgb(35, 37, 39));
+
 }
 
 .general-title-b h3 {
