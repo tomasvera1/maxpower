@@ -1041,12 +1041,12 @@ body.nobg .section9 {
   text-transform: uppercase;
 }
 
-.general-title-b {
+.general-titulo {
   background: linear-gradient(to bottom right, #464646, rgb(35, 37, 39));
 
 }
 
-.general-title-b h3 {
+.general-titulo h3 {
   font-weight: 600;
   color: white;
   letter-spacing: -0.65px;
@@ -1055,7 +1055,7 @@ body.nobg .section9 {
   text-transform: uppercase;
 }
 
-.general-title-b p {
+.general-titulo p {
   color: #696E74;
   font-family: 'Ruda', sans-serif !important;
   font-size: 18px;
