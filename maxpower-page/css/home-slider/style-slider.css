@@ -79,8 +79,8 @@ h4
 }
 .flexslider .slides img {
     width: 100%;
-    min-width: 648px;
-    min-height: 270px;
+    min-width: auto;
+    min-height: auto;
     display: block;
 }
 .flexslider .slides > li {
@@ -92,7 +92,7 @@ h4
 .flexslider img {
     position: relative;
     width: 100%;
-    height: 700px;
+    height: 650px;
 }
 
 .flexslider h1 {
