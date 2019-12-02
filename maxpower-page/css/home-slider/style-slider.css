@@ -83,6 +83,29 @@ h4
     min-height: 100%;
     display: block;
 }
+
+@media screen and (max-width: 800px) {
+    .flexslider img {
+      width: 100%; 
+      height: auto;
+    }
+  }
+
+@media screen and (max-width: 600px)   {
+    .flexslider img {
+        width: 100%; 
+        height: auto;
+      }
+    }
+
+    @media screen and (max-width: 400px)   {
+        .flexslider img {
+            width: 100%; 
+            height: auto;
+          }
+        }
+
+
 .flexslider .slides > li {
     display: none;  
     padding: 0;
