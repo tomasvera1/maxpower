@@ -13,17 +13,20 @@
 
   <link href="../css/products/font-awesome.min.css" rel="stylesheet">
   <link href="../css/products/bootstrap.min.css" rel="stylesheet">  
-  <link href="../css/products/products.css" rel="stylesheet">
-  <link href="../css/style.css" rel="stylesheet">  
-  {{else}}
+  <link href="../css/products/products.css" rel="stylesheet">     
+  <link href="../css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/colors/red.css">
 
+  {{else}}
   <link href="img/favicon.png" rel="icon">
 
   <link href="css/products/font-awesome.min.css" rel="stylesheet">
   <link href="css/products/bootstrap.min.css" rel="stylesheet">  
-  <link href="css/products/products.css" rel="stylesheet">   
-  <link href="css/style.css" rel="stylesheet">
-  {{/if}}  
+  <link href="css/products/products.css" rel="stylesheet">  
+  <link href="../css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/colors/red.css">
+
+  {{/if}}   
 
   
 
@@ -31,37 +34,50 @@
  <body> 
 
 <style>
-    .social_buttons a{
+.social_buttons a{
 	color: #fff;
 }
+
  span {
+	 
 	 color: #fff;
  }
-</style>     
+
+ strong {
+	 color:black;
+ }
+</style>    
+
  <section class="post-wrapper-top">
     <div class="container">
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <ul class="breadcrumb">
           <li><a href="/" method="get">Inicio</a></li>
-          <li> Productos de seguridad </li>
+          <li> Productos Electronicos </li>
         </ul>
-        <h2> Productos de seguridad </h2>
+        <h2> Productos Electronicos </h2>
       </div>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
       </div>
     </div>
-  </section> 
+  </section>   
+
+
 
     <section class="categories_product_main p_80">
             <div class="container">
                 <div class="categories_main_inner">
                     <div class="row row_disable">
                         <div class="col-lg-9 float-md-right">
-                            
+                            <div class="showing_fillter">
+                                <div class="row m0">
+                
+                                </div>
                             </div>
 
                             <div class="categories_product_area">
                                 <div class="row">
+                                    
                                     {{#each prod}}
                                     <div class="col-lg-4 col-sm-6">
                                         <div class="l_product_item">
@@ -71,22 +87,6 @@
                                             </div>
                                             <div class="l_p_text">
                                                <ul> 
-                                                    <li><a class="view_product_btn" href="/productos-electronicos/{{this.id_electronicos}}">Ver Producto</a></li>
-                                                </ul>
-                                                <h4>{{this.Nombre}}</h4>
-                                                <h5> Codigo:&nbsp;{{this.Codigo}}</h5>
-                                                {{!-- <h5><del>U$D 1050 </del>  $1000</h5> --}}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--<div class="col-lg-4 col-sm-6">
-                                        <div class="l_product_item">
-                                            <div class="l_p_img">
-                                                <img style="height:300px;"src="data:image/png;base64,{{this.Img}}" alt="">
-                                                {{!-- <h5 class="discount">Descuento</h5> --}}
-                                            </div>
-                                            <div class="l_p_text">
-                                               <ul>
                                                     <li><a class="view_product_btn" href="/productos-seguridad/{{this.id_seguridad}}">Ver Producto</a></li>
                                                 </ul>
                                                 <h4>{{this.Nombre}}</h4>
@@ -94,11 +94,17 @@
                                                 {{!-- <h5><del>U$D 1050 </del>  $1000</h5> --}}
                                             </div>
                                         </div>
-                                    </div> -->
-                                    {{/each}}                     
+                                    </div>
+                                    {{/each}}
+
+
                                 </div>
                             </div>
                         </div> 
+
+
+                                  <!-- CATEGORIAS -->
+
 
                       <div class="col-lg-3 float-md-right">
                             <div class="categories_sidebar">
@@ -113,6 +119,7 @@
 
                                     </ul>
                                 </aside>
+
                                 <aside class="l_widgest l_menufacture_widget">
                                     <div class="l_w_title">
                                         <h3>Fabricantes</h3>
@@ -124,29 +131,18 @@
                                     </ul>
                                 </aside>
 
+
+
+
+                                        <!-- NUEVOS PRODUCTOS -->
+
+
                                 <aside class="l_widgest l_feature_widget">
                                     <div class="l_w_title">
                                         <h3>Nuevos productos</h3>
                                     </div>
                                     <div class="media">
-                                        <!-- 
-                                        <div class="d-flex">
-                                            <img src="img/product/featured-product/" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <h4>Jeans with <br /> Frayed Hems</h4>
-                                            <h5>$45.05</h5>
-                                        </div>
-                                    </div>
-                                    <div class="media">
-                                        <div class="d-flex">
-                                            <img src="img/product/featured-product/" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <h4>Crysp Denim<br />Montana</h4>
-                                            <h5>$45.05</h5>
-                                        </div>
-                                        -->
+
                                     </div>
                                 </aside>
                             </div>
@@ -155,16 +151,16 @@
                 </div>
             </div>
         </section>
-        
+
          
         {{#if dou}}
         <script src="../js/products/jquery-3.2.1.min.js"></script>
         <script src="../js/products/popper.min.js"></script>
-        <script src="../js/products/bootstrap.min.js"></script>
+        <script src="../js/products/bootstrap.min.js"></script> 
         {{else}}
         <script src="js/products/jquery-3.2.1.min.js"></script>
         <script src="js/products/popper.min.js"></script>
         <script src="js/products/bootstrap.min.js"></script> 
         {{/if}}
  </body>
- </html>   
+ </html> 
