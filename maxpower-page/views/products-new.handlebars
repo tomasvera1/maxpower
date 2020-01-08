@@ -16,6 +16,7 @@
   <link href="../css/products/products.css" rel="stylesheet">
   <link href="../css/style.css" rel="stylesheet">  
   {{else}}
+
   <link href="img/favicon.png" rel="icon">
 
   <link href="css/products/font-awesome.min.css" rel="stylesheet">
@@ -52,6 +53,22 @@
                                     {{#each prod}}
                                     <div class="col-lg-4 col-sm-6">
                                         <div class="l_product_item">
+                                            <div class="l_p_img" style="background: white;">
+                                                <center><img src="data:image/png;base64,{{this.Img}}" alt="" style="height: 250px;"></center>
+                                                {{!-- <h5 class="discount">Descuento</h5> --}}
+                                            </div>
+                                            <div class="l_p_text">
+                                               <ul> 
+                                                    <li><a class="view_product_btn" href="/productos-electronicos/{{this.id_electronicos}}">Ver Producto</a></li>
+                                                </ul>
+                                                <h4>{{this.Nombre}}</h4>
+                                                <h5> Codigo:&nbsp;{{this.Codigo}}</h5>
+                                                {{!-- <h5><del>U$D 1050 </del>  $1000</h5> --}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--<div class="col-lg-4 col-sm-6">
+                                        <div class="l_product_item">
                                             <div class="l_p_img">
                                                 <img style="height:300px;"src="data:image/png;base64,{{this.Img}}" alt="">
                                                 {{!-- <h5 class="discount">Descuento</h5> --}}
@@ -65,7 +82,7 @@
                                                 {{!-- <h5><del>U$D 1050 </del>  $1000</h5> --}}
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     {{/each}}                     
                                 </div>
                             </div>
