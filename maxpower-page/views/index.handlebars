@@ -10,7 +10,6 @@
         		</div>
 					</li>
 
-
             <li> 
 						<img src="img/slider/2.jpg">
 						<div class="slider-caption">
@@ -71,7 +70,7 @@
               </div>
              
               <div class="col-sm-6 col-lg-3 feature-box">
-                  <div class="feature-box-inner1">
+                  <div class="feature-box-inner">
                       <div class="feature-box-icon">
                           <i class="fa fa-bars" data-effect="slide-left"></i>
                       </div>
@@ -85,7 +84,7 @@
               </div>
                 
               <div class="col-sm-6 col-lg-3 feature-box">
-                  <div class="feature-box-inner1">
+                  <div class="feature-box-inner">
                       <div class="feature-box-icon">
                           <i class="fa fa-envelope" data-effect="slide-left"></i>
                       </div>
@@ -125,7 +124,7 @@
         <div class="message text-center">
           <h2 class="big-title"><span> MaxPower </span> es una empresa que brinda soluciones integrales a las industrias </h2>
           <p class="small-title">Buscamos a través de un servicio de asistencia en excelencia y eficiencia, apoyar el crecimiento y fortalecimiento del sector industrial, siendo asi una empresa líder en el mercado brindando soluciones tecnológicas con valor agregado para nuestros clientes.</p>
-   ;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button large" href="/services"> SERVICIOS </a>
+          <a class="button large" href="/services"> SERVICIOS </a>
         </div>
       </div>  
      </section>  
@@ -356,11 +355,10 @@
         </div>
       </section>   
 
-<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css'>
-<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css'><link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
 
 <style>
 .section10 {
@@ -369,75 +367,6 @@
 
 .section2 {
   background: linear-gradient(to top right, #464646, rgb(35, 37, 39));
-}
-
-#desc_info {   
-  padding-bottom: 50px;
-  padding-top: 50px;
-  background: linear-gradient(to top right, #464646, rgb(35, 37, 39));
-  /*background: linear-gradient(90deg, #464646 50%, gray 50%);*/
-  width:  100%;
- 
-}
-#desc_info p {
-  padding-bottom: 30px;
-  text-align: center;
-  color: #fff;
-}
-
-#desc_info h4, a{
-  color: #fff;
-}
-
-
-#desc_info .feature-box {
-  transition: all .5s;
-  background: transparent;
-  padding: 20px 0 20px 0;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-left: 0px;
-  padding-right: 0px;
-  padding-left: 0px;
-}
-#desc_info .feature-box:hover {
-  padding: 0;
-  color: #fff;
-}
-#desc_info .feature-box .feature-box-inner1 {
-  transition: all .5s;
-  background: rgb(121, 117, 117);
-}
-
-#desc_info .feature-box .feature-box-inner2 {
-  transition: all .5s;
-  background: rgb(71, 71, 71);
-}
-
-#desc_info .feature-box:hover .feature-box-inner1 {
-  background: #d3321d;
-}
-
-#desc_info .feature-box:hover .feature-box-inner2 {
-  background: #d3321d;
-}
-
-#desc_info .feature-box p {
-  max-width: 250px;
-  min-height: 260px;
-  line-height: 32px;
-  padding-top: 30px;
-  font-size: 18px;
-  margin: auto;
-}
-#desc_info .feature-box .feature-box-icon {
-  border-radius: 0px;
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 10px;
-  font-size: 40px;
-  color:#fff;
 }
 
 .general-title-a h3 {
@@ -450,22 +379,6 @@
 }
 
 
-  @media only screen and (max-width: 400px){
-    .swipper-wrapper img {
-     width: 100%;
-     height: 100%;
-    } 
-  .swiper-container{
-    width: 100%;
-    height: 100%;
-    }
-  .swiper-slide{
-   width: 100%;
-   height: 100%;   
-  }
-}
-
-
 .swiper-container {
         width: 100%;
         height: 500px;
@@ -474,7 +387,7 @@
       .swiper-slide {
         text-align: center;
         font-size: 18px;
-        background: linear-gradient(to bottom right, #464646, rgb(35, 37, 39));   
+        background: linear-gradient(to top right, #464646, rgb(35, 37, 39));     
         display: -webkit-box;
         display: -ms-flexbox;
         display: -webkit-flex;
@@ -487,7 +400,6 @@
         -ms-flex-align: center;
         -webkit-align-items: center;
         align-items: center;
-     
     }
     .swiper-slide img { max-height: 500px; max-width: 500px; }
 
@@ -497,27 +409,41 @@
     height: 720px;
 }
 
+
 @media screen and (max-width: 800px) {
     .flexslider img {
       width: 100%; 
       height: 600px;
     }
   }
-
-  @media screen and (max-width: 600px)   {
+@media screen and (max-width: 600px)   {
     .flexslider img {
         width: 100%; 
         height: 500px;
       }
     }
-
     @media screen and (max-width: 400px)   {
         .flexslider img {
             width: 100%;
-            height: 100%;
+            height: 370px;
           }
 
-          .swiper-slide img { max-height: 500px; max-width: 370px; }
+    .swiper-slide img { max-height: 500px; max-width: 370px; }
+
+    .swipper-wrapper img {
+     width: 100%;
+     height: 100%;
+     
+    } 
+  
+  .swiper-container{
+    width: 100%;
+    height: 500px;
+    }
+  .swiper-slide{
+   width: 400px;
+   height: 500px;   
+  }
         }
 </style>
 
