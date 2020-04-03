@@ -4,6 +4,7 @@
   font-family: 'Ruda', sans-serif;
 }
 
+
 body {
   background: #f8f8f8;
   margin: 0;
@@ -2727,9 +2728,11 @@ section {
   background: #d3321d;
 }
 
+#div-corona{
+  background: rgb(192, 23, 37)
+}
 
 #img-corona{
-  background-color: #d3321d;
   width: 80%;
 }
 
