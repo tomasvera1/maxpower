@@ -2727,6 +2727,12 @@ section {
   background: #d3321d;
 }
 
+
+#img-corona{
+  background-color: #d3321d;
+  width: 80%;
+}
+
 #desc_info .feature-box p {
   max-width: 250px;
   min-height: 260px;
@@ -2772,6 +2778,9 @@ section {
    height: 300px;   
   }
 }
+
+
+
 
 
 /*
