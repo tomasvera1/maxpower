@@ -2609,10 +2609,6 @@ section {
   margin-top: 30px;
 }
 
-.logo {
-
-
-}
 
 /* Slider-Clients  */
 @keyframes scroll {
@@ -2856,4 +2852,14 @@ section {
 .maxpower_homewrapper h3{
   text-align: center;
   font-size: 30px;
+}
+
+
+*/
+.sin-stock {
+  width: 30px;
+  height: 15px;
+  text-align: center;
+  display: inline-block;
+  background: #ce110a;
 }
