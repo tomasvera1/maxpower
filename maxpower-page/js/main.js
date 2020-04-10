@@ -252,7 +252,6 @@ async function search(e){
   }
 }
 
-
 async function sendEmail(){
   let sEmail = true;
   const send = {
@@ -314,4 +313,11 @@ async function sendEmail(){
     $('#msg').html('<img src="../img/err.png"></img>' + msg).css('color', 'red');
   }
 
+}
+
+
+function close_ad(){
+  let div = document.getElementById('div-corona')
+  //let parent = document.getElementById('home')
+  div.parentNode.removeChild(div)
 }
